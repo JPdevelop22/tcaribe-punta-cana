@@ -11,7 +11,7 @@
         crossorigin=""
     />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""
     >
@@ -93,41 +93,41 @@
     <h1 class="txt-primary">Book functionality</h1>
 
     <div class="container bordered">
-        <form id="bookForm" method="post">
+        <form id="bookForm">
             
-            <div class="row">
-                <div class="col">
+            <div class="row my-3">
+                <div class="col-sm-3">
                     <label for="bookType">Tipo de viaje</label>
-                    <select name="tipoDeViaje" id="bookType">
+                    <select name="tipoDeViaje" id="bookType" required>
                         <option value=""></option>
                         <option value="viaje turistico">viaje turistico</option>
                         <option value="excursion">excursion</option>
                     </select>
                 </div>
 
-                <div id="tracksContainer" class="col"></div>
+                <div id="tracksContainer" class="col-sm"></div>
             </div>
 
-            <br><br>
+            <div class="row my-3">
 
-            <div class="row">
-                <div class="col" id="startContainer"></div>
+                <div class="col-sm" id="startContainer"></div>
 
-                <br><br>
+                <div class="col-sm" id="stopContainer"></div>
 
-                <div class="col" id="stopContainer"></div>
+                <div class="col-sm" id="destinyContainer"></div>
 
-                <br><br>
-
-                <div class="col" id="destinyContainer"></div>
-
-                <br><br>
-
-                <label for="bookDate">Fecha de salida</label>
-                <input type="date" name="fechaDeSalida" id="bookDate">
             </div>
 
-            <br><br>
+            <div class="row my-3">
+                <div class="col-sm-4">
+                    <label for="bookDate">Fecha de salida</label>
+                    <input type="date" name="fechaDeSalida" id="bookDate">
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-sm-4" id="passengersContainer"></div>
+            </div>
 
             <button class="btn btn-primary outline" type="submit">
                 <i class="bi bi-whatsapp"></i>
@@ -137,6 +137,5 @@
     </div>
 
     <script src="./js/bookFuntionality.js"></script>
-    <script src="./js/domManipulation.js"></script>
 </body>
 </html>
