@@ -162,11 +162,773 @@ const travels =
             "name-ES": "Aeropuerto Internacional de Punta Cana",
             "name-EN": "Punta Cana Internacional airport",
             "stops": [],
-            "destiny-ES": ["Hoteles de la zona Bavaro, Punta Cana", "Hoteles en Uvero Alto", "Hoteles in La Romana", "San Pedro de Macorís", "El Seibo", "Boca Chica", "Santo Domingo", "Santiago", "Samaná", "Puerto Plata"],
+            "destiny-ES": ["Hoteles de la zona Bavaro, Punta Cana", "Hoteles en Uvero Alto", "Hoteles en La Romana", "San Pedro de Macorís", "El Seibo", "Boca Chica", "Santo Domingo", "Santiago", "Samaná", "Puerto Plata"],
             "destiny-EN": ["Hotels in Bavaro, Punta Cana area", "Hotels in Uvero Alto", "Hotels in La Romana", "San Pedro de Macorís", "El Seibo", "Boca Chica", "Santo Domingo", "Santiago", "Samaná", "Puerto Plata"],
             "tracks": 2,
             "passengers": ["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"]			
         } 
+    }
+}
+
+const pricesEs = 
+{
+    "pickups":
+    {
+        "Hoteles de la zona Bavaro, Punta Cana":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 31.0,
+                                "7 - 21": 85.0,
+                                "22 - 33": 118.0,
+                                "34 - 45": 145.0,
+                                "46 - 54": 175.0,
+                                "55 - 59": 189.0
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 61.0,
+                                "7 - 21": 156.0,
+                                "22 - 33": 219.0,
+                                "34 - 45": 269.0,
+                                "46 - 54": 323.0,
+                                "55 - 59": 350.0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Uvero Alto":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 76.0,
+                                "7 - 21": 123.0,
+                                "22 - 33": 181.0,
+                                "34 - 45": 213.0,
+                                "46 - 54": 268.0,
+                                "55 - 59": 282.0
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 141,
+                                "7 - 21": 227,
+                                "22 - 33": 334.0,
+                                "34 - 45": 395,
+                                "46 - 54": 496.0,
+                                "55 - 59": 523.0
+                            }
+                        }
+                    }
+                },
+
+                "La Romana":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 124,
+                                "7 - 21": 209,
+                                "22 - 33": 283,
+                                "34 - 45": 340,
+                                "46 - 54": 359,
+                                "55 - 59": 374
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 231,
+                                "7 - 21": 385,
+                                "22 - 33": 524,
+                                "34 - 45": 630,
+                                "46 - 54": 685,
+                                "55 - 59": 693
+                            }
+                        }
+                    }
+                },
+
+                "Boca Chica-Aila":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 168,
+                                "7 - 21": 287,
+                                "22 - 33": 358,
+                                "34 - 45": 508,
+                                "46 - 54": 629,
+                                "55 - 59": 642
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 313,
+                                "7 - 21": 530,
+                                "22 - 33": 661,
+                                "34 - 45": 940,
+                                "46 - 54": 1162,
+                                "55 - 59": 1188
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Higüey":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 76,
+                                "7 - 21": 123,
+                                "22 - 33": 181,
+                                "34 - 45": 213,
+                                "46 - 54": 268,
+                                "55 - 59": 282
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 141,
+                                "7 - 21": 227,
+                                "22 - 33": 334,
+                                "34 - 45": 395,
+                                "46 - 54": 496,
+                                "55 - 59": 523
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Bayahíbe":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 113,
+                                "7 - 21": 189,
+                                "22 - 33": 257,
+                                "34 - 45": 310,
+                                "46 - 54": 327,
+                                "55 - 59": 340
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 209,
+                                "7 - 21": 350,
+                                "22 - 33": 476,
+                                "34 - 45": 572,
+                                "46 - 54": 605,
+                                "55 - 59": 630
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en La Romana":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 113,
+                                "7 - 21": 189,
+                                "22 - 33": 257,
+                                "34 - 45": 310,
+                                "46 - 54": 327,
+                                "55 - 59": 340
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 209,
+                                "7 - 21": 350,
+                                "22 - 33": 476,
+                                "34 - 45": 572,
+                                "46 - 54": 605,
+                                "55 - 59": 630
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Juan Dolio":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 129,
+                                "7 - 21": 219,
+                                "22 - 33": 267,
+                                "34 - 45": 350,
+                                "46 - 54": 433,
+                                "55 - 59": 445
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 238,
+                                "7 - 21": 404,
+                                "22 - 33": 497,
+                                "34 - 45": 647,
+                                "46 - 54": 800,
+                                "55 - 59": 823
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Boca Chica":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 145,
+                                "7 - 21": 247,
+                                "22 - 33": 303,
+                                "34 - 45": 396,
+                                "46 - 54": 492,
+                                "55 - 59": 505
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 270,
+                                "7 - 21": 408,
+                                "22 - 33": 559,
+                                "34 - 45": 751,
+                                "46 - 54": 909,
+                                "55 - 59": 933
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Santo Domingo":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 154,
+                                "7 - 21": 260,
+                                "22 - 33": 324,
+                                "34 - 45": 462,
+                                "46 - 54": 572,
+                                "55 - 59": 585
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 284,
+                                "7 - 21": 482,
+                                "22 - 33": 601,
+                                "34 - 45": 852,
+                                "46 - 54": 1057,
+                                "55 - 59": 1082
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Santiago":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 350,
+                                "7 - 21": 599,
+                                "22 - 33": 744,
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Puerto Plata":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 332,
+                                "7 - 21": 626,
+                                "22 - 33": 777,
+                                "34 - 45": 870,
+                                "46 - 54": 1042,
+                                "55 - 59": 1057
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Samaná":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 395,
+                                "7 - 21": 666,
+                                "22 - 33": 827,
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Sabana de la Mar":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 154,
+                                "7 - 21": 260,
+                                "22 - 33": 324,
+                                "34 - 45": 484,
+                                "46 - 54": 629,
+                                "55 - 59": 633
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 284,
+                                "7 - 21": 482,
+                                "22 - 33": 601,
+                                "34 - 45": 896,
+                                "46 - 54": 1162,
+                                "55 - 59": 1170
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Aeropuerto Internacional de Punta Cana":
+        {
+            "destiny":
+            {
+                "Hoteles de la zona Bavaro, Punta Cana":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 31.0,
+                                "7 - 21": 85.0,
+                                "22 - 33": 118.0,
+                                "34 - 45": 145.0,
+                                "46 - 54": 175.0,
+                                "55 - 59": 189.0
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 61.0,
+                                "7 - 21": 156.0,
+                                "22 - 33": 219.0,
+                                "34 - 45": 269.0,
+                                "46 - 54": 323.0,
+                                "55 - 59": 350.0
+                            }
+                        }
+                    }
+                },
+
+                "Hoteles en Uvero Alto":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 76.0,
+                                "7 - 21": 123.0,
+                                "22 - 33": 181.0,
+                                "34 - 45": 213.0,
+                                "46 - 54": 268.0,
+                                "55 - 59": 282.0
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 141,
+                                "7 - 21": 227,
+                                "22 - 33": 334.0,
+                                "34 - 45": 395,
+                                "46 - 54": 496.0,
+                                "55 - 59": 523.0
+                            }
+                        }
+                    }
+                },
+
+                "Hoteles en La Romana":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 113,
+                                "7 - 21": 189,
+                                "22 - 33": 257,
+                                "34 - 45": 310,
+                                "46 - 54": 327,
+                                "55 - 59": 340
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 209,
+                                "7 - 21": 350,
+                                "22 - 33": 476,
+                                "34 - 45": 572,
+                                "46 - 54": 605,
+                                "55 - 59": 630
+                            }
+                        }
+                    }
+                },
+
+                "San Pedro de Macorís":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": "Consultelo con el proveedor",
+                                "7 - 21": "Consultelo con el proveedor",
+                                "22 - 33": "Consultelo con el proveedor",
+                                "34 - 45": "Consultelo con el proveedor",
+                                "46 - 54": "Consultelo con el proveedor",
+                                "55 - 59": "Consultelo con el proveedor"
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": "Consultelo con el proveedor",
+                                "7 - 21": "Consultelo con el proveedor",
+                                "22 - 33": "Consultelo con el proveedor",
+                                "34 - 45": "Consultelo con el proveedor",
+                                "46 - 54": "Consultelo con el proveedor",
+                                "55 - 59": "Consultelo con el proveedor"
+                            }
+                        }
+                    }
+                },
+
+                "El Seibo":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": "Consultelo con el proveedor",
+                                "7 - 21": "Consultelo con el proveedor",
+                                "22 - 33": "Consultelo con el proveedor",
+                                "34 - 45": "Consultelo con el proveedor",
+                                "46 - 54": "Consultelo con el proveedor",
+                                "55 - 59": "Consultelo con el proveedor"
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": "Consultelo con el proveedor",
+                                "7 - 21": "Consultelo con el proveedor",
+                                "22 - 33": "Consultelo con el proveedor",
+                                "34 - 45": "Consultelo con el proveedor",
+                                "46 - 54": "Consultelo con el proveedor",
+                                "55 - 59": "Consultelo con el proveedor"
+                            }
+                        }
+                    }
+                },
+
+                "Boca Chica":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 145,
+                                "7 - 21": 247,
+                                "22 - 33": 303,
+                                "34 - 45": 396,
+                                "46 - 54": 492,
+                                "55 - 59": 505
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 270,
+                                "7 - 21": 408,
+                                "22 - 33": 559,
+                                "34 - 45": 751,
+                                "46 - 54": 909,
+                                "55 - 59": 933
+                            }
+                        }
+                    }
+                },
+
+                "Santo Domingo":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 154,
+                                "7 - 21": 260,
+                                "22 - 33": 324,
+                                "34 - 45": 462,
+                                "46 - 54": 572,
+                                "55 - 59": 585
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 284,
+                                "7 - 21": 482,
+                                "22 - 33": 601,
+                                "34 - 45": 852,
+                                "46 - 54": 1057,
+                                "55 - 59": 1082
+                            }
+                        }
+                    }
+                },
+
+                "Santiago":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 350,
+                                "7 - 21": 599,
+                                "22 - 33": 744,
+                            }
+                        }
+                    }
+                },
+                
+                "Samaná":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 395,
+                                "7 - 21": 666,
+                                "22 - 33": 827,
+                            }
+                        }
+                    }
+                },
+
+                "Puerto Plata":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 332,
+                                "7 - 21": 626,
+                                "22 - 33": 777,
+                                "34 - 45": 870,
+                                "46 - 54": 1042,
+                                "55 - 59": 1057
+                            }
+                        }
+                    }
+                },
+            }
+        },
     }
 }
 
