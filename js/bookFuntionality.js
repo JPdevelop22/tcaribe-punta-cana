@@ -162,12 +162,196 @@ const travels =
             "name-ES": "Aeropuerto Internacional de Punta Cana",
             "name-EN": "Punta Cana Internacional airport",
             "stops": [],
-            "destiny-ES": ["Hoteles de la zona Bavaro, Punta Cana", "Hoteles en Uvero Alto", "Hoteles en La Romana", "San Pedro de Macorís", "El Seibo", "Boca Chica", "Santo Domingo", "Santiago", "Samaná", "Puerto Plata"],
-            "destiny-EN": ["Hotels in Bavaro, Punta Cana area", "Hotels in Uvero Alto", "Hotels in La Romana", "San Pedro de Macorís", "El Seibo", "Boca Chica", "Santo Domingo", "Santiago", "Samaná", "Puerto Plata"],
+            "destiny-ES": ["Hoteles de la zona Bavaro, Punta Cana ", " Hoteles en Uvero Alto ", " Hoteles en La Romana ", " San Pedro de Macorís ", " El Seibo ", " Boca Chica ", " Santo Domingo ", " Santiago ", " Samaná ", " Puerto Plata"],
+            "destiny-EN": ["Hotels in Bavaro, Punta Cana area ", " Hotels in Uvero Alto ", " Hotels in La Romana ", " San Pedro de Macorís ", " El Seibo ", " Boca Chica ", " Santo Domingo ", " Santiago ", " Samaná ", " Puerto Plata"],
             "tracks": 2,
             "passengers": ["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"]			
         } 
     }
+}
+
+const excursionsES = 
+{
+    "Excursión Higüey":
+    {
+        "passengers":
+        {
+            "1 - 6": 99.0,
+            "7 - 21": 203.0,
+            "22 - 33": 257.0,
+            "34 - 45": 279.0,
+            "46 - 54": 312.0,
+            "55 - 59": 350.0
+        }
+    },
+
+    "Excursión Bayahíbe":
+    {
+        "passengers":
+        {
+            "1 - 6": 169.0,
+            "7 - 21": 303.0,
+            "22 - 33": 378.0,
+            "34 - 45": 410.0,
+            "46 - 54": 443.0,
+            "55 - 59": 452.0
+        }
+    },
+
+    "Excursión La Romana - Chavón":
+    {
+        "passengers":
+        {
+            "1 - 6": 184.0,
+            "7 - 21": 312.0,
+            "22 - 33": 389.0,
+            "34 - 45": 419.0,
+            "46 - 54": 456.0,
+            "55 - 59": 465.0
+        }
+    },
+
+    "Excursión La Romana - Cumayasa":
+    {
+        "passengers":
+        {
+            "1 - 6": 184.0,
+            "7 - 21": 312.0,
+            "22 - 33": 389.0,
+            "34 - 45": 419.0,
+            "46 - 54": 456.0,
+            "55 - 59": 465.0
+        }
+    },
+
+    "Excursión Santo Domingo":
+    {
+        "passengers":
+        {
+            "1 - 6": 240.0,
+            "7 - 21": 340.0,
+            "22 - 33": 487.0,
+            "34 - 45": 555.0,
+            "46 - 54": 670.0,
+            "55 - 59": 680.0
+        }
+    },
+
+    "Excursión Playa Esmeralda":
+    {
+        "passengers":
+        {
+            "1 - 6": 240.0,
+            "7 - 21": 340.0,
+            "22 - 33": 487.0,
+            "34 - 45": 555.0,
+            "46 - 54": 670.0,
+            "55 - 59": 680.0
+        }
+    },
+
+    "Excursión Boca del Diablo":
+    {
+        "passengers":
+        {
+            "1 - 6": 238.0,
+            "7 - 21": 358.0,
+            "22 - 33": 507.0,
+            "34 - 45": 558.0,
+            "46 - 54": 675.0,
+            "55 - 59": 689.0
+        }
+    },
+
+    "Excursión Sabana de la Mar":
+    {
+        "passengers":
+        {
+            "1 - 6": 257.0,
+            "7 - 21": 358.0,
+            "22 - 33": 507.0,
+            "34 - 45": 558.0,
+            "46 - 54": 675.0,
+            "55 - 59": 689.0
+        }
+    },
+
+    "Excursión Boca de Yuma":
+    {
+        "passengers":
+        {
+            "1 - 6": 169.0,
+            "7 - 21": 303.0,
+            "22 - 33": 378.0,
+            "34 - 45": 410.0,
+            "46 - 54": 443.0,
+            "55 - 59": 452.0
+        }
+    },
+
+    "Excursión Tres Ciudades":
+    {
+        "passengers":
+        {
+            "1 - 6": 248.0,
+            "7 - 21": 372.0,
+            "22 - 33": 498.0,
+            "34 - 45": 568.0,
+            "46 - 54": 680.0,
+            "55 - 59": 716.0
+        }
+    },
+
+    "Full day Zone":
+    {
+        "passengers":
+        {
+            "1 - 6": 168.0,
+            "7 - 21": 298.0,
+            "22 - 33": 372.0,
+            "34 - 45": 410.0,
+            "46 - 54": 447.0,
+            "55 - 59": 456.0
+        }
+    },
+
+    "Shopping trours Bavaro":
+    {
+        "passengers":
+        {
+            "1 - 6": 69.0,
+            "7 - 21": 181.0,
+            "22 - 33": 251.0,
+            "34 - 45": 289.0,
+            "46 - 54": 331.0,
+            "55 - 59": 372.0
+        }
+    },
+
+    "Bus a disposición de 1 - 4 horas":
+    {
+        "passengers":
+        {
+            "1 - 6": 84.0,
+        }
+    },
+
+    "Bus a disposición de 4 - 8 horas":
+    {
+        "passengers":
+        {
+            "1 - 6": 168.0,
+        }
+    },
+
+    "Excursiones en la zona Bavaro, Punta Cana (1 - 3 horas)": {},
+    "Excursiones en la zona Bavaro, Punta Cana (4 - 5 horas)": {},
+    "Excursiones en la zona Bavaro, Punta Cana (6 - 8 horas)": {},
+    "Excursiones Montaña redonda (4 - 5 horas)": {},
+    "Excursiones en Saona y Alto Chavón": {},
+    "Excursión a Santiago": {},
+    "Excursión a Samaná": {},
+    "Excursión a Puerto Plata": {},
 }
 
 const pricesEs = 
@@ -237,10 +421,10 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 141,
-                                "7 - 21": 227,
+                                "1 - 6": 141.0,
+                                "7 - 21": 227.0,
                                 "22 - 33": 334.0,
-                                "34 - 45": 395,
+                                "34 - 45": 395.0,
                                 "46 - 54": 496.0,
                                 "55 - 59": 523.0
                             }
@@ -256,12 +440,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 124,
-                                "7 - 21": 209,
-                                "22 - 33": 283,
-                                "34 - 45": 340,
-                                "46 - 54": 359,
-                                "55 - 59": 374
+                                "1 - 6": 124.0,
+                                "7 - 21": 209.0,
+                                "22 - 33": 283.0,
+                                "34 - 45": 340.0,
+                                "46 - 54": 359.0,
+                                "55 - 59": 374.0
                             }
                         },
                         
@@ -269,12 +453,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 231,
-                                "7 - 21": 385,
-                                "22 - 33": 524,
-                                "34 - 45": 630,
-                                "46 - 54": 685,
-                                "55 - 59": 693
+                                "1 - 6": 231.0,
+                                "7 - 21": 385.0,
+                                "22 - 33": 524.0,
+                                "34 - 45": 630.0,
+                                "46 - 54": 685.0,
+                                "55 - 59": 693.0
                             }
                         }
                     }
@@ -288,12 +472,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 168,
-                                "7 - 21": 287,
-                                "22 - 33": 358,
-                                "34 - 45": 508,
-                                "46 - 54": 629,
-                                "55 - 59": 642
+                                "1 - 6": 168.0,
+                                "7 - 21": 287.0,
+                                "22 - 33": 358.0,
+                                "34 - 45": 508.0,
+                                "46 - 54": 629.0,
+                                "55 - 59": 642.0
                             }
                         },
                         
@@ -301,12 +485,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 313,
-                                "7 - 21": 530,
-                                "22 - 33": 661,
-                                "34 - 45": 940,
-                                "46 - 54": 1162,
-                                "55 - 59": 1188
+                                "1 - 6": 313.0,
+                                "7 - 21": 530.0,
+                                "22 - 33": 661.0,
+                                "34 - 45": 940.0,
+                                "46 - 54": 1162.0,
+                                "55 - 59": 1188.0
                             }
                         }
                     }
@@ -326,12 +510,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 76,
-                                "7 - 21": 123,
-                                "22 - 33": 181,
-                                "34 - 45": 213,
-                                "46 - 54": 268,
-                                "55 - 59": 282
+                                "1 - 6": 76.0,
+                                "7 - 21": 123.0,
+                                "22 - 33": 181.0,
+                                "34 - 45": 213.0,
+                                "46 - 54": 268.0,
+                                "55 - 59": 282.0
                             }
                         },
                         
@@ -339,12 +523,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 141,
-                                "7 - 21": 227,
-                                "22 - 33": 334,
-                                "34 - 45": 395,
-                                "46 - 54": 496,
-                                "55 - 59": 523
+                                "1 - 6": 141.0,
+                                "7 - 21": 227.0,
+                                "22 - 33": 334.0,
+                                "34 - 45": 395.0,
+                                "46 - 54": 496.0,
+                                "55 - 59": 523.0
                             }
                         }
                     }
@@ -364,12 +548,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 113,
-                                "7 - 21": 189,
-                                "22 - 33": 257,
-                                "34 - 45": 310,
-                                "46 - 54": 327,
-                                "55 - 59": 340
+                                "1 - 6": 113.0,
+                                "7 - 21": 189.0,
+                                "22 - 33": 257.0,
+                                "34 - 45": 310.0,
+                                "46 - 54": 327.0,
+                                "55 - 59": 340.0
                             }
                         },
                         
@@ -377,12 +561,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 209,
-                                "7 - 21": 350,
-                                "22 - 33": 476,
-                                "34 - 45": 572,
-                                "46 - 54": 605,
-                                "55 - 59": 630
+                                "1 - 6": 209.0,
+                                "7 - 21": 350.0,
+                                "22 - 33": 476.0,
+                                "34 - 45": 572.0,
+                                "46 - 54": 605.0,
+                                "55 - 59": 630.0
                             }
                         }
                     }
@@ -402,12 +586,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 113,
-                                "7 - 21": 189,
-                                "22 - 33": 257,
-                                "34 - 45": 310,
-                                "46 - 54": 327,
-                                "55 - 59": 340
+                                "1 - 6": 113.0,
+                                "7 - 21": 189.0,
+                                "22 - 33": 257.0,
+                                "34 - 45": 310.0,
+                                "46 - 54": 327.0,
+                                "55 - 59": 340.0
                             }
                         },
                         
@@ -415,12 +599,50 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 209,
-                                "7 - 21": 350,
-                                "22 - 33": 476,
-                                "34 - 45": 572,
-                                "46 - 54": 605,
-                                "55 - 59": 630
+                                "1 - 6": 209.0,
+                                "7 - 21": 350.0,
+                                "22 - 33": 476.0,
+                                "34 - 45": 572.0,
+                                "46 - 54": 605.0,
+                                "55 - 59": 630.0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "Hoteles en Santana Play.n":
+        {
+            "destiny":
+            {
+                "PUJ":
+                {
+                    "tracks":
+                    {
+                        1: 
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 129.0,
+                                "7 - 21": 219.0,
+                                "22 - 33": 267.0,
+                                "34 - 45": 350.0,
+                                "46 - 54": 433.0,
+                                "55 - 59": 445.0
+                            }
+                        },
+                        
+                        2:
+                        {
+                            "passengers":
+                            {
+                                "1 - 6": 238.0,
+                                "7 - 21": 404.0,
+                                "22 - 33": 497.0,
+                                "34 - 45": 647.0,
+                                "46 - 54": 800.0,
+                                "55 - 59": 823.0
                             }
                         }
                     }
@@ -440,12 +662,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 129,
-                                "7 - 21": 219,
-                                "22 - 33": 267,
-                                "34 - 45": 350,
-                                "46 - 54": 433,
-                                "55 - 59": 445
+                                "1 - 6": 143.0,
+                                "7 - 21": 243.0,
+                                "22 - 33": 297.0,
+                                "34 - 45": 388.0,
+                                "46 - 54": 481.0,
+                                "55 - 59": 494.0
                             }
                         },
                         
@@ -453,12 +675,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 238,
-                                "7 - 21": 404,
-                                "22 - 33": 497,
-                                "34 - 45": 647,
-                                "46 - 54": 800,
-                                "55 - 59": 823
+                                "1 - 6": 264.0,
+                                "7 - 21": 448.0,
+                                "22 - 33": 548.0,
+                                "34 - 45": 719.0,
+                                "46 - 54": 890.0,
+                                "55 - 59": 916.0
                             }
                         }
                     }
@@ -478,12 +700,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 145,
-                                "7 - 21": 247,
-                                "22 - 33": 303,
-                                "34 - 45": 396,
-                                "46 - 54": 492,
-                                "55 - 59": 505
+                                "1 - 6": 145.0,
+                                "7 - 21": 247.0,
+                                "22 - 33": 303.0,
+                                "34 - 45": 396.0,
+                                "46 - 54": 492.0,
+                                "55 - 59": 505.0
                             }
                         },
                         
@@ -491,12 +713,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 270,
-                                "7 - 21": 408,
-                                "22 - 33": 559,
-                                "34 - 45": 751,
-                                "46 - 54": 909,
-                                "55 - 59": 933
+                                "1 - 6": 270.0,
+                                "7 - 21": 408.0,
+                                "22 - 33": 559.0,
+                                "34 - 45": 751.0,
+                                "46 - 54": 909.0,
+                                "55 - 59": 933.0
                             }
                         }
                     }
@@ -516,12 +738,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 154,
-                                "7 - 21": 260,
-                                "22 - 33": 324,
-                                "34 - 45": 462,
-                                "46 - 54": 572,
-                                "55 - 59": 585
+                                "1 - 6": 154.0,
+                                "7 - 21": 260.0,
+                                "22 - 33": 324.0,
+                                "34 - 45": 462.0,
+                                "46 - 54": 572.0,
+                                "55 - 59": 585.0
                             }
                         },
                         
@@ -529,12 +751,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 284,
-                                "7 - 21": 482,
-                                "22 - 33": 601,
-                                "34 - 45": 852,
-                                "46 - 54": 1057,
-                                "55 - 59": 1082
+                                "1 - 6": 284.0,
+                                "7 - 21": 482.0,
+                                "22 - 33": 601.0,
+                                "34 - 45": 852.0,
+                                "46 - 54": 1057.0,
+                                "55 - 59": 1082.0
                             }
                         }
                     }
@@ -554,9 +776,9 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 350,
-                                "7 - 21": 599,
-                                "22 - 33": 744,
+                                "1 - 6": 350.0,
+                                "7 - 21": 599.0,
+                                "22 - 33": 744.0,
                             }
                         }
                     }
@@ -576,12 +798,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 332,
-                                "7 - 21": 626,
-                                "22 - 33": 777,
-                                "34 - 45": 870,
-                                "46 - 54": 1042,
-                                "55 - 59": 1057
+                                "1 - 6": 332.0,
+                                "7 - 21": 626.0,
+                                "22 - 33": 777.0,
+                                "34 - 45": 870.0,
+                                "46 - 54": 1042.0,
+                                "55 - 59": 1057.0
                             }
                         }
                     }
@@ -601,9 +823,9 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 395,
-                                "7 - 21": 666,
-                                "22 - 33": 827,
+                                "1 - 6": 395.0,
+                                "7 - 21": 666.0,
+                                "22 - 33": 827.0,
                             }
                         }
                     }
@@ -623,12 +845,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 154,
-                                "7 - 21": 260,
-                                "22 - 33": 324,
-                                "34 - 45": 484,
-                                "46 - 54": 629,
-                                "55 - 59": 633
+                                "1 - 6": 154.0,
+                                "7 - 21": 260.0,
+                                "22 - 33": 324.0,
+                                "34 - 45": 484.0,
+                                "46 - 54": 629.0,
+                                "55 - 59": 633.0
                             }
                         },
                         
@@ -636,12 +858,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 284,
-                                "7 - 21": 482,
-                                "22 - 33": 601,
-                                "34 - 45": 896,
-                                "46 - 54": 1162,
-                                "55 - 59": 1170
+                                "1 - 6": 284.0,
+                                "7 - 21": 482.0,
+                                "22 - 33": 601.0,
+                                "34 - 45": 896.0,
+                                "46 - 54": 1162.0,
+                                "55 - 59": 1170.0
                             }
                         }
                     }
@@ -706,10 +928,10 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 141,
-                                "7 - 21": 227,
+                                "1 - 6": 141.0,
+                                "7 - 21": 227.0,
                                 "22 - 33": 334.0,
-                                "34 - 45": 395,
+                                "34 - 45": 395.0,
                                 "46 - 54": 496.0,
                                 "55 - 59": 523.0
                             }
@@ -725,12 +947,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 113,
-                                "7 - 21": 189,
-                                "22 - 33": 257,
-                                "34 - 45": 310,
-                                "46 - 54": 327,
-                                "55 - 59": 340
+                                "1 - 6": 113.0,
+                                "7 - 21": 189.0,
+                                "22 - 33": 257.0,
+                                "34 - 45": 310.0,
+                                "46 - 54": 327.0,
+                                "55 - 59": 340.0
                             }
                         },
                         
@@ -738,80 +960,80 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 209,
-                                "7 - 21": 350,
-                                "22 - 33": 476,
-                                "34 - 45": 572,
-                                "46 - 54": 605,
-                                "55 - 59": 630
+                                "1 - 6": 209.0,
+                                "7 - 21": 350.0,
+                                "22 - 33": 476.0,
+                                "34 - 45": 572.0,
+                                "46 - 54": 605.0,
+                                "55 - 59": 630.0
                             }
                         }
                     }
                 },
 
-                "San Pedro de Macorís":
-                {
-                    "tracks":
-                    {
-                        1: 
-                        {
-                            "passengers":
-                            {
-                                "1 - 6": "Consultelo con el proveedor",
-                                "7 - 21": "Consultelo con el proveedor",
-                                "22 - 33": "Consultelo con el proveedor",
-                                "34 - 45": "Consultelo con el proveedor",
-                                "46 - 54": "Consultelo con el proveedor",
-                                "55 - 59": "Consultelo con el proveedor"
-                            }
-                        },
+                // "San Pedro de Macorís":
+                // {
+                //     "tracks":
+                //     {
+                //         1: 
+                //         {
+                //             "passengers":
+                //             {
+                //                 "1 - 6": "Consultelo con el proveedor",
+                //                 "7 - 21": "Consultelo con el proveedor",
+                //                 "22 - 33": "Consultelo con el proveedor",
+                //                 "34 - 45": "Consultelo con el proveedor",
+                //                 "46 - 54": "Consultelo con el proveedor",
+                //                 "55 - 59": "Consultelo con el proveedor"
+                //             }
+                //         },
                         
-                        2:
-                        {
-                            "passengers":
-                            {
-                                "1 - 6": "Consultelo con el proveedor",
-                                "7 - 21": "Consultelo con el proveedor",
-                                "22 - 33": "Consultelo con el proveedor",
-                                "34 - 45": "Consultelo con el proveedor",
-                                "46 - 54": "Consultelo con el proveedor",
-                                "55 - 59": "Consultelo con el proveedor"
-                            }
-                        }
-                    }
-                },
+                //         2:
+                //         {
+                //             "passengers":
+                //             {
+                //                 "1 - 6": "Consultelo con el proveedor",
+                //                 "7 - 21": "Consultelo con el proveedor",
+                //                 "22 - 33": "Consultelo con el proveedor",
+                //                 "34 - 45": "Consultelo con el proveedor",
+                //                 "46 - 54": "Consultelo con el proveedor",
+                //                 "55 - 59": "Consultelo con el proveedor"
+                //             }
+                //         }
+                //     }
+                // },
 
-                "El Seibo":
-                {
-                    "tracks":
-                    {
-                        1: 
-                        {
-                            "passengers":
-                            {
-                                "1 - 6": "Consultelo con el proveedor",
-                                "7 - 21": "Consultelo con el proveedor",
-                                "22 - 33": "Consultelo con el proveedor",
-                                "34 - 45": "Consultelo con el proveedor",
-                                "46 - 54": "Consultelo con el proveedor",
-                                "55 - 59": "Consultelo con el proveedor"
-                            }
-                        },
+                // "El Seibo":
+                // {
+                //     "tracks":
+                //     {
+                //         1: 
+                //         {
+                //             "passengers":
+                //             {
+                //                 "1 - 6": "Consultelo con el proveedor",
+                //                 "7 - 21": "Consultelo con el proveedor",
+                //                 "22 - 33": "Consultelo con el proveedor",
+                //                 "34 - 45": "Consultelo con el proveedor",
+                //                 "46 - 54": "Consultelo con el proveedor",
+                //                 "55 - 59": "Consultelo con el proveedor"
+                //             }
+                //         },
                         
-                        2:
-                        {
-                            "passengers":
-                            {
-                                "1 - 6": "Consultelo con el proveedor",
-                                "7 - 21": "Consultelo con el proveedor",
-                                "22 - 33": "Consultelo con el proveedor",
-                                "34 - 45": "Consultelo con el proveedor",
-                                "46 - 54": "Consultelo con el proveedor",
-                                "55 - 59": "Consultelo con el proveedor"
-                            }
-                        }
-                    }
-                },
+                //         2:
+                //         {
+                //             "passengers":
+                //             {
+                //                 "1 - 6": "Consultelo con el proveedor",
+                //                 "7 - 21": "Consultelo con el proveedor",
+                //                 "22 - 33": "Consultelo con el proveedor",
+                //                 "34 - 45": "Consultelo con el proveedor",
+                //                 "46 - 54": "Consultelo con el proveedor",
+                //                 "55 - 59": "Consultelo con el proveedor"
+                //             }
+                //         }
+                //     }
+                // },
 
                 "Boca Chica":
                 {
@@ -821,12 +1043,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 145,
-                                "7 - 21": 247,
-                                "22 - 33": 303,
-                                "34 - 45": 396,
-                                "46 - 54": 492,
-                                "55 - 59": 505
+                                "1 - 6": 145.0,
+                                "7 - 21": 247.0,
+                                "22 - 33": 303.0,
+                                "34 - 45": 396.0,
+                                "46 - 54": 492.0,
+                                "55 - 59": 505.0
                             }
                         },
                         
@@ -834,12 +1056,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 270,
-                                "7 - 21": 408,
-                                "22 - 33": 559,
-                                "34 - 45": 751,
-                                "46 - 54": 909,
-                                "55 - 59": 933
+                                "1 - 6": 270.0,
+                                "7 - 21": 408.0,
+                                "22 - 33": 559.0,
+                                "34 - 45": 751.0,
+                                "46 - 54": 909.0,
+                                "55 - 59": 933.0
                             }
                         }
                     }
@@ -853,12 +1075,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 154,
-                                "7 - 21": 260,
-                                "22 - 33": 324,
-                                "34 - 45": 462,
-                                "46 - 54": 572,
-                                "55 - 59": 585
+                                "1 - 6": 154.0,
+                                "7 - 21": 260.0,
+                                "22 - 33": 324.0,
+                                "34 - 45": 462.0,
+                                "46 - 54": 572.0,
+                                "55 - 59": 585.0
                             }
                         },
                         
@@ -866,12 +1088,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 284,
-                                "7 - 21": 482,
-                                "22 - 33": 601,
-                                "34 - 45": 852,
-                                "46 - 54": 1057,
-                                "55 - 59": 1082
+                                "1 - 6": 284.0,
+                                "7 - 21": 482.0,
+                                "22 - 33": 601.0,
+                                "34 - 45": 852.0,
+                                "46 - 54": 1057.0,
+                                "55 - 59": 1082.0
                             }
                         }
                     }
@@ -885,9 +1107,9 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 350,
-                                "7 - 21": 599,
-                                "22 - 33": 744,
+                                "1 - 6": 350.0,
+                                "7 - 21": 599.0,
+                                "22 - 33": 744.0,
                             }
                         }
                     }
@@ -901,9 +1123,9 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 395,
-                                "7 - 21": 666,
-                                "22 - 33": 827,
+                                "1 - 6": 395.0,
+                                "7 - 21": 666.0,
+                                "22 - 33": 827.0,
                             }
                         }
                     }
@@ -917,12 +1139,12 @@ const pricesEs =
                         {
                             "passengers":
                             {
-                                "1 - 6": 332,
-                                "7 - 21": 626,
-                                "22 - 33": 777,
-                                "34 - 45": 870,
-                                "46 - 54": 1042,
-                                "55 - 59": 1057
+                                "1 - 6": 332.0,
+                                "7 - 21": 626.0,
+                                "22 - 33": 777.0,
+                                "34 - 45": 870.0,
+                                "46 - 54": 1042.0,
+                                "55 - 59": 1057.0
                             }
                         }
                     }
@@ -950,9 +1172,31 @@ const drawPickupsSelect = (pickups) => {
     })
 }
 
+const drawExcursions = (excursions) => {
+    $("#excursionContainer").html(
+        '<label for="excursions">Excursiones</label>' +
+        '<select name="excursions" id="excursions" required>' +
+            '<option value=""></option>' +
+        '</select>'        
+    )
+
+    excursions.forEach((excursion) => {
+        let optionValue = excursion + " . "
+        try {
+            optionValue += Object.keys(excursionsES[excursion].passengers)
+        } catch (error) {
+            optionValue += ''
+        }
+
+        $('#excursions').append(
+            `<option value="${optionValue}">${excursion}</option>`
+        )
+    })
+}
+
 const drawTracksSelect = (tracks) => {
     $("#tracksContainer").html(
-        '<label for="tracks">Punto de recogida</label>' +
+        '<label for="tracks">Vias</label>' +
         '<select name="tracks" id="tracks" required>' +
             '<option value="1">1 via</option>' +
         '</select>'        
@@ -1000,25 +1244,44 @@ const drawDestinySelect = (destinies) => {
 }
 
 const drawPassengersSelect = (passgersCount) => {
-    $("#passengersContainer").html(
-        '<label for="passengers">Pasajeros</label>' +
-        '<select name="passengers" id="passengers" required>' +
-            '<option value=""></option>' +
-        '</select>'        
-    )
-
-    passgersCount.forEach(passengers => {
-        $('#passengers').append(
-            `<option value="${passengers}">De ${passengers} pasajeros</option>`
+    if (passgersCount[0]) {
+        $("#passengersContainer").html(
+            '<label for="passengers">Pasajeros</label>' +
+            '<select name="passengers" id="passengers" required>' +
+                '<option value=""></option>' +
+            '</select>'        
         )
-    })
+
+        passgersCount.forEach(passengers => {
+            $('#passengers').append(
+                `<option value="${passengers}">De ${passengers} pasajeros</option>`
+            )
+        })
+    } else {
+        $("#passengersContainer").html(
+            '<p class="txt-info">El numero de pasajeros lo tiene que consultar con su proveedor</p>'
+        )
+    }
 }
 
 $(document).ready(() => {
     $('#bookType').on('change', (e) => {
         if (e.target.value === 'viaje turistico') {
             drawPickupsSelect(pickups)
+            $('#excursionContainer').empty()
+            $('#passengersContainer').empty()
+            $('#priceContainer').empty()
+        } else if (e.target.value === 'excursion') {
+            drawExcursions(Object.keys(excursionsES))
+            $('#startContainer').empty()
+            $('#stopContainer').empty()
+            $('#destinyContainer').empty()
+            $('#tracksContainer').empty()
+            $('#passengersContainer').empty()
+            $('#priceContainer').empty()
+
         }
+
         console.log("changing...")
     })
     
@@ -1034,37 +1297,75 @@ $(document).ready(() => {
         }
 
         console.log(destiny)
-        drawDestinySelect(destiny.split(","))
+        drawDestinySelect(destiny.split(" , "))
 
         console.log(passengers)
         drawPassengersSelect(passengers.split(","))
+
+        $('#priceContainer').empty()
+    })
+
+    $('#excursionContainer').on('change', '#excursions', (e) => {
+        const [ _, passegers ] = e.target.value.split(' . ') 
+        const passegersArr = passegers.split(',')
+        $('#priceContainer').empty()
+        drawPassengersSelect(passegersArr)
     })
 
     $('#bookForm').on('submit', (e) => {
         e.preventDefault()
+        const { 
+            bookType, 
+            tracks,
+            excursions, 
+            pickUpPoints,
+            stops, 
+            destinies, 
+            bookDate, 
+            passengers
+        } = e.target
 
-        let message
-        if (e.target.stops) {
-            message = 
-                e.target.bookType.value + ' | ' +
-                e.target.tracks.value + ' | ' +
-                e.target.pickUpPoints.value + ' | ' +
-                e.target.stops.value + ' | ' +
-                e.target.destinies.value + ' | ' +
-                e.target.bookDate.value + ' | ' +
-                e.target.passengers.value
-        } else {
-            message = 
-                e.target.bookType.value + ' | ' +
-                e.target.tracks.value + ' | ' +
-                e.target.pickUpPoints.value + ' | ' +
-                e.target.destinies.value + ' | ' +
-                e.target.bookDate.value + ' | ' +
-                e.target.passengers.value
+        if (bookType.value === "viaje turistico") {
+
+            const pickup = pickUpPoints.value.split(' . ')[0]
+    
+            console.log(bookType.value + ' | ' + tracks.value + ' | ' + pickup + ' | ' + 
+                        (stops || 'no stop') + ' | ' + destinies.value + ' | ' + bookDate.value + ' | ' + 
+                        passengers.value)
+    
+            try {
+                const totalPrice = 
+                                pricesEs
+                                .pickups[pickup]
+                                .destiny[destinies.value]
+                                .tracks[tracks.value]
+                                .passengers[passengers.value]
+                
+                $('#priceContainer').html(
+                    `<p class="txt-info">Precio total: ${totalPrice}$</p>`
+                )
+            } catch(error) {
+                $('#priceContainer').html(
+                    '<p class="txt-info">Precio total: Consultelo con la empresa</p>'
+                )
+            }
+        } else if (bookType.value === "excursion"){
+            try {
+                console.log(excursions.value + '\n' + passengers.value)
+
+                const totalPrice = 
+                                excursionsES[excursions.value.split(" . ")[0]]
+                                .passengers[passengers.value]
+                
+                $('#priceContainer').html(
+                    `<p class="txt-info">Precio total: ${totalPrice}$</p>`
+                )
+            } catch(error) {
+                $('#priceContainer').html(
+                    '<p class="txt-info">Precio total: Consultelo con la empresa</p>'
+                )
+            }
         }
-
-        console.log(message)
     })
-
 })
 
