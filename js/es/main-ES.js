@@ -19,7 +19,7 @@ $(document).ready(() => {
                 break;
         
             case bookTypesArr[1]:
-                drawSelectExcursions(Object.keys(excursions), excursions)
+                drawSelectExcursions(Object.keys(excursions))
                 emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
                 break;
             
@@ -70,23 +70,21 @@ $(document).ready(() => {
 
         switch (bookType) {
             case bookTypesArr[0]:
-                if(!selectStops) {
-                    try {
-                        totalPrice = prices["pickup locations"]
-                                        [selectPickupLocations.value]
-                                        .destiny[selectDestinies.value]
-                                        .tracks[tracks.value]
-                                        ["passengers ranges"][selectPassengers.value]
-                        $("#totalPriceContainer").html(
-                            `<p>Precio a pagar: ${totalPrice}$</p>`
-                        )
-                    } catch (error) {
-                        $("#totalPriceContainer").html(
-                            `<p>Consulte el precio con la empresa</p>`
-                        )
-                    }
-                }    
-
+                try {
+                    console.debug(selectPickupLocations.value.split(' . ')[0])
+                    totalPrice = prices["pickup locations"]
+                                    [selectPickupLocations.value.split(' . ')[0]]
+                                    .destiny[selectDestinies.value]
+                                    .tracks[tracks.value]
+                                    ["passengers ranges"][selectPassengers.value]
+                    $("#totalPriceContainer").html(
+                        `<p>Precio a pagar: ${totalPrice}$</p>`
+                    )
+                } catch (error) {
+                    $("#totalPriceContainer").html(
+                        `<p>Consulte el precio con la empresa</p>`
+                    )
+                }
                 break;
         
             case bookTypesArr[1]:

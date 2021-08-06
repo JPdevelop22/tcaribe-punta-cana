@@ -21,7 +21,7 @@ const drawPickupsLocationSelect = (pickupLocations) => {
     })
 }
 
-const drawSelectExcursions = (excursions, excursionsObject) => {
+const drawSelectExcursions = (excursionNames) => {
     $("#excursionContainer").html(
         '<label for="selectExcursions">Excursiones</label>' +
         '<select name="excursions" id="selectExcursions" required>' +
@@ -29,14 +29,14 @@ const drawSelectExcursions = (excursions, excursionsObject) => {
         '</select>'        
     )
 
-    excursions.forEach((excursion) => {
-        let optionValue = excursion + optionSeparator
+    excursionNames.forEach((excursionName) => {
+        let optionValue = excursionName + optionSeparator
         try {
-            optionValue += Object.keys(excursionsObject[excursion]["passengers ranges"])
+            optionValue += Object.keys(excursions[excursionName]["passengers ranges"])
         } catch (_) {}
 
         $('#selectExcursions').append(
-            `<option value="${optionValue}">${excursion}</option>`
+            `<option value="${optionValue}">${excursionName}</option>`
         )
     })
 }
