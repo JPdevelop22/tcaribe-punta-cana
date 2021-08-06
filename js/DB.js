@@ -1,3 +1,4 @@
+const DB = 
 { 
     "travels":
     {

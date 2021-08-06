@@ -13,8 +13,9 @@ const drawPickupsLocationSelect = (pickupLocations) => {
     )
 
     pickupLocations.forEach((location) => {
-        let optionValue = `${location["name-ES"]} . ${location["stops"]} . ${location["destiny-ES"]} . ${location["tracks"]} . ${location["passengers"]}`
-        $('#pickUpPoints').append(
+        console.log(location)
+        let optionValue = `${location["name-ES"]} . ${location["stops"]} . ${location["destinies-ES"]} . ${location["tracks"]} . ${location["passengers ranges"]}`
+        $('#selectPickupLocations').append(
             `<option value="${optionValue}">${location["name-ES"]}</option>`
         )
     })
@@ -22,7 +23,7 @@ const drawPickupsLocationSelect = (pickupLocations) => {
 
 const drawSelectExcursions = (excursions, excursionsObject) => {
     $("#excursionContainer").html(
-        '<label for="excursions">Excursiones</label>' +
+        '<label for="selectExcursions">Excursiones</label>' +
         '<select name="excursions" id="selectExcursions" required>' +
             '<option value=""></option>' +
         '</select>'        
@@ -34,7 +35,7 @@ const drawSelectExcursions = (excursions, excursionsObject) => {
             optionValue += Object.keys(excursionsObject[excursion]["passengers ranges"])
         } catch (_) {}
 
-        $('#excursions').append(
+        $('#selectExcursions').append(
             `<option value="${optionValue}">${excursion}</option>`
         )
     })
@@ -60,13 +61,13 @@ const drawTracksSelect = (tracks) => {
 const drawStopsSelect = (stops) => {
     $("#stopsContainer").html(
         '<label for="stops">Punto de parada</label>' +
-        '<select name="stops" id="stops" required>' +
+        '<select name="stops" id="selectStops" required>' +
             '<option value=""></option>' +
         '</select>'        
     )
 
     stops.forEach(stop => {
-        $('#stops').append(
+        $('#selectStops').append(
             `<option value="${stop}">${stop}</option>`
         )
     })
@@ -75,13 +76,13 @@ const drawStopsSelect = (stops) => {
 const drawDestinySelect = (destinies) => {
     $("#destiniesContainer").html(
         '<label for="destinies">Destino</label>' +
-        '<select name="destinies" id="destinies" required>' +
+        '<select name="destinies" id="selectDestinies" required>' +
             '<option value=""></option>' +
         '</select>'        
         )
         
     destinies.forEach(destiny => {
-        $('#destinies').append(
+        $('#selectDestinies').append(
             `<option value="${destiny}">${destiny}</option>`
         )
     })
@@ -91,13 +92,13 @@ const drawPassengersSelect = (passgersCount) => {
     if (passgersCount[0]) {
         $("#passengersContainer").html(
             '<label for="passengers">Pasajeros</label>' +
-            '<select name="passengers" id="passengers" required>' +
+            '<select name="passengers" id="selectPassengers" required>' +
                 '<option value=""></option>' +
             '</select>'        
         )
 
         passgersCount.forEach(passengers => {
-            $('#passengers').append(
+            $('#selectPassengers').append(
                 `<option value="${passengers}">De ${passengers} pasajeros</option>`
             )
         })

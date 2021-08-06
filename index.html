@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- #region Book functionality dependencies-->
+    <!-- #region Dependencias de la funcionalidad de la reservación-->
     <script    
         src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous">
     </script>
 
+    <script src="./js/DB.js"></script>
     <script src="./js/es/bookUtitlityFuncitons-ES.js"></script>
     <script src="./js/es/main-ES.js"></script>
     <!-- #endregion -->    
@@ -21,5 +22,71 @@
 </head>
 <body>
     
+    <!-- #region Cabecera de la pagina-->
+    <nav>
+        <div>
+            <div class="navbar-brand-logo"> <!-- Aparatado de la zona del logo de la marca -->
+                <img src="./res/img/brand-logo.png" alt="Logo de la marca">
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">Booking</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region Seccion de Reservacion -->
+    <section>
+        <div> <!-- Apartado del titulo de la reservacion -->
+            <title>
+                Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
+                Hoteld Hard Rock, Punta Cana
+            </title>
+        </div>  
+
+        <div class="book-container">
+            <div>
+                <form id="formBook">
+                    
+                    <select name="tipo de reservacion" id="selectBookType">
+                        <option value=""></option>
+                        <option value="Viaje turístico">Viaje turístico</option>
+                        <option value="Excursión">Excursión</option>
+                    </select>
+
+                    <div id="tracksContainer"></div>
+
+                    <div id="excursionContainer"></div>
+                    <div id="pickupLocationsContainer"></div>
+
+                    <div id="stopsContainer"></div>
+
+                    <div id="destiniesContainer"></div>
+
+                    <div id="passengersContainer"></div>
+
+                    <button id="btnWaMe" type="submit">Hacer reservacion</button>
+                </form>
+
+                <div id="totalPriceContainer"></div>
+            </div>
+            <div class="map">
+
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
