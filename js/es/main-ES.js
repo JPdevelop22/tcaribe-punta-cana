@@ -30,26 +30,26 @@ $(document).ready(() => {
 
     // On select excursion changing event handler 
     $("#excursionContainer").on('change', "#selectExcursions", evt => {
-        const [ _, passegers ] = evt.target.value.split(' . ') 
-        const passegersArr = passegers.split(',')
+        const [ _, passegers ] = evt.target.value.split(optionValueSeparator) 
+        const passegersArr = passegers.split(arraySeparator)
         drawPassengersSelect(passegersArr)
     })
 
     // On select pickup locations changing event handler 
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
-        const [name, stops, destiny, tracks, passengers] = evt.target.value.split(' . ')
+        const [name, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
         console.debug("On selectPickupLocations change")
         drawTracksSelect(tracks)
 
         if (stops) {
-            drawStopsSelect(stops.split(","))
+            drawStopsSelect(stops.split(arraySeparator))
         } else {
             emptyContainers(['stopsContainer'])
         }
 
-        drawDestinySelect(destiny.split(" , "))
+        drawDestinySelect(destiny.split(arraySeparator2))
 
-        drawPassengersSelect(passengers.split(","))
+        drawPassengersSelect(passengers.split(arraySeparator))
 
         emptyContainers(['totalPriceContainer'])
     })
@@ -71,9 +71,9 @@ $(document).ready(() => {
         switch (bookType) {
             case bookTypesArr[0]:
                 try {
-                    console.debug(selectPickupLocations.value.split(' . ')[0])
+                    console.debug(selectPickupLocations.value.split(optionValueSeparator)[0])
                     totalPrice = prices["pickup locations"]
-                                    [selectPickupLocations.value.split(' . ')[0]]
+                                    [selectPickupLocations.value.split(optionValueSeparator)[0]]
                                     .destiny[selectDestinies.value]
                                     .tracks[tracks.value]
                                     ["passengers ranges"][selectPassengers.value]

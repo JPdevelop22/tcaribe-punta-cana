@@ -1,5 +1,5 @@
 // Separators for the data in string shape 
-const optionSeparator = ' . '
+const optionValueSeparator = ' . '
 const arraySeparator = ','
 const arraySeparator2 = ' , ' 
 
@@ -30,7 +30,7 @@ const drawSelectExcursions = (excursionNames) => {
     )
 
     excursionNames.forEach((excursionName) => {
-        let optionValue = excursionName + optionSeparator
+        let optionValue = excursionName + optionValueSeparator
         try {
             optionValue += Object.keys(excursions[excursionName]["passengers ranges"])
         } catch (_) {}

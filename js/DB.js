@@ -27,8 +27,8 @@ const DB =
                 "name-ES": "Hoteles en Uvero Alto",
                 "name-EN": "Hotels in Uvero Alto",
                 "stops": [],
-                "destinies-ES": ["PUJ", "La Romana", "Boca Chica-Aila"],
-                "destinies-EN": ["PUJ", "La Romana", "Boca Chica-Aila"],
+                "destinies-ES": ["PUJ ", " La Romana ", " Boca Chica-Aila"],
+                "destinies-EN": ["PUJ ", " La Romana ", " Boca Chica-Aila"],
                 "tracks": 2,
                 "passengers ranges": [
                                     "1 - 6", 
