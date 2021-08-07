@@ -30,28 +30,26 @@ $(document).ready(() => {
 
     // On select excursion changing event handler 
     $("#excursionContainer").on('change', "#selectExcursions", evt => {
-        const [ _, passegers ] = evt.target.value.split(optionValueSeparator) 
-        const passegersArr = passegers.split(arraySeparator)
-        
+        const [ _, passegers ] = evt.target.value.split(' . ') 
+        const passegersArr = passegers.split(',')
         drawPassengersSelect(passegersArr)
-
-        emptyContainers(['totalPriceContainer'])
     })
 
     // On select pickup locations changing event handler 
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
-        const [name, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
+        const [name, stops, destiny, tracks, passengers] = evt.target.value.split(' . ')
+        console.debug("On selectPickupLocations change")
         drawTracksSelect(tracks)
 
         if (stops) {
-            drawStopsSelect(stops.split(arraySeparator))
+            drawStopsSelect(stops.split(","))
         } else {
             emptyContainers(['stopsContainer'])
         }
 
-        drawDestinySelect(destiny.split(arraySeparator2))
+        drawDestinySelect(destiny.split(" , "))
 
-        drawPassengersSelect(passengers.split(arraySeparator))
+        drawPassengersSelect(passengers.split(","))
 
         emptyContainers(['totalPriceContainer'])
     })
@@ -73,8 +71,9 @@ $(document).ready(() => {
         switch (bookType) {
             case bookTypesArr[0]:
                 try {
+                    console.debug(selectPickupLocations.value.split(' . ')[0])
                     totalPrice = prices["pickup locations"]
-                                    [selectPickupLocations.value.split(optionValueSeparator)[0]]
+                                    [selectPickupLocations.value.split(' . ')[0]]
                                     .destiny[selectDestinies.value]
                                     .tracks[tracks.value]
                                     ["passengers ranges"][selectPassengers.value]
@@ -83,24 +82,12 @@ $(document).ready(() => {
                     )
                 } catch (error) {
                     $("#totalPriceContainer").html(
-                        '<p>Consulte el precio con la empresa</p>'
+                        `<p>Consulte el precio con la empresa</p>`
                     )
                 }
                 break;
         
             case bookTypesArr[1]:
-                try {
-                    totalPrice = excursions[selectExcursions.value.split(optionValueSeparator)[0]]
-                                ["passengers ranges"][selectPassengers.value]                   
-                    
-                    $("#totalPriceContainer").html(
-                        `<p>Precio a pagar: ${totalPrice}$</p>`
-                    )
-                } catch (error) {
-                    $("#totalPriceContainer").html(
-                        '<p>Consulte el precio con la empresa</p>'
-                    )
-                }
                 break;
             
             default:

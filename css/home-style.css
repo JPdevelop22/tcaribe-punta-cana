@@ -1,0 +1,62 @@
+:root{
+    --blue-brand:#41336E;
+    --red-brand:#E52E2A;
+    --black-brand:#333333;
+    
+    /* FONTS */
+
+    --title-font: 'Lato', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1% 13%;
+    align-items: center;
+    background: #efefef88;
+    /* position: absolute; */
+}
+
+.logo{
+    width: 15%;
+}
+
+.links_header_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.links_header_container .link{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: var(--paragraph-font);
+    color: var(--blue-brand);
+    border-bottom: var(--blue-brand) solid .1875rem;
+    margin: 0 2%;
+}
+
+/* BOOKING FORM */
+
+.book-container{
+    background-image: url(../img/backgrounds/melisa-popanicic-VGzsMSAKARg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#formBook{
+    margin: 10% 0 0 0;
+}

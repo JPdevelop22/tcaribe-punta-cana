@@ -15,7 +15,17 @@
     <script src="./js/DB.js"></script>
     <script src="./js/es/bookUtitlityFuncitons-ES.js"></script>
     <script src="./js/es/main-ES.js"></script>
-    <!-- #endregion -->    
+    <!-- #endregion -->
+
+    <!-- Linking de las tipografias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- END -->
 
     <link rel="stylesheet" href="./css/home-style.css">
     <title>Home - T.CARIBE</title>
@@ -24,26 +34,13 @@
     
     <!-- #region Cabecera de la pagina-->
     <nav>
-        <div>
-            <div class="navbar-brand-logo"> <!-- Aparatado de la zona del logo de la marca -->
-                <img src="./res/img/brand-logo.png" alt="Logo de la marca">
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">Booking</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">About us</a>
-                    </li>
+                <img class="logo" src="./img/logo/logo.png" alt="">
 
-                    <li>
-                        <a href="#">Contact us</a>
-                    </li>
-                </ul>
+            <div class="links_header_container">
+                <a class="link" href="#">RESERVACION</a>
+                <a class="link" href="#">ACERCA NOSOTROS</a>
+                <a class="link" href="#">CONTACTANOS</a>
             </div>
-        </div>
     </nav>
     <!-- #endregion -->
 
@@ -55,7 +52,7 @@
                 Hoteld Hard Rock, Punta Cana
             </title>
         </div>  
-
+<!--  
         <div class="book-container">
             <div>
                 <form id="formBook">
@@ -86,6 +83,67 @@
 
             </div>
         </div>
+-->
+
+    <div class="booking_container">
+        <div class="title_content">
+            <h1>ENCUENTRA TU MEJOR RESERVACION AQUI</h1>
+        </div>
+
+        <div class="booking_content">
+            <div class="select_from">
+                <h3>From:</h3>
+                <select name="" id="">
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                </select>
+            </div>
+
+            <div class="select_to">
+                <h3>to:</h3>
+                <select name="" id="">
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                </select>
+            </div>
+
+            <div class="select_arrivaldate">
+                <h3>Fecha de llegada o Transporte:</h3>
+                <select name="" id="">
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                </select>
+            </div>
+
+            <div class="select_amount_person">
+                <h3>Cantidad de Persona:</h3>
+                <select name="" id="">
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                    <option value="">ahsihfa</option>
+                </select>
+            </div>
+
+            <div class="select_via">
+                <h3>Vias:</h3>
+                <input type="radio" name="tracks" id="tracks" value="1" required />       
+                <label for="tracks">1 via</label>
+
+                <input type="radio" name="tracks" id="tracks" value="2" required />
+                <label for="tracks">2 vias</label>
+            </div>
+
+        </div>
+    </div>
+
+
     </section>
 
 </body>
