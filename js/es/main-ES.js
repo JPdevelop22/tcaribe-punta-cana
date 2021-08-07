@@ -32,13 +32,15 @@ $(document).ready(() => {
     $("#excursionContainer").on('change', "#selectExcursions", evt => {
         const [ _, passegers ] = evt.target.value.split(optionValueSeparator) 
         const passegersArr = passegers.split(arraySeparator)
+        
         drawPassengersSelect(passegersArr)
+
+        emptyContainers(['totalPriceContainer'])
     })
 
     // On select pickup locations changing event handler 
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
         const [name, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
-        console.debug("On selectPickupLocations change")
         drawTracksSelect(tracks)
 
         if (stops) {
@@ -71,7 +73,6 @@ $(document).ready(() => {
         switch (bookType) {
             case bookTypesArr[0]:
                 try {
-                    console.debug(selectPickupLocations.value.split(optionValueSeparator)[0])
                     totalPrice = prices["pickup locations"]
                                     [selectPickupLocations.value.split(optionValueSeparator)[0]]
                                     .destiny[selectDestinies.value]
@@ -82,12 +83,24 @@ $(document).ready(() => {
                     )
                 } catch (error) {
                     $("#totalPriceContainer").html(
-                        `<p>Consulte el precio con la empresa</p>`
+                        '<p>Consulte el precio con la empresa</p>'
                     )
                 }
                 break;
         
             case bookTypesArr[1]:
+                try {
+                    totalPrice = excursions[selectExcursions.value.split(optionValueSeparator)[0]]
+                                ["passengers ranges"][selectPassengers.value]                   
+                    
+                    $("#totalPriceContainer").html(
+                        `<p>Precio a pagar: ${totalPrice}$</p>`
+                    )
+                } catch (error) {
+                    $("#totalPriceContainer").html(
+                        '<p>Consulte el precio con la empresa</p>'
+                    )
+                }
                 break;
             
             default:
