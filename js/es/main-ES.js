@@ -30,7 +30,7 @@ $(document).ready(() => {
 
     // On select excursion changing event handler 
     $("#excursionContainer").on('change', "#selectExcursions", evt => {
-        const [ _, passegers ] = evt.target.value.split(optionValueSeparator) 
+        const [ _, passegers ] = evt.target.value.split(optionValueSeparator) // Here we're getting the passegenrs ranges
         const passegersArr = passegers.split(arraySeparator)
         
         drawPassengersSelect(passegersArr)
@@ -40,7 +40,7 @@ $(document).ready(() => {
 
     // On select pickup locations changing event handler 
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
-        const [name, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
+        const [_, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
         drawTracksSelect(tracks)
 
         if (stops) {
@@ -68,6 +68,7 @@ $(document).ready(() => {
             selectDestinies,
             selectPassengers
         } = evt.target
+        
         let totalPrice
 
         switch (bookType) {

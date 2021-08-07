@@ -1,4 +1,4 @@
-// Separators for the data in string shape 
+// Separators for the data sending in string shape 
 const optionValueSeparator = ' . '
 const arraySeparator = ','
 const arraySeparator2 = ' , ' 
@@ -12,9 +12,13 @@ const drawPickupsLocationSelect = (pickupLocations) => {
         '</select>'        
     )
 
-    pickupLocations.forEach((location) => {
-        console.log(location)
-        let optionValue = `${location["name-ES"]} . ${location["stops"]} . ${location["destinies-ES"]} . ${location["tracks"]} . ${location["passengers ranges"]}`
+    pickupLocations.forEach(location => {
+        let optionValue = location["name-ES"] + optionValueSeparator + 
+                            location["stops"] + optionValueSeparator + 
+                            location["destinies-ES"] + optionValueSeparator +
+                            location["tracks"] + optionValueSeparator +
+                            location["passengers ranges"]
+
         $('#selectPickupLocations').append(
             `<option value="${optionValue}">${location["name-ES"]}</option>`
         )
@@ -29,13 +33,15 @@ const drawSelectExcursions = (excursionNames) => {
         '</select>'        
     )
 
-    excursionNames.forEach((excursionName) => {
+    excursionNames.forEach(excursionName => {
         let optionValue = excursionName + optionValueSeparator
         try {
+            // Some excursions don't have passegers ranges, so we need to look for those and for that we're using an try-catch
             optionValue += Object.keys(excursions[excursionName]["passengers ranges"])
         } catch (_) {}
 
         $('#selectExcursions').append(
+            // Value can have data without passegers ranges
             `<option value="${optionValue}">${excursionName}</option>`
         )
     })
@@ -89,6 +95,7 @@ const drawDestinySelect = (destinies) => {
 }
 
 const drawPassengersSelect = (passgersCount) => {
+    // Here we pass an array called passgersCount and we need to check if the array is not and empty array
     if (passgersCount[0]) {
         $("#passengersContainer").html(
             '<label for="passengers">Pasajeros</label>' +
