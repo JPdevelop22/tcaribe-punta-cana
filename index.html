@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- END -->
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./css/home-style.css">
     <title>Home - T.CARIBE</title>
 </head>
@@ -87,59 +87,85 @@
 
     <div class="booking_container">
         <div class="title_content">
-            <h1>ENCUENTRA TU MEJOR RESERVACION AQUI</h1>
+            <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
         </div>
 
         <div class="booking_content">
-            <div class="select_from">
-                <h3>From:</h3>
-                <select name="" id="">
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                </select>
+            <div class="position_via">
+                <div class="select_via input_container">
+                    <h3>Vias:</h3>
+                        <div class="optiom_input">
+                            <div class="option_tracks">
+                                <input type="radio" name="tracks" id="tracks" value="1" required />       
+                                <label for="tracks">1 via</label>
+                            </div>
+
+                            <div class="option_tracks">
+                                <input type="radio" name="tracks" id="tracks" value="2" required />
+                                <label for="tracks">2 vias</label>
+                            </div>
+                        </div>
+                </div>
             </div>
 
-            <div class="select_to">
-                <h3>to:</h3>
-                <select name="" id="">
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                </select>
+            <div class="position_from_to">
+                <div class="select_from input_container">
+                    <h3>From:</h3>
+                    <select name="" id="">
+                        <option value="">PUJ</option>
+                        <option value="">Casa de otoniel</option>
+                        <option value="">Casa de Dalvin😎</option>
+                        <option value="">Casita de Luisito Abinader</option>
+                    </select>
+                </div>
+
+                <div class="select_to input_container">
+                    <h3>to:</h3>
+                    <select name="" id="">
+                        <option value="">Dubhai</option>
+                        <option value="">Haiti</option>
+                        <option value="">La cocina de Otoniel</option>
+                        <option value="">El repositorio de Dalvin</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="select_arrivaldate">
-                <h3>Fecha de llegada o Transporte:</h3>
-                <select name="" id="">
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                </select>
+            <div class="position_date_people">
+                <div class="select_arrivaldate input_container">
+                    <h3>Fecha de llegada o Transporte:</h3>
+                    <input class="select" type="date" name="" id="">
+                </div>
+
+                <div class="select_amount_person input_container">
+                    <h3>Cantidad de Persona:</h3>
+                    <select name="" id="">
+                        <option value="">ahsihfa</option>
+                        <option value="">ahsihfa</option>
+                        <option value="">ahsihfa</option>
+                        <option value="">ahsihfa</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="select_amount_person">
-                <h3>Cantidad de Persona:</h3>
-                <select name="" id="">
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                    <option value="">ahsihfa</option>
-                </select>
+        </div>
+
+        <div class="tittle_select_car">
+            <h1>ELIGE EL VEHICULO DE TU PREFERENCIA</h1>
+        </div>
+        <div class="car_select_container">
+            <div class="car_content">
+                
+                    <img src="img/cars/chevrolet.png" alt="">
+                
+                .position_branname_
+                    <h3>Chevrolet suburban 2012</h3>
+
+                    <div class="alert">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different</p>
+                    </div>
             </div>
-
-            <div class="select_via">
-                <h3>Vias:</h3>
-                <input type="radio" name="tracks" id="tracks" value="1" required />       
-                <label for="tracks">1 via</label>
-
-                <input type="radio" name="tracks" id="tracks" value="2" required />
-                <label for="tracks">2 vias</label>
-            </div>
-
         </div>
     </div>
 
