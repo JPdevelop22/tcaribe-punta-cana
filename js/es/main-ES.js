@@ -66,7 +66,8 @@ $(document).ready(() => {
             tracks,
             selectStops,
             selectDestinies,
-            selectPassengers
+            selectPassengers,
+            pickupDate
         } = evt.target
         
         let totalPrice
@@ -82,6 +83,16 @@ $(document).ready(() => {
                     $("#totalPriceContainer").html(
                         `<p>Precio a pagar: ${totalPrice}$</p>`
                     )
+                    
+                    wameMessage = `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
+                                    `${selectPickupLocations.value.split(optionValueSeparator)[0]} a ` +
+                                    `${selectDestinies.value} para la fecha del ${pickupDate.value}, con una ` +
+                                    `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
+                                    `quiero que sea de ${tracks.value} vias.`
+                    
+                    wameMessage = wameMessage.replace(/\s+/g, '%20')
+                    alert(wameMessage)
+                    window.location = "https://wa.me/18494529589?text=" +  wameMessage
                 } catch (error) {
                     $("#totalPriceContainer").html(
                         '<p>Consulte el precio con la empresa</p>'
