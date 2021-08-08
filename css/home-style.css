@@ -71,6 +71,7 @@ nav{
 .title_content span{
     color: var(--blue-brand);
 }
+
 /* POSITION INPUTS */
  .booking_content .position_from_to{
     width: 60%;
@@ -80,17 +81,17 @@ nav{
  }
  .booking_content .position_date_people{
     width: 60%;
-    margin: 6% auto 0;
+    margin: 6% auto 2%;
     display: flex;
     justify-content: space-between;
  }
 
  .booking_content .position_via{
     width: 40%;
-    margin: 2% auto 0;
+    margin: 2% auto 2%;
     display: flex;
     text-align: start;
-    justify-content: flex-start;
+    justify-content: center;
  }
 /* END */
 
@@ -126,4 +127,50 @@ nav{
 .booking_content .select_via .option_tracks{
     margin: 0 10px;
 
+}
+
+/* CAR SELECT */
+
+.car_content{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 2px;
+    background: rgb(199, 199, 199);
+    box-shadow: 2px 5px 10px -5px;
+    margin: 10% 0;
+    position: relative;
+}
+
+.car_content img{
+    width: 25%;
+    
+    
+}
+
+.name_car{
+    text-align: center;
+    font-size: 22px;
+    font-family: var(--title-font);
+    font-weight: 800;
+    color: var(--blue-brand);
+
+}
+
+.car_content .alert{
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 2% 0
+}
+
+.car_content .alert p{
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--paragraph-font);
+}
+.car_content .alert p i{
+    margin: 0 2% 0 0;
+    color: var(--red-brand);
 }
