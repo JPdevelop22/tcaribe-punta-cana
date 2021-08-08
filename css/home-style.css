@@ -53,7 +53,7 @@ nav{
 
 .booking_container{
     width: 90%;
-   margin: 6% auto 0;
+    margin: 6% auto 0;
 }
 
 
@@ -72,32 +72,40 @@ nav{
     color: var(--blue-brand);
 }
 /* POSITION INPUTS */
- .booking_content .position_from_to{
-    width: 60%;
+.booking_content .position_from_to{
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
- }
- .booking_content .position_date_people{
+}
+.booking_content .position_date_people{
     width: 60%;
     margin: 6% auto 0;
     display: flex;
     justify-content: space-between;
- }
+}
 
- .booking_content .position_via{
-    width: 40%;
-    margin: 2% auto 0;
+.booking_content .position_book_type_via{
+    width: 60%;
+    margin: 2% auto 5%;
     display: flex;
     text-align: start;
-    justify-content: flex-start;
- }
+    justify-content: center;
+}
+
+/* Espacio entre los div del area de seleccion del tipo de  reservacion y los tracks */
+.position_book_type_via div {
+    margin-left: 2%;
+    margin-right: 2%;
+}
 /* END */
 
 .booking_content .input_container{
     font-size: .875rem;
     font-family: var(--title-font);
     font-weight: 400;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .booking_content .input_container select, .select{
@@ -110,6 +118,13 @@ nav{
     border: var(--black-brand) solid 0.5px;
 }
 
+/* Area de presentacion del error con los pasajeros */
+.booking_content .input_container p {
+    color: #E52E2A;
+    text-align: center;
+    font-weight: bold;
+}
+
 .booking_content .select_via{
     text-align: center;
 }
@@ -118,7 +133,7 @@ nav{
     font-size: 1rem;
 }
 
-.booking_content .select_via .optiom_input{
+.booking_content .select_via .option_input{
     display: flex;
     flex-direction: row;
 }
