@@ -90,15 +90,42 @@
                 <div class="title_content">
                     <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
                 </div>
-
+                
                 <div class="booking_content">
-                    <div class="position_book_type_via">
-                        <div class="select_book_type input_container">
+                    <div class="select_via ">
+    
+                        <h3>Vias:</h3>
+                        <div class="option_input" id="tracksContainer">
+                                <div class="option_tracks">
+                                    <input type="radio" name="tracks" id="tracks" value="1" required />       
+                                    <label for="tracks">1 via</label>
+                                </div>
+    
+                                <div class="option_tracks">
+                                    <input type="radio" name="tracks" id="tracks" value="2" required />
+                                    <label for="tracks">2 vias</label>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="position_typebooking_excursions">
+                        
+                        <div class="select_booking_type input_container">
+                            
                             <h3>Tipo de reservacion:</h3>
                             <select name="bookType" id="selectBookType" required>
                                 <option value=""></option>
                                 <option value="Viaje turístico">Viaje turístico</option>
                                 <option value="Excursión">Excursión</option>
+                            </select>
+                            
+                        </div>
+                        
+                        
+                        <div class="select_excursion" id="excursionContainer">
+                            <h3>Excursions:</h3>
+                            <select name="excursions" id="selectExcursions" required>
+                                <option value=""></option>
                             </select>
                         </div>
                         
@@ -107,95 +134,130 @@
                             Puedes modificarlos descomentandolos y cuando quede el diseño lo
                             puedes dejar asi que yo hare que funcione
                         -->
-                        <div class="select_via input_container">
-                            <!-- <h3>Vias:</h3> -->
-                                <div class="option_input" id="tracksContainer">
-                                    <!-- <div class="option_tracks">
-                                        <input type="radio" name="tracks" id="tracks" value="1" required />       
-                                        <label for="tracks">1 via</label>
-                                    </div>
-
-                                    <div class="option_tracks">
-                                        <input type="radio" name="tracks" id="tracks" value="2" required />
-                                        <label for="tracks">2 vias</label>
-                                    </div> -->
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="position_from_to">
-                        <div class="select_excursion input_container" id="excursionContainer">
-                            <!-- <h3>Excursions:</h3>
-                            <select name="excursions" id="selectExcursions" required>
-                                <option value=""></option>
-                            </select> -->
-                        </div>
-                        
-                        <div class="select_from input_container" id="pickupLocationsContainer">
-                            <!-- <h3>From:</h3>
-                            <select name="pickup locations" id="selectPickupLocations" required>
-                                <option value=""></option>
-                            </select> -->
-                        </div>
-                        
-                        <div class="select_stop input_container" id="stopsContainer">
-                            <!-- <h3>Stop:</h3>
-                            <select name="stops" id="selectStops" required>
-                                <option value=""></option>
-                            </select>  -->
-                        </div>
-
-                        <div class="select_to input_container" id="destiniesContainer">
-                            <!-- <h3>to:</h3>
-                            <select name="destinies" id="selectDestinies" required>
-                                <option value=""></option>
-                            </select> -->
-                        </div>
-                    </div>
-
-                    <div class="position_date_people">
-                        <div class="select_arrivaldate input_container">
-                            <h3>Fecha de llegada o Transporte:</h3>
-                            <input class="select" type="date" name="pickupDate" id="pickupDate" required>
-                        </div>
-
-                        <div class="select_amount_person input_container" id="passengersContainer">
-                            <!-- <h3>Cantidad de Persona:</h3>
-                            <select name="passengers" id="selectPassengers" required>
-                                <option value=""></option>
-                            </select> -->
-                        </div>
-                    </div>
                     
-                </div>
-
-                <div class="tittle_select_car">
-                    <h1>ELIGE EL VEHICULO DE TU PREFERENCIA</h1>
-                </div>
-                <div class="car_select_container">
-                    <div class="car_content">
-                        
-                            <img src="img/cars/chevrolet.png" alt="">
-                        
-                        .position_branname_
-                            <h3>Chevrolet suburban 2012</h3>
-
-                            <div class="alert">
-                                <i class="fas fa-exclamation-circle"></i>
-                                <p>The photographs are intended to illustrate the type of vehicle only, 
-                                    the color of your selected vehicle may be different</p>
+                    </div>
+                        <div class="position_from_stop_to">
+                            <div class="select_from" id="pickupLocationsContainer">
+                                <h3>Desde:</h3>
+                                <select name="pickup locations" id="selectPickupLocations" required>
+                                    <option value=""></option>
+                                </select>
                             </div>
+                            
+                            <!-- <div class="select_stop" id="stopsContainer">
+                                <h3>Stop:</h3>
+                                <select name="stops" id="selectStops" required>
+                                    <option value=""></option>
+                                </select>
+                            </div> -->
+
+                            <div class="select_to" id="destiniesContainer">
+                                <h3>Hasta:</h3>
+                                <select name="destinies" id="selectDestinies" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                    <div class="position_date_amountperson">
+                            <div class="select_arrivaldate">
+                                <h3>Fecha de llegada o Transporte:</h3>
+                                <input class="select" type="date" name="pickupDate" id="pickupDate" required>
+                            </div>
+
+                            <div class="select_amount_person" id="passengersContainer">
+                                <h3>Cantidad de Persona:</h3>
+                                <select name="passengers" id="selectPassengers" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                    </div>  
+                </div>
+        </div>
+
+        <div class="tittle_select_car">
+            <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
+        </div>
+        <div class="car_select_container">
+            <div class="car_content">
+                
+                <div class="car_img chevrolet_car"></div>
+
+
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Chevrolet suburban 2012</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different
+                        </p>
                     </div>
+
                 </div>
 
-                <div class="">
-                    <div class="">
-                        <button type="submit">Hacer reservacion</button>
-                    </div>
-                    <div class="" id="totalPriceContainer"></div>
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
                 </div>
             </div>
-        </form>
+
+            <div class="car_content">
+                
+                <div class="car_img limosina_car"></div>
+
+
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Limosina Town Car 2007</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="car_content">
+                
+                <div class="car_img mercedes_car"></div>
+
+
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Mercedes Benz Clase C 2012</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="tobook_content">
+                <button class="btn_tobook" type="submit">Reservar Ahora</button>
+            </div>
+        </form >
     </section>
 </body>
 </html>

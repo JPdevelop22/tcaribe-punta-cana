@@ -52,13 +52,18 @@ nav{
 /* BOOKING FORM */
 
 .booking_container{
-    width: 90%;
-    margin: 6% auto 0;
+    width: 100%;
+    margin: 1% auto 0;
+    background-image: url(/img/backgrounds/clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5% 0;
 }
 
 
 .title_content{
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
     font-size: .875rem;
@@ -71,54 +76,64 @@ nav{
 .title_content span{
     color: var(--blue-brand);
 }
+
 /* POSITION INPUTS */
-.booking_content .position_from_to{
-    width: 80%;
-    margin: 0 auto;
+.position_typebooking_excursions{
     display: flex;
-    justify-content: space-between;
-}
-.booking_content .position_date_people{
-    width: 60%;
-    margin: 6% auto 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.booking_content .position_book_type_via{
-    width: 60%;
-    margin: 2% auto 5%;
-    display: flex;
-    text-align: start;
     justify-content: center;
+    padding: 0 20%;
+    flex-direction: row;
+    margin: 4% 0;
+}
+.position_from_stop_to{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin: 5% 0;
+    justify-content: center;
+    
 }
 
-/* Espacio entre los div del area de seleccion del tipo de  reservacion y los tracks */
-.position_book_type_via div {
-    margin-left: 2%;
-    margin-right: 2%;
+.position_date_amountperson{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 /* END */
 
-.booking_content .input_container{
-    font-size: .875rem;
-    font-family: var(--title-font);
-    font-weight: 400;
-    margin-left: 2%;
-    margin-right: 2%;
-}
 
-.booking_content .input_container select, .select{
-    width: 100%;
-    height: 80%;
-    padding: 0 5.25rem;
+.booking_content select, .select{
+    width: 180px;
+    height: 34px;
+    /* padding: 6px 5.25rem; */
     text-align: center;
     border: none;
     background: #E0E0E0;
     border: var(--black-brand) solid 0.5px;
 }
 
-/* Area de presentacion del error con los pasajeros */
+.select_from select, .select_to select{
+    width: 250px;
+    text-align: center;
+    
+}
+
+.select_from, .select_to, .select_arrivaldate, .select_amount_person, .select_booking_type, .select_excursion{
+    margin: 0 2%;
+}
+
+
+.booking_content h3{
+    font-size: 13px;
+    font-family: var(--paragraph-font);
+    color: var(--black-brand);
+}
+
+
+.select_excursion{
+    text-align: center;
+}
+
 .booking_content .input_container p {
     color: #E52E2A;
     text-align: center;
@@ -127,6 +142,7 @@ nav{
 
 .booking_content .select_via{
     text-align: center;
+    margin-top: 3%;
 }
 
 .booking_content .select_via label{
@@ -136,9 +152,161 @@ nav{
 .booking_content .select_via .option_input{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .booking_content .select_via .option_tracks{
     margin: 0 10px;
 
+}
+
+/* TITLE CARS */
+
+.tittle_select_car{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10% 0 5%;
+}
+
+.tittle_select_car h1{
+    font-size: 19px;
+    font-family: var(--title-font);
+    color: var(--blue-brand);
+    border-bottom: var(--black-brand) solid 3px;
+    padding: 0 2%;
+}
+
+.tittle_select_car h1 span{
+    color: var(--red-brand);
+}
+
+/* CAR SELECT */
+
+.car_content{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    background: rgb(199, 199, 199);
+    box-shadow: 2px 5px 10px -5px;
+    margin: 3% auto 0;
+    position: relative;
+}
+
+
+.position_brandname_alert{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.car_content img{
+    width: 25%;
+    
+    margin: 0 5%;
+}
+
+
+.chevrolet_car{
+    width: 25%;
+    background-image: url(/img/cars/chevrolet.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 5%;
+    /* margin-top: 4%; */
+}
+
+.limosina_car{
+    width: 25%;
+    background-image: url(/img/cars/limusina.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 5%;
+    margin-top: 4%;
+}
+
+.mercedes_car{
+    width: 25%;
+    background-image: url(/img/cars/mercedes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 5%;
+}
+
+.name_car{
+    width: 100%;
+    font-size: 22px;
+    font-family: var(--title-font);
+    font-weight: 800;
+    color: var(--blue-brand);
+    margin: 5% 0 0 15%;
+}
+
+.car_content .alert{
+    width: 40%;
+    margin: 5% 0 0 15%;
+}
+
+.car_content .alert p{
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--paragraph-font);
+    margin: 0 0 20% 0;
+}
+.car_content .alert p i{
+    margin: 0 2% 0 0;
+    color: var(--red-brand);
+}
+
+.btn_select_content{
+    position: absolute;
+    right: 7%;
+    top: 40%;
+}
+    .btn_select_content button:hover{
+        background: #e52d2a00;
+        border: var(--red-brand) solid 2px;
+        color: var(--red-brand);
+        transition: all .2s ease-in-out;
+    }
+
+.btn_select_content button{
+    border: none;
+    background: var(--red-brand);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: var(--title-font);
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 3px 3px 4px -1px var(--black-brand);
+}
+
+.tobook_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+}
+    .tobook_content .btn_tobook:hover{
+        background: #fff0;
+        border: var(--red-brand) solid 3px;
+        color: var(--red-brand);
+        transform: scale(1.02,1.02);
+        transition: all .2s ease-in-out;
+    }
+
+.btn_tobook{
+    border: none;
+    background: var(--blue-brand);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--title-font);
 }
