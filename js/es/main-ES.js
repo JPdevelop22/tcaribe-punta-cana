@@ -14,13 +14,13 @@ $(document).ready(() => {
     $("#selectBookType").on('change', evt => {
         switch (evt.target.value) {
             case bookTypesArr[0]:
-                drawPickupsLocationSelect(Object.values(travels["pickup locations"]))
                 emptyContainers(['excursionContainer', 'tracksContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
+                drawPickupsLocationSelect(Object.values(travels["pickup locations"]))
                 break;
         
             case bookTypesArr[1]:
-                drawSelectExcursions(Object.keys(excursions))
                 emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
+                drawSelectExcursions(Object.keys(excursions))
                 break;
             
             default:

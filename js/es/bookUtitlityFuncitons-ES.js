@@ -6,10 +6,10 @@ const arraySeparator2 = ' , '
 // DOM manipulation functions
 const drawPickupsLocationSelect = (pickupLocations) => {
     $("#pickupLocationsContainer").html(
-        '<label for="pickUpPoints">Punto de recogida</label>' +
+        '<h3>Desde:</h3>' +
         '<select name="pickup locations" id="selectPickupLocations" required>' +
             '<option value=""></option>' +
-        '</select>'        
+        '</select>'       
     )
 
     pickupLocations.forEach(location => {
@@ -27,10 +27,10 @@ const drawPickupsLocationSelect = (pickupLocations) => {
 
 const drawSelectExcursions = (excursionNames) => {
     $("#excursionContainer").html(
-        '<label for="selectExcursions">Excursiones</label>' +
+        '<h3>Excursiones:</h3>' +
         '<select name="excursions" id="selectExcursions" required>' +
             '<option value=""></option>' +
-        '</select>'        
+        '</select>'       
     )
 
     excursionNames.forEach(excursionName => {
@@ -49,16 +49,20 @@ const drawSelectExcursions = (excursionNames) => {
 
 const drawTracksSelect = (tracks) => {
     $("#tracksContainer").html(
-        '<p>Vias:</p>' +
-        '<input type="radio" name="tracks" id="tracks" value="1" required />' +        
-        '<label for="tracks">1 via</label>' 
+        '<h3>Vias: </h3> <br />' +
+        '<div class="option_tracks">' +
+            '<input type="radio" name="tracks" id="tracks" value="1" required />' +       
+            '<label for="tracks">1 via</label>' +
+        '</div>'
     )
 
     if (tracks > 1) {
         for (let i = 2; i <= tracks; i++) {
             $('#tracksContainer').append(
-                `<input type="radio" name="tracks" id="tracks" value="${i}" required />` +
-                `<label for="tracks">${i} vias</label>`
+                '<div class="option_tracks">' +
+                    `<input type="radio" name="tracks" id="tracks" value="${i}" required />` +       
+                    `<label for="tracks">${i} vias</label>` +
+                '</div>'
             )
         }
     }
@@ -66,10 +70,10 @@ const drawTracksSelect = (tracks) => {
 
 const drawStopsSelect = (stops) => {
     $("#stopsContainer").html(
-        '<label for="stops">Punto de parada</label>' +
+        '<h3>Paradas:</h3>' +
         '<select name="stops" id="selectStops" required>' +
             '<option value=""></option>' +
-        '</select>'        
+        '</select>'
     )
 
     stops.forEach(stop => {
@@ -81,11 +85,11 @@ const drawStopsSelect = (stops) => {
 
 const drawDestinySelect = (destinies) => {
     $("#destiniesContainer").html(
-        '<label for="destinies">Destino</label>' +
+        '<h3>Hacia:</h3>' +
         '<select name="destinies" id="selectDestinies" required>' +
             '<option value=""></option>' +
         '</select>'        
-        )
+    )
         
     destinies.forEach(destiny => {
         $('#selectDestinies').append(
@@ -98,10 +102,10 @@ const drawPassengersSelect = (passgersCount) => {
     // Here we pass an array called passgersCount and we need to check if the array is not and empty array
     if (passgersCount[0]) {
         $("#passengersContainer").html(
-            '<label for="passengers">Pasajeros</label>' +
+            '<h3>Cantidad de Persona:</h3>' +
             '<select name="passengers" id="selectPassengers" required>' +
                 '<option value=""></option>' +
-            '</select>'        
+            '</select>'       
         )
 
         passgersCount.forEach(passengers => {

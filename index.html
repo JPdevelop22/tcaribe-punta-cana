@@ -46,117 +46,144 @@
 
     <!-- #region Seccion de Reservacion -->
     <section>
-        <div> <!-- Apartado del titulo de la reservacion -->
-            <title>
-                Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
-                Hoteld Hard Rock, Punta Cana
-            </title>
-        </div>  
-<!--  
-        <div class="book-container">
-            <div>
-                <form id="formBook">
-                    
-                    <select name="tipo de reservacion" id="selectBookType">
-                        <option value=""></option>
-                        <option value="Viaje turístico">Viaje turístico</option>
-                        <option value="Excursión">Excursión</option>
-                    </select>
+        <form id="formBook">
+            <div> <!-- Apartado del titulo de la reservacion -->
+                <title>
+                    Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
+                    Hoteld Hard Rock, Punta Cana
+                </title>
+            </div>  
+    <!--  
+            <div class="book-container">
+                <div>
+                    <form id="formBook">
+                        
+                        <select name="tipo de reservacion" id="selectBookType">
+                            <option value=""></option>
+                            <option value="Viaje turístico">Viaje turístico</option>
+                            <option value="Excursión">Excursión</option>
+                        </select>
 
-                    <div id="tracksContainer"></div>
+                        <div id="tracksContainer"></div>
 
-                    <div id="excursionContainer"></div>
-                    <div id="pickupLocationsContainer"></div>
+                        <div id="excursionContainer"></div>
+                        <div id="pickupLocationsContainer"></div>
 
-                    <div id="stopsContainer"></div>
+                        <div id="stopsContainer"></div>
 
-                    <div id="destiniesContainer"></div>
+                        <div id="destiniesContainer"></div>
 
-                    <div id="passengersContainer"></div>
+                        <div id="passengersContainer"></div>
 
-                    <button id="btnWaMe" type="submit">Hacer reservacion</button>
-                </form>
+                        <button id="btnWaMe" type="submit">Hacer reservacion</button>
+                    </form>
 
-                <div id="totalPriceContainer"></div>
+                    <div id="totalPriceContainer"></div>
+                </div>
+                <div class="map">
+
+                </div>
             </div>
-            <div class="map">
+    -->
 
-            </div>
-        </div>
--->
-
-    <div class="booking_container">
-        <div class="title_content">
-            <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
-        </div>
-
-        <div class="booking_content">
-            <div class="position_via">
-                <div class="select_via input_container">
-                    <h3>Vias:</h3>
-                        <div class="optiom_input">
-                            <div class="option_tracks">
-                                <input type="radio" name="tracks" id="tracks" value="1" required />       
-                                <label for="tracks">1 via</label>
+            <div class="booking_container">
+                <div class="title_content">
+                    <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
+                </div>
+                
+                <div class="booking_content">
+                    <div class="select_via ">
+    
+                        <h3>Vias:</h3>
+                        <div class="option_input" id="tracksContainer">
+                                <div class="option_tracks">
+                                    <input type="radio" name="tracks" id="tracks" value="1" required />       
+                                    <label for="tracks">1 via</label>
+                                </div>
+    
+                                <div class="option_tracks">
+                                    <input type="radio" name="tracks" id="tracks" value="2" required />
+                                    <label for="tracks">2 vias</label>
+                                </div>
                             </div>
+                    </div>
+                    
+                    <div class="position_typebooking_excursions">
+                        
+                        <div class="select_booking_type input_container">
+                            
+                            <h3>Tipo de reservacion:</h3>
+                            <select name="bookType" id="selectBookType" required>
+                                <option value=""></option>
+                                <option value="Viaje turístico">Viaje turístico</option>
+                                <option value="Excursión">Excursión</option>
+                            </select>
+                            
+                        </div>
+                        
+                        
+                        <div class="select_excursion" id="excursionContainer">
+                            <h3>Excursions:</h3>
+                            <select name="excursions" id="selectExcursions" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        
+                        <!-- 
+                            Los campos documentados son los que se rellenaran con jquery
+                            Puedes modificarlos descomentandolos y cuando quede el diseño lo
+                            puedes dejar asi que yo hare que funcione
+                        -->
+                    
+                    </div>
+                        <div class="position_from_stop_to">
+                            <div class="select_from" id="pickupLocationsContainer">
+                                <h3>Desde:</h3>
+                                <select name="pickup locations" id="selectPickupLocations" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            
+                            <!-- <div class="select_stop" id="stopsContainer">
+                                <h3>Stop:</h3>
+                                <select name="stops" id="selectStops" required>
+                                    <option value=""></option>
+                                </select>
+                            </div> -->
 
-                            <div class="option_tracks">
-                                <input type="radio" name="tracks" id="tracks" value="2" required />
-                                <label for="tracks">2 vias</label>
+                            <div class="select_to" id="destiniesContainer">
+                                <h3>Hasta:</h3>
+                                <select name="destinies" id="selectDestinies" required>
+                                    <option value=""></option>
+                                </select>
                             </div>
                         </div>
-                </div>
-            </div>
+                    
+                    <div class="position_date_amountperson">
+                            <div class="select_arrivaldate">
+                                <h3>Fecha de llegada o Transporte:</h3>
+                                <input class="select" type="date" name="pickupDate" id="pickupDate" required>
+                            </div>
 
-            <div class="position_from_to">
-                <div class="select_from input_container">
-                    <h3>From:</h3>
-                    <select name="" id="">
-                        <option value="">PUJ</option>
-                        <option value="">Casa de otoniel</option>
-                        <option value="">Casa de Dalvin😎</option>
-                        <option value="">Casita de Luisito Abinader</option>
-                    </select>
+                            <div class="select_amount_person" id="passengersContainer">
+                                <h3>Cantidad de Persona:</h3>
+                                <select name="passengers" id="selectPassengers" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                    </div>  
                 </div>
-
-                <div class="select_to input_container">
-                    <h3>to:</h3>
-                    <select name="" id="">
-                        <option value="">Dubhai</option>
-                        <option value="">Haiti</option>
-                        <option value="">La cocina de Otoniel</option>
-                        <option value="">El repositorio de Dalvin</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="position_date_people">
-                <div class="select_arrivaldate input_container">
-                    <h3>Fecha de llegada o Transporte:</h3>
-                    <input class="select" type="date" name="" id="">
-                </div>
-
-                <div class="select_amount_person input_container">
-                    <h3>Cantidad de Persona:</h3>
-                    <select name="" id="">
-                        <option value="">ahsihfa</option>
-                        <option value="">ahsihfa</option>
-                        <option value="">ahsihfa</option>
-                        <option value="">ahsihfa</option>
-                    </select>
-                </div>
-            </div>
-
         </div>
 
         <div class="tittle_select_car">
-            <h1>ELIGE EL VEHICULO DE TU PREFERENCIA</h1>
+            <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
         </div>
         <div class="car_select_container">
             <div class="car_content">
                 
-                    <img src="img/cars/chevrolet.png" alt="">
-                
+                <div class="car_img chevrolet_car"></div>
+
+
                 <div class="position_brandname_alert">
                     <h3 class="name_car">Chevrolet suburban 2012</h3>
 
@@ -168,16 +195,69 @@
                         </p>
                     </div>
 
-                    <div class="btn_select_content">
-                        <button>SELECT</button>
-                    </div>
+                </div>
+
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="car_content">
+                
+                <div class="car_img limosina_car"></div>
 
 
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Limosina Town Car 2007</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="car_content">
+                
+                <div class="car_img mercedes_car"></div>
+
+
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Mercedes Benz Clase C 2012</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="btn_select_content">
+                    <button>SELECT</button>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="tobook_content">
+                <button class="btn_tobook" type="submit">Reservar Ahora</button>
+            </div>
+        </form >
     </section>
-
 </body>
 </html>
