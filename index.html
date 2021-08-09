@@ -46,7 +46,7 @@
 
     <!-- #region Seccion de Reservacion -->
     <section>
-        <form id="formBook">
+        <form id="formBook" name="fBook">
             <div> <!-- Apartado del titulo de la reservacion -->
                 <title>
                     Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
@@ -94,18 +94,18 @@
                 <div class="booking_content">
                     <div class="select_via ">
     
-                        <h3>Vias:</h3>
+                        <h3 id="tracksTitleContainer"></h3>
                         <div class="option_input" id="tracksContainer">
-                                <div class="option_tracks">
-                                    <input type="radio" name="tracks" id="tracks" value="1" required />       
-                                    <label for="tracks">1 via</label>
-                                </div>
-    
-                                <div class="option_tracks">
-                                    <input type="radio" name="tracks" id="tracks" value="2" required />
-                                    <label for="tracks">2 vias</label>
-                                </div>
+                            <!-- <div class="option_tracks">
+                                <input type="radio" name="tracks" id="tracks1" value="1" required />       
+                                <label for="tracks1">1 via</label>
                             </div>
+
+                            <div class="option_tracks">
+                                <input type="radio" name="tracks" id="tracks2" value="2" required />
+                                <label for="tracks2">2 vias</label>
+                            </div> -->
+                        </div>
                     </div>
                     
                     <div class="position_typebooking_excursions">
@@ -123,10 +123,10 @@
                         
                         
                         <div class="select_excursion" id="excursionContainer">
-                            <h3>Excursions:</h3>
+                            <!-- <h3>Excursions:</h3>
                             <select name="excursions" id="selectExcursions" required>
                                 <option value=""></option>
-                            </select>
+                            </select> -->
                         </div>
                         
                         <!-- 
@@ -138,24 +138,24 @@
                     </div>
                         <div class="position_from_stop_to">
                             <div class="select_from" id="pickupLocationsContainer">
-                                <h3>Desde:</h3>
+                                <!-- <h3>Desde:</h3>
                                 <select name="pickup locations" id="selectPickupLocations" required>
                                     <option value=""></option>
-                                </select>
+                                </select> -->
                             </div>
                             
-                            <!-- <div class="select_stop" id="stopsContainer">
-                                <h3>Stop:</h3>
+                            <div class="select_stop" id="stopsContainer">
+                                <!-- <h3>Stop:</h3>
                                 <select name="stops" id="selectStops" required>
                                     <option value=""></option>
-                                </select>
-                            </div> -->
+                                </select> -->
+                            </div>
 
                             <div class="select_to" id="destiniesContainer">
-                                <h3>Hasta:</h3>
+                                <!-- <h3>Hasta:</h3>
                                 <select name="destinies" id="selectDestinies" required>
                                     <option value=""></option>
-                                </select>
+                                </select> -->
                             </div>
                         </div>
                     
@@ -166,10 +166,10 @@
                             </div>
 
                             <div class="select_amount_person" id="passengersContainer">
-                                <h3>Cantidad de Persona:</h3>
+                                <!-- <h3>Cantidad de Persona:</h3>
                                 <select name="passengers" id="selectPassengers" required>
                                     <option value=""></option>
-                                </select>
+                                </select> -->
                             </div>
                     </div>  
                 </div>
@@ -255,7 +255,19 @@
             </div>
 
             <div class="tobook_content">
-                <button class="btn_tobook" type="submit">Reservar Ahora</button>
+                <button class="btn_tobook" type="submit">Total a pagar</button>
+            </div>
+
+            <div id="totalPriceContainer">
+                <!-- <p>
+                    Precio total a pagar: XX$
+                </p> -->
+            </div>
+
+            <div id="btnWaMeContainer">
+                <!-- <button id="btnWaMe" type="button"> 
+                    Hacer reservacion 
+                </button> -->
             </div>
         </form >
     </section>

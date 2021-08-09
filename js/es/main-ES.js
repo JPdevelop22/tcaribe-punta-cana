@@ -19,7 +19,7 @@ $(document).ready(() => {
                 break;
         
             case bookTypesArr[1]:
-                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
+                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
                 drawSelectExcursions(Object.keys(excursions))
                 break;
             
@@ -63,47 +63,49 @@ $(document).ready(() => {
         const {
             selectPickupLocations,
             selectExcursions,
-            tracks,
             selectStops,
             selectDestinies,
             selectPassengers,
             pickupDate
         } = evt.target
         
+        const pickupLocation = selectPickupLocations.value.split(optionValueSeparator)[0]
+        const trackSelectedValue = document.fBook.tracks.value
+
         let totalPrice
 
         switch (bookType) {
             case bookTypesArr[0]:
                 try {
                     totalPrice = prices["pickup locations"]
-                                    [selectPickupLocations.value.split(optionValueSeparator)[0]]
+                                    [pickupLocation]
                                     .destiny[selectDestinies.value]
-                                    .tracks[tracks.value]
+                                    .tracks[trackSelectedValue]
                                     ["passengers ranges"][selectPassengers.value]
+                    
                     $("#totalPriceContainer").html(
                         `<p>Precio a pagar: ${totalPrice}$</p>`
                     )
                     
                     wameMessage = `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
-                                    `${selectPickupLocations.value.split(optionValueSeparator)[0]} a ` +
-                                    `${selectDestinies.value} para la fecha del ${pickupDate.value}, con una ` +
-                                    `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
-                                    `quiero que sea de ${tracks.value} vias.`
-                    
-                    wameMessage = wameMessage.replace(/\s+/g, '%20')
-                    alert(wameMessage)
-                    window.location = "https://wa.me/18494529589?text=" +  wameMessage
+                        `${pickupLocation} a ` +
+                        `${selectDestinies.value} para la fecha del ${pickupDate.value}, con una ` +
+                        `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
+                        `quiero que sea de ${trackSelectedValue} vias.`
+        
                 } catch (error) {
                     $("#totalPriceContainer").html(
                         '<p>Consulte el precio con la empresa</p>'
                     )
                 }
+
+                drawBtnWaMe()
                 break;
         
             case bookTypesArr[1]:
                 try {
                     totalPrice = excursions[selectExcursions.value.split(optionValueSeparator)[0]]
-                                ["passengers ranges"][selectPassengers.value]                   
+                                ["passengers ranges"][selectPassengers.value]          
                     
                     $("#totalPriceContainer").html(
                         `<p>Precio a pagar: ${totalPrice}$</p>`
@@ -113,6 +115,8 @@ $(document).ready(() => {
                         '<p>Consulte el precio con la empresa</p>'
                     )
                 }
+
+                drawBtnWaMe()
                 break;
             
             default:
@@ -121,7 +125,8 @@ $(document).ready(() => {
     })
 
     // On button wame clicking event handler
-    $("#btnWaMe").on('click', evt => {
-
+    $("#btnWaMeContainer").on('click', '#btnWaMe', () => {
+        wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
+        window.location = "https://wa.me/18494529589?text=" +  wameMessage
     })
 })

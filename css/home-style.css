@@ -54,7 +54,7 @@ nav{
 .booking_container{
     width: 100%;
     margin: 1% auto 0;
-    background-image: url(/img/backgrounds/clouds.jpg);
+    background-image: url(../img/backgrounds/clouds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -134,7 +134,8 @@ nav{
     text-align: center;
 }
 
-.booking_content .input_container p {
+/* Error presentation indicating the amount of persons */
+.booking_content #passengersContainer p {
     color: #E52E2A;
     text-align: center;
     font-weight: bold;
@@ -210,7 +211,7 @@ nav{
 
 .chevrolet_car{
     width: 25%;
-    background-image: url(/img/cars/chevrolet.png);
+    background-image: url(../img/cars/chevrolet.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -220,7 +221,7 @@ nav{
 
 .limosina_car{
     width: 25%;
-    background-image: url(/img/cars/limusina.png);
+    background-image: url(../img/cars/limusina.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -230,7 +231,7 @@ nav{
 
 .mercedes_car{
     width: 25%;
-    background-image: url(/img/cars/mercedes.png);
+    background-image: url(../img/cars/mercedes.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;

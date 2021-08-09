@@ -48,11 +48,11 @@ const drawSelectExcursions = (excursionNames) => {
 }
 
 const drawTracksSelect = (tracks) => {
+    $('#tracksTitleContainer').html("Vías:")
     $("#tracksContainer").html(
-        '<h3>Vias: </h3> <br />' +
         '<div class="option_tracks">' +
-            '<input type="radio" name="tracks" id="tracks" value="1" required />' +       
-            '<label for="tracks">1 via</label>' +
+            '<input type="radio" name="tracks" id="tracks1" value="1" required />' +       
+            '<label for="tracks1">1 via</label>' +
         '</div>'
     )
 
@@ -60,8 +60,8 @@ const drawTracksSelect = (tracks) => {
         for (let i = 2; i <= tracks; i++) {
             $('#tracksContainer').append(
                 '<div class="option_tracks">' +
-                    `<input type="radio" name="tracks" id="tracks" value="${i}" required />` +       
-                    `<label for="tracks">${i} vias</label>` +
+                    `<input type="radio" name="tracks" id="tracks${i}" value="${i}" required />` +       
+                    `<label for="tracks${i}">${i} vias</label>` +
                 '</div>'
             )
         }
@@ -118,6 +118,14 @@ const drawPassengersSelect = (passgersCount) => {
             '<p>El numero de pasajeros lo tiene que consultar con su proveedor</p>'
         )
     }
+}
+
+const drawBtnWaMe = () => {
+    $('#btnWaMeContainer').html(
+        '<button id="btnWaMe" type="button">' +
+            'Hacer reservacion' +
+        '</button>'
+    )
 }
 
 // Empty containers in the recived array by Id
