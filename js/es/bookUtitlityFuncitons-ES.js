@@ -68,20 +68,20 @@ const drawTracksSelect = (tracks) => {
     }
 }
 
-const drawStopsSelect = (stops) => {
-    $("#stopsContainer").html(
-        '<h3>Paradas:</h3>' +
-        '<select name="stops" id="selectStops" required>' +
-            '<option value=""></option>' +
-        '</select>'
-    )
+// const drawStopsSelect = (stops) => {
+//     $("#stopsContainer").html(
+//         '<h3>Paradas:</h3>' +
+//         '<select name="stops" id="selectStops" required>' +
+//             '<option value=""></option>' +
+//         '</select>'
+//     )
 
-    stops.forEach(stop => {
-        $('#selectStops').append(
-            `<option value="${stop}">${stop}</option>`
-        )
-    })
-}
+//     stops.forEach(stop => {
+//         $('#selectStops').append(
+//             `<option value="${stop}">${stop}</option>`
+//         )
+//     })
+// }
 
 const drawDestinySelect = (destinies) => {
     $("#destiniesContainer").html(

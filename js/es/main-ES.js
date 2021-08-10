@@ -129,4 +129,6 @@ $(document).ready(() => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
         window.location = "https://wa.me/18494529589?text=" +  wameMessage
     })
+
+
 })

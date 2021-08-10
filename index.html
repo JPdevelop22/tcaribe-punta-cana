@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- BOOTSRAP LINKING -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- END -->
     <!-- #region Dependencias de la funcionalidad de la reservación-->
     <script    
         src="https://code.jquery.com/jquery-3.6.0.min.js" 
@@ -31,6 +35,11 @@
     <title>Home - T.CARIBE</title>
 </head>
 <body>
+
+    
+    
+
+
     
     <!-- #region Cabecera de la pagina-->
     <nav>
@@ -41,9 +50,9 @@
                 <a class="link" href="#">ACERCA NOSOTROS</a>
                 <a class="link" href="#">CONTACTANOS</a>
             </div>
-    </nav>
+        </nav>
     <!-- #endregion -->
-
+    
     <!-- #region Seccion de Reservacion -->
     <section>
         <form id="formBook" name="fBook">
@@ -65,46 +74,57 @@
                         </select>
 
                         <div id="tracksContainer"></div>
-
+                        
                         <div id="excursionContainer"></div>
                         <div id="pickupLocationsContainer"></div>
-
+                        
                         <div id="stopsContainer"></div>
-
+                        
                         <div id="destiniesContainer"></div>
-
+                        
                         <div id="passengersContainer"></div>
-
+                        
                         <button id="btnWaMe" type="submit">Hacer reservacion</button>
                     </form>
-
+                    
                     <div id="totalPriceContainer"></div>
                 </div>
                 <div class="map">
-
+                    
                 </div>
             </div>
-    -->
-
-            <div class="booking_container">
-                <div class="title_content">
-                    <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
+        -->
+        <!-- ALERTAS -->
+            <div class="alert-booking">
+                <div class="content-one">
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
-                
-                <div class="booking_content">
-                    <div class="select_via ">
-    
-                        <h3 id="tracksTitleContainer"></h3>
-                        <div class="option_input" id="tracksContainer">
-                            <!-- <div class="option_tracks">
-                                <input type="radio" name="tracks" id="tracks1" value="1" required />       
-                                <label for="tracks1">1 via</label>
+
+                <div class="content-two">
+                    <p>El precio debera ser consultado al comunicarse con unos de nuestro angentes de reservaciones.</p>
+                </div>
+            </div>
+        <!--  -->
+        
+        <div class="booking_container">
+            <div class="title_content">
+                <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
+            </div>
+            
+            <div class="booking_content">
+                <div class="select_via ">
+                    
+                    <h3 id="tracksTitleContainer"></h3>
+                    <div class="option_input" id="tracksContainer">
+                        <div class="option_tracks">
+                            <input type="radio" name="tracks" id="tracks1" value="1" required />       
+                            <label for="tracks1">1 via</label>
                             </div>
 
                             <div class="option_tracks">
                                 <input type="radio" name="tracks" id="tracks2" value="2" required />
                                 <label for="tracks2">2 vias</label>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     
@@ -123,10 +143,10 @@
                         
                         
                         <div class="select_excursion" id="excursionContainer">
-                            <!-- <h3>Excursions:</h3>
+                            <h3>Excursions:</h3>
                             <select name="excursions" id="selectExcursions" required>
                                 <option value=""></option>
-                            </select> -->
+                            </select>
                         </div>
                         
                         <!-- 
@@ -138,24 +158,24 @@
                     </div>
                         <div class="position_from_stop_to">
                             <div class="select_from" id="pickupLocationsContainer">
-                                <!-- <h3>Desde:</h3>
+                                <h3>Desde:</h3>
                                 <select name="pickup locations" id="selectPickupLocations" required>
                                     <option value=""></option>
-                                </select> -->
+                                </select>
                             </div>
                             
-                            <div class="select_stop" id="stopsContainer">
-                                <!-- <h3>Stop:</h3>
+                            <!-- <div class="select_stop" id="stopsContainer">
+                                <h3>Stop:</h3>
                                 <select name="stops" id="selectStops" required>
                                     <option value=""></option>
-                                </select> -->
-                            </div>
+                                </select>
+                            </div> -->
 
                             <div class="select_to" id="destiniesContainer">
-                                <!-- <h3>Hasta:</h3>
+                                <h3>Hasta:</h3>
                                 <select name="destinies" id="selectDestinies" required>
                                     <option value=""></option>
-                                </select> -->
+                                </select>
                             </div>
                         </div>
                     
@@ -166,10 +186,10 @@
                             </div>
 
                             <div class="select_amount_person" id="passengersContainer">
-                                <!-- <h3>Cantidad de Persona:</h3>
+                                <h3>Cantidad de Persona:</h3>
                                 <select name="passengers" id="selectPassengers" required>
                                     <option value=""></option>
-                                </select> -->
+                                </select>
                             </div>
                     </div>  
                 </div>
@@ -254,8 +274,8 @@
                 </div>
             </div>
 
-            <div class="tobook_content">
-                <button class="btn_tobook" type="submit">Total a pagar</button>
+            <div class="tobook_content" data-toggle="modal" data-target="#ventanaModal">
+                <button id="btn-pay" class="btn_tobook" type="submit">Total a pagar</button>
             </div>
 
             <div id="totalPriceContainer">
@@ -270,6 +290,143 @@
                 </button> -->
             </div>
         </form >
+
+        <div class="modal" id="ventanaModal" tabindex="-1">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Finalizar Reservacion</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                        <div class="modal-body">
+                            <div class="position-center">
+                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
+                                <div class="itempay-content">
+                                <h3 class="title">Ruta Selecionada:</h3>
+                                <p>USD$ 50</p>
+                                </div>
+                            
+                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
+                                <div class="itempay-content">
+                                <h3 class="title">Mercedes Benz Clase C:</h3>
+                                <p>USD$ 30</p>
+                                </div>
+                                
+                                <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
+                                <div class="total_topay_content">
+                                <h3>Total Estimado:</h3>
+                                <p>USD$ 80</p>
+                                </div>
+                            
+                                <div class="alert_viawa_content">
+                                    <p> <i class="fas fa-exclamation-circle"></i> La reservacion se realizara por whatsapp y se pondra en contacto con la agencia para confirmar su reservacion</p>
+                                </div>
+
+                                <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
+                                <div class="btn_tobook_content">
+                                    <button> RESERVAR</button>
+                                <!-- <i class="fab fa-whatsapp"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                          
+                          <style>
+                          
+                          
+                          .itempay-content{
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: space-between;
+                          }
+                            .itempay-content h3{
+                                font-size: 14px;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+                    
+                            .itempay-content p{
+                                font-size: 15px;
+                                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            }
+                    
+                        .total_topay_content{
+                            text-align: center;
+                            margin: 2% 0 0;
+                        }
+                          .total_topay_content h3{
+                              font-size: 16px;
+                              font-family: Arial, Helvetica, sans-serif;
+                              
+                          }
+                    
+                          .total_topay_content p{
+                              font-size: 18px;
+                              font-weight: bold;
+                              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                              color: #E52E2A;
+                          }
+                    
+                          .btn_tobook_content{
+                              width: 100%;
+                              display: flex;
+                              justify-content: center;
+                              margin: 10% auto 0;
+                          }
+                            .btn_tobook_content button{
+                                border: none;
+                                background-color: green;
+                                color: #fff;
+                                font-size: 13px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-weight: 700;
+                                border-radius: 20px;
+                                padding: 10px 20px;
+                                text-align: center;
+                                display: flex;
+                                flex-wrap: nowrap;
+                            }
+                    
+                            .btn_tobook_content button:hover{
+                                background: #fff0;
+                                border: green solid 3px;
+                                transition: all .3s ease;
+                            }
+                    
+                            .btn_tobook_content button i{
+                                margin-right: 10px;
+                                font-size: 20px;
+                            }
+                    
+                        .alert_viawa_content{
+                            text-align: center;
+                            width: 90%;
+                            margin: 10% auto 0;
+                        }
+                            .alert_viawa_content p{
+                                font-size: 14px;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+                            .alert_viawa_content p i{
+                                font-size: 16px;
+                                margin-right: 2%;
+                                color: #E52E2A;
+                            }
+                          
+                          </style>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
+
+    <!-- BOOTSTAP SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <!-- END -->
 </body>
 </html>
