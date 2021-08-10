@@ -6,8 +6,8 @@ const DB =
         {
             "Bavaro Punta Cana": 
             {
-                "name-ES": "Hoteles de la zona Bavaro, Punta Cana",
-                "name-EN": "Hotels in Bavaro, Punta Cana area",
+                "name-ES": "Hoteles de la zona Bávaro, Punta Cana",
+                "name-EN": "Hotels in Bávaro, Punta Cana area",
                 "stops": [],
                 "destinies-ES": ["PUJ"],
                 "destinies-EN": ["PUJ"],
@@ -237,7 +237,7 @@ const DB =
                 "name-EN": "Punta Cana Internacional airport",
                 "stops": [],
                 "destinies-ES": [
-                                "Hoteles de la zona Bavaro, Punta Cana ", 
+                                "Hoteles de la zona Bávaro, Punta Cana ", 
                                 " Hoteles en Uvero Alto ", 
                                 " Hoteles en La Romana ", 
                                 " San Pedro de Macorís ", 
@@ -249,7 +249,7 @@ const DB =
                                 " Puerto Plata"
                             ],
                 "destinies-EN": [
-                                "Hotels in Bavaro, Punta Cana area ", 
+                                "Hotels in Bávaro, Punta Cana area ", 
                                 " Hotels in Uvero Alto ", 
                                 " Hotels in La Romana ", 
                                 " San Pedro de Macorís ", 
@@ -417,7 +417,7 @@ const DB =
             }
         },
 
-        "Shopping trours Bavaro":
+        "Shopping trours Bávaro":
         {
             "passengers ranges":
             {
@@ -446,9 +446,9 @@ const DB =
             }
         },
 
-        "Excursiones en la zona Bavaro, Punta Cana (1 - 3 horas)": {},
-        "Excursiones en la zona Bavaro, Punta Cana (4 - 5 horas)": {},
-        "Excursiones en la zona Bavaro, Punta Cana (6 - 8 horas)": {},
+        "Excursiones en la zona Bávaro, Punta Cana (1 - 3 horas)": {},
+        "Excursiones en la zona Bávaro, Punta Cana (4 - 5 horas)": {},
+        "Excursiones en la zona Bávaro, Punta Cana (6 - 8 horas)": {},
         "Excursiones Montaña redonda (4 - 5 horas)": {},
         "Excursiones en Saona y Alto Chavón": {},
         "Excursión a Santiago": {},
@@ -601,7 +601,7 @@ const DB =
             }
         },
 
-        "Shopping trours Bavaro, Punta Cana":
+        "Shopping trours Bávaro, Punta Cana":
         {
             "passengers ranges":
             {
@@ -630,9 +630,9 @@ const DB =
             }
         },
 
-        "Excursions in Bavaro, Punta Cana area (1 - 3 hours)": {},
-        "Excursions in Bavaro, Punta Cana area (4 - 5 hours)": {},
-        "Excursions in Bavaro, Punta Cana area (6 - 8 hours)": {},
+        "Excursions in Bávaro, Punta Cana area (1 - 3 hours)": {},
+        "Excursions in Bávaro, Punta Cana area (4 - 5 hours)": {},
+        "Excursions in Bávaro, Punta Cana area (6 - 8 hours)": {},
         "Excursions Montaña redonda (4 - 5 hours)": {},
         "Excursions in Saona and Alto Chavón": {},
         "excursion to Santiago": {},
@@ -644,7 +644,7 @@ const DB =
     {
         "pickup locations":
         {
-            "Hoteles de la zona Bavaro, Punta Cana":
+            "Hoteles de la zona Bávaro, Punta Cana":
             {
                 "destiny":
                 {
@@ -1150,7 +1150,7 @@ const DB =
             {
                 "destiny":
                 {
-                    "Hoteles de la zona Bavaro, Punta Cana":
+                    "Hoteles de la zona Bávaro, Punta Cana":
                     {
                         "tracks":
                         {
@@ -1364,7 +1364,7 @@ const DB =
     {
         "pickup locations":
         {
-            "Hotels in Bavaro, Punta Cana area":
+            "Hotels in Bávaro, Punta Cana area":
             {
                 "destiny":
                 {
@@ -1870,7 +1870,7 @@ const DB =
             {
                 "destiny":
                 {
-                    "Hotels in Bavaro, Punta Cana area":
+                    "Hotels in Bávaro, Punta Cana area":
                     {
                         "tracks":
                         {

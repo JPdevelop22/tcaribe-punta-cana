@@ -94,15 +94,17 @@
                 </div>
             </div>
         -->
-        <!-- ALERTAS -->
-            <div class="alert-booking">
-                <div class="content-one">
+        <!-- ALERTAS que se rellenaran con jquery -->
+            <div class="alert-booking" id="alertContainer">
+                <!-- <div class="content-one">
                     <i class="fas fa-exclamation-circle"></i>
                 </div>
 
                 <div class="content-two">
-                    <p>El precio debera ser consultado al comunicarse con unos de nuestro angentes de reservaciones.</p>
-                </div>
+                    <p>
+                        El precio debera ser consultado al comunicarse con unos de nuestro angentes de reservaciones.
+                    </p>
+                </div> -->
             </div>
         <!--  -->
         
@@ -143,7 +145,7 @@
                         
                         
                         <div class="select_excursion" id="excursionContainer">
-                            <h3>Excursions:</h3>
+                            <h3>Excursiones:</h3>
                             <select name="excursions" id="selectExcursions" required>
                                 <option value=""></option>
                             </select>
@@ -284,11 +286,6 @@
                 </p> -->
             </div>
 
-            <div id="btnWaMeContainer">
-                <!-- <button id="btnWaMe" type="button"> 
-                    Hacer reservacion 
-                </button> -->
-            </div>
         </form >
 
         <div class="modal" id="ventanaModal" tabindex="-1">
@@ -326,8 +323,8 @@
                                 </div>
 
                                 <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
-                                <div class="btn_tobook_content">
-                                    <button> RESERVAR</button>
+                                <div class="btn_tobook_content" id="btnWaMeContainer">
+                                    <button id="btnWaMe" type="button">RESERVAR</button>
                                 <!-- <i class="fab fa-whatsapp"></i> -->
                                 </div>
                             </div>

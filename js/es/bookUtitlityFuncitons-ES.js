@@ -128,6 +128,26 @@ const drawBtnWaMe = () => {
     )
 }
 
+const drawAlert = (content) => {
+    $('#alertContainer').html(
+        '<div class="content-one">' +
+            '<i class="fas fa-exclamation-circle"></i>' +
+        '</div>' +
+
+        '<div class="content-two">' +
+            '<p>' +
+                content +
+            '</p>' +
+        '</div>'
+    )
+    
+    setTimeout(() => {
+        $('#alertContainer').hide("slow")
+        console.debug("se ejecuta")
+    }, 4000);
+
+}
+
 // Empty containers in the recived array by Id
 const emptyContainers = (containerIds) => {
     containerIds.forEach(id => $(`#${id}`).empty())

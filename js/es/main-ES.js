@@ -14,13 +14,17 @@ $(document).ready(() => {
     $("#selectBookType").on('change', evt => {
         switch (evt.target.value) {
             case bookTypesArr[0]:
-                emptyContainers(['excursionContainer', 'tracksContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
+                emptyContainers(['excursionContainer'])
+                drawTracksSelect(2)
                 drawPickupsLocationSelect(Object.values(travels["pickup locations"]))
+                drawDestinySelect([])
+                drawPassengersSelect(["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"])
                 break;
         
             case bookTypesArr[1]:
-                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'stopsContainer', 'destiniesContainer', 'passengersContainer'])
+                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'stopsContainer', 'destiniesContainer'])
                 drawSelectExcursions(Object.keys(excursions))
+                drawPassengersSelect(["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"])
                 break;
             
             default:
@@ -42,18 +46,19 @@ $(document).ready(() => {
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
         const [_, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
         drawTracksSelect(tracks)
-
-        if (stops) {
-            drawStopsSelect(stops.split(arraySeparator))
-        } else {
-            emptyContainers(['stopsContainer'])
-        }
+        
+        // drawAlert('testing')
+        // if (stops) {
+        //     drawStopsSelect(stops.split(arraySeparator))
+        // } else {
+        //     emptyContainers(['stopsContainer'])
+        // }
 
         drawDestinySelect(destiny.split(arraySeparator2))
 
         drawPassengersSelect(passengers.split(arraySeparator))
 
-        emptyContainers(['totalPriceContainer'])
+        // emptyContainers(['totalPriceContainer'])
     })
 
     // On book form submiting event handler
