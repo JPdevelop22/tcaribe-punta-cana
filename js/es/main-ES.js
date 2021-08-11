@@ -129,6 +129,7 @@ $(document).ready(() => {
         const excursionSelectedValue = (selectExcursions)? 
                 selectExcursions.value.split(optionValueSeparator)[0]: undefined
 
+        const date = formatDate(pickupDate.value)
         let totalPrice
 
         if (!carSelected) {
@@ -159,11 +160,16 @@ $(document).ready(() => {
                 wameMessage = 
                     `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
                     `${pickupLocation} a ` +
-                    `${selectDestinies.value} para la fecha del ${pickupDate.value}, con una ` +
+                    `${selectDestinies.value} para la fecha del ${date}, con una ` +
                     `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
                     `quiero que sea de ${trackSelectedValue} vias.`
                 
                 // Modal contruction
+                $('#selectedDateContainer').html(
+                    '<h3 class="title">Fecha selecionada:</h3>' +
+                    `<p>${date}</p>`
+                )
+
                 $('#selectedRouteContainer').html(
                     '<h3 class="title">Ruta Selecionada:</h3>' +
                     `<p>${pickupLocation} hacia ${selectDestinies.value}</p>`
@@ -196,6 +202,11 @@ $(document).ready(() => {
                 wameMessage = `Quiero la excursion: ${excursionSelectedValue}`
 
                 // Modal contruction
+                $('#selectedDateContainer').html(
+                    '<h3 class="title">Fecha selecionada:</h3>' +
+                    `<p>${date}</p>`
+                )
+                
                 $('#selectedRouteContainer').html(
                     '<h3 class="title">Excursion Selecionada:</h3>' +
                     `<p>${excursionSelectedValue}</p>`
@@ -214,3 +225,5 @@ $(document).ready(() => {
         }
     })
 })
+
+

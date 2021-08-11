@@ -224,3 +224,12 @@ const emptyContainers = (containerIds) => {
     })
 }
 
+// A function for format a date by its language
+const formatDate = (date, langFormat = "es-ES") => {
+    let dateToFormat = new Date(date);
+    let day = dateToFormat.getDate();
+    let year = dateToFormat.getFullYear();
+    let month = dateToFormat.toLocaleDateString(langFormat, {month:'long'})
+    return day + " de " + month + " del " + year; // Dia de Mes del Año
+}
+
