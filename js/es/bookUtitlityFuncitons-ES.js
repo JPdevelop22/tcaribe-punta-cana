@@ -225,3 +225,4 @@ const changeCarSelected = (newCar) => {
 const emptyContainers = (containerIds) => {
     containerIds.forEach(id => $(`#${id}`).empty())
 }
+

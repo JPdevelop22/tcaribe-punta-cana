@@ -62,8 +62,8 @@
 
             <div class="links_header_container">
                 <a class="link" href="#">RESERVACION</a>
-                <a class="link" href="#">ACERCA NOSOTROS</a>
-                <a class="link" href="#">CONTACTANOS</a>
+                <a class="link" href="#contact-zone">CONTACTANOS</a>
+                <a class="link" href="#about_us_container">ACERCA NOSOTROS</a>
             </div>
         </nav>
     <!-- #endregion -->
@@ -77,7 +77,7 @@
                     Hoteld Hard Rock, Punta Cana
                 </title>
             </div>  
-    <!--  
+            <!--  
             <div class="book-container">
                 <div>
                     <form id="formBook">
@@ -108,8 +108,8 @@
                     
                 </div>
             </div>
-        -->
-        <!-- ALERTAS que se rellenaran con jquery -->
+         -->
+         <!-- ALERTAS que se rellenaran con jquery -->
             <div class="alert-booking" id="alertContainer">
                 <!-- <div class="content-one">
                     <i class="fas fa-exclamation-circle"></i>
@@ -121,7 +121,7 @@
                     </p>
                 </div> -->
             </div>
-        <!--  -->
+         <!--  -->
         
         <div class="booking_container">
             <div class="title_content">
@@ -216,7 +216,7 @@
             <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
         </div>
         <div class="car_select_container" id="carsContainer">
-            <div class="car_content">
+            <div id="car_content" class="car_content">
                 
                 <div class="car_img chevrolet_car"></div>
 
@@ -237,7 +237,9 @@
                 <div class="btn_select_content">
                     <button 
                         onclick="changeCarSelected('Chevrolet suburban 2012');" 
-                        type="button">
+                        type="button"
+                        id="btnCarSelected">
+                        
                         SELECT
                     </button>
                 </div>
@@ -245,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="car_content">
+            <div id="car_content" class="car_content">
                 
                 <div class="car_img limosina_car"></div>
 
@@ -266,7 +268,8 @@
                 <div class="btn_select_content">
                     <button 
                         onclick="changeCarSelected('Limosina Town Car 2007');" 
-                        type="button">
+                        type="button"
+                        id="btnCarSelected">
                         SELECT
                     </button>
                 </div>
@@ -274,7 +277,7 @@
                 </div>
             </div>
 
-            <div class="car_content">
+            <div id="car_content" class="car_content">
                 
                 <div class="car_img mercedes_car"></div>
 
@@ -295,7 +298,8 @@
                 <div class="btn_select_content">
                     <button 
                         onclick="changeCarSelected('Mercedes Benz Clase C 2012');" 
-                        type="button">
+                        type="button"
+                        id="btnCarSelected">
                         SELECT
                     </button>
                 </div>
@@ -304,7 +308,7 @@
             </div>
 
             <div class="tobook_content">
-                <button id="btn-pay" class="btn_tobook" type="submit">Total a pagar</button>
+                <button id="btn-pay" class="btn_tobook" type="submit">Consultar</button>
             </div>
 
         </form >
@@ -433,13 +437,42 @@
                             }
                         
                         </style>
-                </div>
+                    </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
             </div>
         </div>
+    </section>
+
+    <section id="contact-zone">
+        <hr>
+
+        <div class="contact_us_container">
+            <div class="title_contact_us">
+                <h2>CONTÁCTANOS</h2>
+            </div>
+
+            <div class="contact_us_content">
+
+                <div class="banner_contacts">
+                    <img src="./img/banners/banner-contacts.jpeg" alt="">
+                </div>
+
+                <div class="location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="about_us_container">
+        <div class="title_contact_us">
+            <h2>ACERCA NOSOTROS</h2>
+        </div>
+
+
     </section>
 
 </body>

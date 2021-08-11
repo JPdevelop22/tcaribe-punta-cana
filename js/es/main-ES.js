@@ -119,7 +119,7 @@ $(document).ready(() => {
         let totalPrice
 
         if (!carSelected) {
-            drawAlert("Debe seleccionar un auto")
+            drawAlert("Debe seleccionar un vehiculo")
             window.location = '#carsContainer'
             return;
         } 
@@ -135,7 +135,7 @@ $(document).ready(() => {
                     
                     $("#totalPriceContainer").html(
                         '<h3>Total Estimado:</h3>' +
-                        `<p>${totalPrice}$</p>`
+                        `<p>USD$ ${totalPrice}</p>`
                     )
                     
                     wameMessage = `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
@@ -177,7 +177,7 @@ $(document).ready(() => {
                     
                     $("#totalPriceContainer").html(
                         '<h3>Total Estimado:</h3>' +
-                        `<p>${totalPrice}$</p>`
+                        `<p>USD$ ${totalPrice}</p>`
                     )
 
                     wameMessage = `Quiero la excursion: ${excursionSelectedValue}`
@@ -213,5 +213,9 @@ $(document).ready(() => {
         window.location = "https://wa.me/18494529589?text=" +  wameMessage
     })
 
+    //this function will add a border outside of the car content when it is selected
+    $("#btnCarSelected").on('click', function(){
+        $("#car_content").toggleClass("car_selected_border");
+    });
 
 })

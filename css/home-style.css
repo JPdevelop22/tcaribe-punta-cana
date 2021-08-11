@@ -57,7 +57,7 @@ nav{
 .booking_container{
     width: 100%;
     margin: 1% auto 0;
-    /* background-image: url(../img/backgrounds/clouds.jpg); */
+    background-image: url(../img/backgrounds/clouds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -65,18 +65,18 @@ nav{
 }
 
 
-.title_content{
+.title_content h1{
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    font-size: .875rem;
+    font-size: 1.25rem;
     font-family: var(--paragraph-font);
     color: var(--red-brand);
     font-weight: 900;
     border-bottom: var(--black-brand) solid .1875rem;
 }
 
-.title_content span{
+.title_content h1 span{
     color: var(--blue-brand);
 }
 
@@ -101,8 +101,18 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 0 3%;
 }
 /* END */
+
+.booking_content{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    width: 70%;
+    margin: 3% auto 0;
+    border-radius: 10px;
+    padding: 10px 0;
+}
 
 
 .booking_content select, .select{
@@ -176,13 +186,13 @@ nav{
 .tittle_select_car h1{
     font-size: 19px;
     font-family: var(--title-font);
-    color: var(--blue-brand);
-    border-bottom: var(--black-brand) solid 3px;
+    color: var(--black-brand);
+    border-bottom: var(--blue-brand) solid 3px;
     padding: 0 2%;
 }
 
 .tittle_select_car h1 span{
-    color: var(--red-brand);
+    color: var(--black-brand);
 }
 
 /* CAR SELECT */
@@ -347,3 +357,60 @@ nav{
     align-items: center;
     text-align: center;
 }
+
+.car_selected_border{
+    border: green solid 3px;
+}
+
+/* CONTACT US ZONE */
+
+.title_contact_us{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10% 0 5%;
+}
+
+.title_contact_us h2{
+    font-size: 1.45rem;
+    font-family: var(--title-font);
+    font-weight: 700;
+    border-bottom: var(--black-brand) solid 3px;
+    color: var(--black-brand);
+}
+
+.banner_contacts{
+    margin: 0 0 6% 5%;
+    
+}
+
+.banner_contacts img{
+    width: 55%;
+    box-shadow: 7px 7px 10px -7px var(--black-brand);
+} 
+    .banner_contacts img:hover{
+        transform: scale(1.1,1.1);
+        transition: all .3s ease-out;
+    }
+
+.location{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 5% 0 0;
+}
+
+.location iframe{
+    width: 60%;
+    box-shadow: -7px -7px 10px -7px var(--black-brand);
+    
+}
+
+.location iframe:hover{
+    transform: scale(1.1,1.1);
+    transition: all .3s ease-out;
+}
+
+
+
+
+/* END */
