@@ -21,6 +21,13 @@
     <script src="./js/es/main-ES.js"></script>
     <!-- #endregion -->
 
+    <!-- #region Animations dependencies -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- #endregion -->
+
     <!-- Linking de las tipografias -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,7 +139,7 @@
                     
                     <div class="position_typebooking_excursions">
                         
-                        <div class="select_booking_type input_container">
+                        <div class="select_booking_type input_container" id="bookTypeContainer">
                             
                             <h3>Tipo de reservacion:</h3>
                             <select name="bookType" id="selectBookType" required>
@@ -161,8 +168,8 @@
                         <div class="position_from_stop_to">
                             <div class="select_from" id="pickupLocationsContainer">
                                 <h3>Desde:</h3>
-                                <select name="pickup locations" id="selectPickupLocations" required>
-                                    <option value=""></option>
+                                <select name="pickupLocations" id="selectPickupLocations" required>
+                                    <option value=" "></option>
                                 </select>
                             </div>
                             

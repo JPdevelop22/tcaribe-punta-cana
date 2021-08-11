@@ -18,16 +18,21 @@ $(document).ready(() => {
                 drawTracksSelect(2)
                 drawPickupsLocationSelect(Object.values(travels["pickup locations"]))
                 drawDestinySelect([])
-                drawPassengersSelect(["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"])
+                drawPassengersSelect([])
                 break;
         
             case bookTypesArr[1]:
                 emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'stopsContainer', 'destiniesContainer'])
                 drawSelectExcursions(Object.keys(excursions))
-                drawPassengersSelect(["1 - 6", "7 - 21", "22 - 33", "34 - 45", "46 - 54", "55 - 59"])
+                drawPassengersSelect([])
                 break;
             
             default:
+                drawTracksSelect(2)
+                drawPickupsLocationSelect([])
+                drawSelectExcursions([])
+                drawDestinySelect([])
+                drawPassengersSelect([])
                 break;
         }
     })
@@ -59,6 +64,28 @@ $(document).ready(() => {
         drawPassengersSelect(passengers.split(arraySeparator))
 
         // emptyContainers(['totalPriceContainer'])
+    })
+
+    // On click handler for some elements that must be inactive
+    $('#excursionContainer, #destiniesContainer, #passengersContainer')
+    .on('click', '#selectExcursions, #selectDestinies, #selectPassengers',
+    () => {
+        if (!document.fBook.bookType.value) {
+            drawAlert('Primero debe seleccionar un tipo de reservacion, para que podamos saber con que podemos rellenar esos campos')
+            animateCSS('#bookTypeContainer', 'bounce', 'faster')
+        } 
+        else if (document.fBook.bookType.value == bookTypesArr[0] && !document.fBook.pickupLocations.value) {
+            drawAlert('Primero debe seleccionar un lugar de recogida, para que podamos saber con que podemos rellenar esos campos')
+            animateCSS('#pickupLocationsContainer', 'bounce', 'faster')
+        }
+    })
+
+    $('#pickupLocationsContainer').on('click', '#selectPickupLocations', 
+    () => {
+        if (!document.fBook.bookType.value) {
+            drawAlert('Primero debe seleccionar un tipo de reservacion, para que podamos saber con que podemos rellenar esos campos')
+            animateCSS('#bookTypeContainer', 'bounce', 'faster')
+        } 
     })
 
     // On book form submiting event handler

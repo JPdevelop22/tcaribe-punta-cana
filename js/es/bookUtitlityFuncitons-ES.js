@@ -3,14 +3,21 @@ const optionValueSeparator = ' . '
 const arraySeparator = ','
 const arraySeparator2 = ' , ' 
 
+// Timer controller for animations
+let timerId
+
 // DOM manipulation functions
 const drawPickupsLocationSelect = (pickupLocations) => {
-    $("#pickupLocationsContainer").html(
+    const pickupLocationsContainerId = "#pickupLocationsContainer"
+    $(pickupLocationsContainerId).hide().html(
         '<h3>Desde:</h3>' +
-        '<select name="pickup locations" id="selectPickupLocations" required>' +
+        '<select name="pickupLocations" id="selectPickupLocations" required>' +
             '<option value=""></option>' +
         '</select>'       
-    )
+    ).ready(() => {
+        $(pickupLocationsContainerId).show()
+        animateCSS(pickupLocationsContainerId, 'fadeIn', 'faster')
+    })
 
     pickupLocations.forEach(location => {
         let optionValue = location["name-ES"] + optionValueSeparator + 
@@ -26,12 +33,16 @@ const drawPickupsLocationSelect = (pickupLocations) => {
 }
 
 const drawSelectExcursions = (excursionNames) => {
-    $("#excursionContainer").html(
+    const excursionContainerId = "#excursionContainer"
+    $(excursionContainerId).hide().html(
         '<h3>Excursiones:</h3>' +
         '<select name="excursions" id="selectExcursions" required>' +
             '<option value=""></option>' +
         '</select>'       
-    )
+    ).ready(() => {
+        $(excursionContainerId).show()
+        animateCSS(excursionContainerId, 'fadeIn', 'faster')
+    })
 
     excursionNames.forEach(excursionName => {
         let optionValue = excursionName + optionValueSeparator
@@ -48,8 +59,12 @@ const drawSelectExcursions = (excursionNames) => {
 }
 
 const drawTracksSelect = (tracks) => {
-    $('#tracksTitleContainer').html("Vías:")
-    $("#tracksContainer").html(
+    const tracksTitleContainerId = "#tracksTitleContainer"
+    const tracksContainerId = "#tracksContainer"
+
+    $(tracksTitleContainerId).html("Vías:")
+
+    $(tracksContainerId).hide().html(
         '<div class="option_tracks">' +
             '<input type="radio" name="tracks" id="tracks1" value="1" required />' +       
             '<label for="tracks1">1 via</label>' +
@@ -66,6 +81,11 @@ const drawTracksSelect = (tracks) => {
             )
         }
     }
+
+    $(tracksContainerId).ready(() => {
+        $(tracksContainerId).show()
+        animateCSS(tracksContainerId, 'fadeIn', 'faster')
+    })
 }
 
 // const drawStopsSelect = (stops) => {
@@ -84,12 +104,17 @@ const drawTracksSelect = (tracks) => {
 // }
 
 const drawDestinySelect = (destinies) => {
-    $("#destiniesContainer").html(
+    const destiniesContainerId = "#destiniesContainer"
+
+    $(destiniesContainerId).hide().html(
         '<h3>Hacia:</h3>' +
         '<select name="destinies" id="selectDestinies" required>' +
             '<option value=""></option>' +
         '</select>'        
-    )
+    ).ready(() => {
+        $(destiniesContainerId).show()
+        animateCSS(destiniesContainerId, 'fadeIn', 'faster')
+    })
         
     destinies.forEach(destiny => {
         $('#selectDestinies').append(
@@ -99,37 +124,54 @@ const drawDestinySelect = (destinies) => {
 }
 
 const drawPassengersSelect = (passgersCount) => {
+    const passengersContainerId = "#passengersContainer"
+    
+    $(passengersContainerId).hide().html(
+        '<h3>Cantidad de Persona:</h3>' +
+        '<select name="passengers" id="selectPassengers" required>' +
+            '<option value=""></option>' +
+        '</select>'       
+    )
+
     // Here we pass an array called passgersCount and we need to check if the array is not and empty array
     if (passgersCount[0]) {
-        $("#passengersContainer").html(
-            '<h3>Cantidad de Persona:</h3>' +
-            '<select name="passengers" id="selectPassengers" required>' +
-                '<option value=""></option>' +
-            '</select>'       
-        )
-
         passgersCount.forEach(passengers => {
             $('#selectPassengers').append(
                 `<option value="${passengers}">De ${passengers} pasajeros</option>`
             )
         })
     } else {
-        $("#passengersContainer").html(
-            '<p>El numero de pasajeros lo tiene que consultar con su proveedor</p>'
+        drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+        $('#selectPassengers').append(
+            '<option value="">Consultelo con la empresa</option>'
         )
     }
+
+    $(passengersContainerId).ready(() => {
+        $(passengersContainerId).show()
+        animateCSS(passengersContainerId, 'fadeIn', 'faster')
+    })
 }
 
-const drawBtnWaMe = () => {
-    $('#btnWaMeContainer').html(
-        '<button id="btnWaMe" type="button">' +
-            'Hacer reservacion' +
-        '</button>'
-    )
-}
+// const drawBtnWaMe = () => {
+//     $('#btnWaMeContainer').html(
+//         '<button id="btnWaMe" type="button">' +
+//             'Hacer reservacion' +
+//         '</button>'
+//     )
+// }
 
+// Draw an alert in DOM with a animation
 const drawAlert = (content) => {
-    $('#alertContainer').html(
+    const alertContainerId = '#alertContainer'
+
+    // Look if there's a timeout running and clear it
+    if ($(alertContainerId).html()) {
+        clearTimeout(timerId)
+    }
+    
+    // First hide element and add html, then show element and put it an animation
+    $(alertContainerId).hide().html(
         '<div class="content-one">' +
             '<i class="fas fa-exclamation-circle"></i>' +
         '</div>' +
@@ -139,14 +181,39 @@ const drawAlert = (content) => {
                 content +
             '</p>' +
         '</div>'
-    )
-    
-    setTimeout(() => {
-        $('#alertContainer').hide("slow")
-        console.debug("se ejecuta")
-    }, 4000);
+    ).ready(() => {
+        $(alertContainerId).show()
+        animateCSS(alertContainerId, 'backInRight', 'faster')
+    })
 
+    // Here we're indentifing the timer for handle it
+    timerId = setTimeout(() => {
+        animateCSS(alertContainerId, 'backOutRight').then(() => {
+            $(alertContainerId).hide().empty().show()
+        })
+    }, 4000);
 }
+
+// Function for animate elements
+const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__') =>
+    // We create a Promise and return it
+    new Promise((resolve, reject) => {
+        const animationName = `${prefix}${animation}`;
+        const animationSpeed =  `${prefix}${duration}`
+        const node = document.querySelector(element);
+
+        node.classList.add(`${prefix}animated`, animationName, animationSpeed);
+
+        // When the animation ends, we clean the classes and resolve the Promise
+        function handleAnimationEnd(event) {
+            event.stopPropagation();
+            node.classList.remove(`${prefix}animated`, animationName, animationSpeed);
+            resolve('Animation ended');
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd, {once: true});
+    }
+);
 
 // Empty containers in the recived array by Id
 const emptyContainers = (containerIds) => {
