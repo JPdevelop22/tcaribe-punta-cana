@@ -112,8 +112,9 @@ $(document).ready(() => {
             pickupDate
         } = evt.target
         
-        const pickupLocation = selectPickupLocations.value.split(optionValueSeparator)[0]
-        const trackSelectedValue = document.fBook.tracks.value
+        const pickupLocation = (selectPickupLocations)? selectPickupLocations.value.split(optionValueSeparator)[0] : undefined
+        const trackSelectedValue = (document.fBook.tracks)? document.fBook.tracks.value : undefined
+        const excursionSelectedValue = (selectExcursions)? selectExcursions.value.split(optionValueSeparator)[0]: undefined
 
         let totalPrice
 
@@ -133,7 +134,8 @@ $(document).ready(() => {
                                     ["passengers ranges"][selectPassengers.value]
                     
                     $("#totalPriceContainer").html(
-                        `<p>Precio a pagar: ${totalPrice}$</p>`
+                        '<h3>Total Estimado:</h3>' +
+                        `<p>${totalPrice}$</p>`
                     )
                     
                     wameMessage = `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
@@ -146,25 +148,58 @@ $(document).ready(() => {
                     $("#totalPriceContainer").html(
                         '<p>Consulte el precio con la empresa</p>'
                     )
-                }
 
+                    wameMessage = `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
+                        `${pickupLocation} a ` +
+                        `${selectDestinies.value} para la fecha del ${pickupDate.value}, con una ` +
+                        `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
+                        `quiero que sea de ${trackSelectedValue} vias. Dame el precio plis`
+                }
+                
+                // Modal contruction
+                $('#selectedRouteContainer').html(
+                    '<h3 class="title">Ruta Selecionada:</h3>' +
+                    `<p>${pickupLocation} hacia ${selectDestinies.value}</p>`
+                )
+
+                $('#selectedCarContainer').html(
+                    '<h3 class="title">Auto seleccionado:</h3>' +
+                    `<p>${carSelected}</p>`
+                )
+
+                $('#ventanaModal').modal('show').modal('handleUpdate')
                 break;
         
             case bookTypesArr[1]:
                 try {
-                    totalPrice = excursions[selectExcursions.value.split(optionValueSeparator)[0]]
+                    totalPrice = excursions[excursionSelectedValue]
                                 ["passengers ranges"][selectPassengers.value]          
                     
                     $("#totalPriceContainer").html(
-                        `<p>Precio a pagar: ${totalPrice}$</p>`
+                        '<h3>Total Estimado:</h3>' +
+                        `<p>${totalPrice}$</p>`
                     )
+
+                    wameMessage = `Quiero la excursion: ${excursionSelectedValue}`
                 } catch (error) {
                     $("#totalPriceContainer").html(
                         '<p>Consulte el precio con la empresa</p>'
                     )
+                    wameMessage = 'Dame precio plis'
                 }
 
-                drawBtnWaMe()
+                // Modal contruction
+                $('#selectedRouteContainer').html(
+                    '<h3 class="title">Excursion Selecionada:</h3>' +
+                    `<p>${excursionSelectedValue}</p>`
+                )
+
+                $('#selectedCarContainer').html(
+                    '<h3 class="title">Auto seleccionado:</h3>' +
+                    `<p>${carSelected}</p>`
+                )
+
+                $('#ventanaModal').modal('show').modal('handleUpdate')
                 break;
             
             default:
@@ -173,7 +208,7 @@ $(document).ready(() => {
     })
 
     // On button wame clicking event handler
-    $("#btnWaMeContainer").on('click', '#btnWaMe', () => {
+    $("#btnWaMe").on('click', () => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
         window.location = "https://wa.me/18494529589?text=" +  wameMessage
     })

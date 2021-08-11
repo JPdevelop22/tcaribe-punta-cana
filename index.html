@@ -303,7 +303,7 @@
                 </div>
             </div>
 
-            <div class="tobook_content" data-toggle="modal" data-target="#ventanaModal">
+            <div class="tobook_content">
                 <button id="btn-pay" class="btn_tobook" type="submit">Total a pagar</button>
             </div>
 
@@ -322,21 +322,21 @@
                         <div class="modal-body">
                             <div class="position-center">
                                 <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
-                                <div class="itempay-content">
-                                    <h3 class="title">Ruta Selecionada:</h3>
-                                    <p>USD$ 50</p>
+                                <div class="itempay-content" id="selectedRouteContainer">
+                                    <!-- <h3 class="title">Ruta Selecionada:</h3> 
+                                    <p>Una ruta - otra runta</p> -->
                                 </div>
                             
                                 <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
-                                <div class="itempay-content">
-                                    <h3 class="title">Mercedes Benz Clase C:</h3>
-                                    <p>USD$ 30</p>
+                                <div class="itempay-content" id="selectedCarContainer">
+                                    <!-- <h3 class="title">Auto seleccionado</h3>
+                                    <p>Mercedes Benz Clase C</p> -->
                                 </div>
                                 
                                 <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
-                                <div class="total_topay_content">
-                                    <h3>Total Estimado:</h3>
-                                    <p>USD$ 80</p>
+                                <div class="total_topay_content" id="totalPriceContainer">
+                                    <!-- <h3>Total Estimado:</h3> -->
+                                    <!-- <p>Precio a pagar: XX$</p> -->
                                 </div>
                             
                                 <div class="alert_viawa_content">
@@ -344,7 +344,7 @@
                                 </div>
 
                                 <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
-                                <div class="btn_tobook_content" id="btnWaMeContainer">
+                                <div class="btn_tobook_content">
                                     <button id="btnWaMe" type="button">RESERVAR</button>
                                 <!-- <i class="fab fa-whatsapp"></i> -->
                                 </div>

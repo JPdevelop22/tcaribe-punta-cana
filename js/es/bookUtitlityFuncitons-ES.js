@@ -125,18 +125,19 @@ const drawDestinySelect = (destinies) => {
 
 const drawPassengersSelect = (passgersCount) => {
     const passengersContainerId = "#passengersContainer"
-    
+    const selectPassengersId = '#selectPassengers'
+
     $(passengersContainerId).hide().html(
         '<h3>Cantidad de Persona:</h3>' +
         '<select name="passengers" id="selectPassengers" required>' +
             '<option value=""></option>' +
-        '</select>'       
+        '</select>'
     )
 
     // Here we pass an array called passgersCount and we need to check if the array is not and empty array
     if (passgersCount[0]) {
         passgersCount.forEach(passengers => {
-            $('#selectPassengers').append(
+            $(selectPassengersId).append(
                 `<option value="${passengers}">De ${passengers} pasajeros</option>`
             )
         })
@@ -144,6 +145,7 @@ const drawPassengersSelect = (passgersCount) => {
         const pickupLocationsValue = (document.fBook.pickupLocations)? document.fBook.pickupLocations.value: undefined
         const excursionsValue = (document.fBook.excursions)? document.fBook.excursions.value: undefined
         if (pickupLocationsValue || excursionsValue) drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+        $(selectPassengersId).removeAttr('required')
     }
 
     $(passengersContainerId).ready(() => {
