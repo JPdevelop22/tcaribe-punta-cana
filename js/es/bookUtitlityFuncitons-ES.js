@@ -9,19 +9,22 @@ let timerId
 // DOM manipulation functions
 const drawPickupsLocationSelect = (pickupLocations) => {
     const pickupLocationsContainerId = "#pickupLocationsContainer"
-    $(pickupLocationsContainerId).hide().html(
-        '<h3>Desde:</h3>' +
-        '<select name="pickupLocations" id="selectPickupLocations" required>' +
-            '<option value=""></option>' +
-        '</select>'       
-    ).ready(() => {
-        $(pickupLocationsContainerId).show()
-        animateCSS(pickupLocationsContainerId, 'fadeIn', 'faster')
-    })
+    
+    // If pickupLocationsContainerId dons't have html inside we can add html into it
+    if (!$(pickupLocationsContainerId).html()) {
+        $(pickupLocationsContainerId).hide().html(
+            '<h3>Desde:</h3>' +
+            '<select name="pickupLocations" id="selectPickupLocations" required>' +
+                '<option value=""></option>' +
+            '</select>'
+        ).ready(() => {
+            $(pickupLocationsContainerId).show()
+            animateCSS(pickupLocationsContainerId, 'bounce', 'faster')
+        })
+    }
 
     pickupLocations.forEach(location => {
         let optionValue = location["name-ES"] + optionValueSeparator + 
-                            location["stops"] + optionValueSeparator + 
                             location["destinies-ES"] + optionValueSeparator +
                             location["tracks"] + optionValueSeparator +
                             location["passengers ranges"]
@@ -34,15 +37,19 @@ const drawPickupsLocationSelect = (pickupLocations) => {
 
 const drawSelectExcursions = (excursionNames) => {
     const excursionContainerId = "#excursionContainer"
-    $(excursionContainerId).hide().html(
-        '<h3>Excursiones:</h3>' +
-        '<select name="excursions" id="selectExcursions" required>' +
-            '<option value=""></option>' +
-        '</select>'       
-    ).ready(() => {
-        $(excursionContainerId).show()
-        animateCSS(excursionContainerId, 'fadeIn', 'faster')
-    })
+    
+    // If excursionContainerId dons't have html inside we can add html into it
+    if (!$(excursionContainerId).html()) {
+        $(excursionContainerId).hide().html(
+            '<h3>Excursiones:</h3>' +
+            '<select name="excursions" id="selectExcursions" required>' +
+                '<option value=""></option>' +
+            '</select>'       
+        ).ready(() => {
+            $(excursionContainerId).show()
+            animateCSS(excursionContainerId, 'fadeIn', 'faster')
+        })
+    }
 
     excursionNames.forEach(excursionName => {
         let optionValue = excursionName + optionValueSeparator
@@ -62,46 +69,33 @@ const drawTracksSelect = (tracks) => {
     const tracksTitleContainerId = "#tracksTitleContainer"
     const tracksContainerId = "#tracksContainer"
 
-    $(tracksTitleContainerId).html("Vías:")
+    if (!document.fBook.tracks || document.fBook.tracks.length != tracks) {
+        $(tracksTitleContainerId).html("Vías:")
 
-    $(tracksContainerId).hide().html(
-        '<div class="option_tracks">' +
-            '<input type="radio" name="tracks" id="tracks1" value="1" required />' +       
-            '<label for="tracks1">1 via</label>' +
-        '</div>'
-    )
-
-    if (tracks > 1) {
-        for (let i = 2; i <= tracks; i++) {
-            $('#tracksContainer').append(
-                '<div class="option_tracks">' +
-                    `<input type="radio" name="tracks" id="tracks${i}" value="${i}" required />` +       
-                    `<label for="tracks${i}">${i} vias</label>` +
-                '</div>'
-            )
+        $(tracksContainerId).hide().html(
+            '<div class="option_tracks">' +
+                '<input type="radio" name="tracks" id="tracks1" value="1" required />' +       
+                '<label for="tracks1">1 via</label>' +
+            '</div>'
+        )
+    
+        if (tracks > 1) {
+            for (let i = 2; i <= tracks; i++) {
+                $('#tracksContainer').append(
+                    '<div class="option_tracks">' +
+                        `<input type="radio" name="tracks" id="tracks${i}" value="${i}" required />` +       
+                        `<label for="tracks${i}">${i} vias</label>` +
+                    '</div>'
+                )
+            }
         }
+
+        $(tracksContainerId).ready(() => {
+            $(tracksContainerId).show()
+            animateCSS(tracksContainerId, 'fadeIn', 'faster')
+        })
     }
-
-    $(tracksContainerId).ready(() => {
-        $(tracksContainerId).show()
-        animateCSS(tracksContainerId, 'fadeIn', 'faster')
-    })
 }
-
-// const drawStopsSelect = (stops) => {
-//     $("#stopsContainer").html(
-//         '<h3>Paradas:</h3>' +
-//         '<select name="stops" id="selectStops" required>' +
-//             '<option value=""></option>' +
-//         '</select>'
-//     )
-
-//     stops.forEach(stop => {
-//         $('#selectStops').append(
-//             `<option value="${stop}">${stop}</option>`
-//         )
-//     })
-// }
 
 const drawDestinySelect = (destinies) => {
     const destiniesContainerId = "#destiniesContainer"
@@ -113,9 +107,9 @@ const drawDestinySelect = (destinies) => {
         '</select>'        
     ).ready(() => {
         $(destiniesContainerId).show()
-        animateCSS(destiniesContainerId, 'fadeIn', 'faster')
+        animateCSS(destiniesContainerId, 'bounce', 'faster')
     })
-        
+
     destinies.forEach(destiny => {
         $('#selectDestinies').append(
             `<option value="${destiny}">${destiny}</option>`
@@ -142,25 +136,22 @@ const drawPassengersSelect = (passgersCount) => {
             )
         })
     } else {
-        const pickupLocationsValue = (document.fBook.pickupLocations)? document.fBook.pickupLocations.value: undefined
-        const excursionsValue = (document.fBook.excursions)? document.fBook.excursions.value: undefined
+        const pickupLocationsValue = (document.fBook.pickupLocations)? 
+                                document.fBook.pickupLocations.value: undefined
+        
+        const excursionsValue = (document.fBook.excursions)? 
+                                document.fBook.excursions.value: undefined
+        
         if (pickupLocationsValue || excursionsValue) drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+        
         $(selectPassengersId).removeAttr('required')
     }
 
     $(passengersContainerId).ready(() => {
         $(passengersContainerId).show()
-        animateCSS(passengersContainerId, 'fadeIn', 'faster')
+        animateCSS(passengersContainerId, 'bounce', 'faster')
     })
 }
-
-// const drawBtnWaMe = () => {
-//     $('#btnWaMeContainer').html(
-//         '<button id="btnWaMe" type="button">' +
-//             'Hacer reservacion' +
-//         '</button>'
-//     )
-// }
 
 // Draw an alert in DOM with a animation
 const drawAlert = (content) => {
@@ -227,6 +218,9 @@ const changeCarSelected = (newCar, containerId) => {
 
 // Empty containers in the recived array by Id
 const emptyContainers = (containerIds) => {
-    containerIds.forEach(id => $(`#${id}`).empty())
+    containerIds.forEach(containerId => {
+        let id = `#${containerId}`
+        animateCSS(id, 'fadeOut', 'faster').then(() => $(id).empty())
+    })
 }
 
