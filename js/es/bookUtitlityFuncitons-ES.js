@@ -141,10 +141,9 @@ const drawPassengersSelect = (passgersCount) => {
             )
         })
     } else {
-        drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
-        $('#selectPassengers').append(
-            '<option value="">Consultelo con la empresa</option>'
-        )
+        const pickupLocationsValue = (document.fBook.pickupLocations)? document.fBook.pickupLocations.value: undefined
+        const excursionsValue = (document.fBook.excursions)? document.fBook.excursions.value: undefined
+        if (pickupLocationsValue || excursionsValue) drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
     }
 
     $(passengersContainerId).ready(() => {
@@ -214,6 +213,11 @@ const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__')
         node.addEventListener('animationend', handleAnimationEnd, {once: true});
     }
 );
+
+// On select a car click handler
+const changeCarSelected = (newCar) => {
+    carSelected = newCar
+}
 
 // Empty containers in the recived array by Id
 const emptyContainers = (containerIds) => {

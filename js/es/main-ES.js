@@ -8,6 +8,7 @@
 let wameMessage = ''
 let bookTypesArr = ['Viaje turístico', 'Excursión']
 const { travels, "excursions-ES": excursions, "prices-ES": prices } = DB
+let carSelected // This var will change while the user click the select car
 
 $(document).ready(() => {
     // Book type Select chaging event handler 
@@ -39,7 +40,7 @@ $(document).ready(() => {
 
     // On select excursion changing event handler 
     $("#excursionContainer").on('change', "#selectExcursions", evt => {
-        const [ _, passegers ] = evt.target.value.split(optionValueSeparator) // Here we're getting the passegenrs ranges
+        const [ _, passegers ] = (evt.target.value)? evt.target.value.split(optionValueSeparator) : ["", ""]// Here we're getting the passegenrs ranges
         const passegersArr = passegers.split(arraySeparator)
         
         drawPassengersSelect(passegersArr)
@@ -49,7 +50,7 @@ $(document).ready(() => {
 
     // On select pickup locations changing event handler 
     $("#pickupLocationsContainer").on('change', "#selectPickupLocations", evt => {
-        const [_, stops, destiny, tracks, passengers] = evt.target.value.split(optionValueSeparator)
+        const [_, stops, destiny, tracks, passengers] = (evt.target.value)? evt.target.value.split(optionValueSeparator) : ["", "", "", "", ""]
         drawTracksSelect(tracks)
         
         // drawAlert('testing')
@@ -67,8 +68,8 @@ $(document).ready(() => {
     })
 
     // On click handler for some elements that must be inactive
-    $('#excursionContainer, #destiniesContainer, #passengersContainer')
-    .on('click', '#selectExcursions, #selectDestinies, #selectPassengers',
+    $('#destiniesContainer, #passengersContainer')
+    .on('click', '#selectDestinies, #selectPassengers',
     () => {
         if (!document.fBook.bookType.value) {
             drawAlert('Primero debe seleccionar un tipo de reservacion, para que podamos saber con que podemos rellenar esos campos')
@@ -77,10 +78,21 @@ $(document).ready(() => {
         else if (document.fBook.bookType.value == bookTypesArr[0] && !document.fBook.pickupLocations.value) {
             drawAlert('Primero debe seleccionar un lugar de recogida, para que podamos saber con que podemos rellenar esos campos')
             animateCSS('#pickupLocationsContainer', 'bounce', 'faster')
+        } else if (document.fBook.bookType.value == bookTypesArr[1] && !document.fBook.excursions.value) {
+            drawAlert('Primero debe seleccionar una excursion, para que podamos saber con que podemos rellenar esos campos')
+            animateCSS('#excursionContainer', 'bounce', 'faster')
         }
     })
 
     $('#pickupLocationsContainer').on('click', '#selectPickupLocations', 
+    () => {
+        if (!document.fBook.bookType.value) {
+            drawAlert('Primero debe seleccionar un tipo de reservacion, para que podamos saber con que podemos rellenar esos campos')
+            animateCSS('#bookTypeContainer', 'bounce', 'faster')
+        } 
+    })
+
+    $('#excursionContainer').on('click', '#selectExcursions', 
     () => {
         if (!document.fBook.bookType.value) {
             drawAlert('Primero debe seleccionar un tipo de reservacion, para que podamos saber con que podemos rellenar esos campos')
@@ -95,7 +107,6 @@ $(document).ready(() => {
         const {
             selectPickupLocations,
             selectExcursions,
-            selectStops,
             selectDestinies,
             selectPassengers,
             pickupDate
@@ -105,6 +116,12 @@ $(document).ready(() => {
         const trackSelectedValue = document.fBook.tracks.value
 
         let totalPrice
+
+        if (!carSelected) {
+            drawAlert("Debe seleccionar un auto")
+            window.location = '#carsContainer'
+            return;
+        } 
 
         switch (bookType) {
             case bookTypesArr[0]:
@@ -131,7 +148,6 @@ $(document).ready(() => {
                     )
                 }
 
-                drawBtnWaMe()
                 break;
         
             case bookTypesArr[1]:
