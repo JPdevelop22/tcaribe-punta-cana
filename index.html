@@ -212,11 +212,10 @@
                 </div>
         </div>
 
-        <div class="tittle_select_car">
-            <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
-        </div>
-        <div class="car_select_container" id="carsContainer">
-            <div id="car_content" class="car_content">
+            <div class="tittle_select_car">
+                <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
+            </div>
+            <div id="carContainer1" class="car_content">
                 
                 <div class="car_img chevrolet_car"></div>
 
@@ -236,18 +235,16 @@
 
                 <div class="btn_select_content">
                     <button 
-                        onclick="changeCarSelected('Chevrolet suburban 2012');" 
+                        onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" 
                         type="button"
                         id="btnCarSelected">
-                        
                         SELECT
                     </button>
                 </div>
 
-                </div>
             </div>
 
-            <div id="car_content" class="car_content">
+            <div id="carContainer2" class="car_content">
                 
                 <div class="car_img limosina_car"></div>
 
@@ -267,17 +264,16 @@
 
                 <div class="btn_select_content">
                     <button 
-                        onclick="changeCarSelected('Limosina Town Car 2007');" 
+                        onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" 
                         type="button"
                         id="btnCarSelected">
                         SELECT
                     </button>
                 </div>
 
-                </div>
             </div>
 
-            <div id="car_content" class="car_content">
+            <div id="carContainer3" class="car_content">
                 
                 <div class="car_img mercedes_car"></div>
 
@@ -297,7 +293,7 @@
 
                 <div class="btn_select_content">
                     <button 
-                        onclick="changeCarSelected('Mercedes Benz Clase C 2012');" 
+                        onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" 
                         type="button"
                         id="btnCarSelected">
                         SELECT

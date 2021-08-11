@@ -120,7 +120,7 @@ $(document).ready(() => {
 
         if (!carSelected) {
             drawAlert("Debe seleccionar un vehiculo")
-            window.location = '#carsContainer'
+            window.location = '#carContainer1'
             return;
         } 
 
@@ -212,10 +212,5 @@ $(document).ready(() => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
         window.location = "https://wa.me/18494529589?text=" +  wameMessage
     })
-
-    //this function will add a border outside of the car content when it is selected
-    $("#btnCarSelected").on('click', function(){
-        $("#car_content").toggleClass("car_selected_border");
-    });
 
 })

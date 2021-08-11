@@ -216,9 +216,13 @@ const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__')
     }
 );
 
-// On select a car click handler
-const changeCarSelected = (newCar) => {
+// On select a car click handler and this function will add a border outside of the car content when it is selected
+const changeCarSelected = (newCar, containerId) => {
     carSelected = newCar
+
+    $('#carContainer1, #carContainer2, #carContainer3').removeClass("car_selected_border")
+
+    $(`#${containerId}`).addClass("car_selected_border")
 }
 
 // Empty containers in the recived array by Id
