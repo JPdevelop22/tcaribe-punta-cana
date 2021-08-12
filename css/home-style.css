@@ -9,7 +9,7 @@
     --paragraph-font: 'Open Sans', sans-serif;
 }
 html{
-
+    scroll-behavior: smooth;
 }
 body{
     background-color: #E8E8E8;
