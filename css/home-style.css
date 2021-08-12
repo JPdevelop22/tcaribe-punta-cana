@@ -27,8 +27,9 @@ nav{
     flex-direction: row;
     padding: 1% 13%;
     align-items: center;
-    background: #efefef88;
-    /* position: absolute; */
+    background: #efefef;
+    position: fixed;
+    z-index: 999;
 }
 
 .logo{
@@ -46,9 +47,11 @@ nav{
 .links_header_container .link{
     text-decoration: none;
     font-size: 0.9rem;
-    font-family: var(--paragraph-font);
-    color: var(--blue-brand);
-    border-bottom: var(--blue-brand) solid .1875rem;
+    font-family: var(--title-font);
+    color: var(--red-brand);
+    /* border-bottom: var(--blue-brand) solid .1875rem; */
+    font-weight: 700;
+    letter-spacing: 0.4px;
     margin: 0 2%;
 }
 
@@ -56,8 +59,8 @@ nav{
 
 .booking_container{
     width: 100%;
-    margin: 1% auto 0;
-    background-image: url(../img/backgrounds/clouds.jpg);
+    margin: 0% auto 0;
+    background: url(../img/backgrounds/clouds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -67,7 +70,7 @@ nav{
 
 .title_content h1{
     width: 60%;
-    margin: 0 auto;
+    margin: 10% auto 0;
     text-align: center;
     font-size: 1.25rem;
     font-family: var(--paragraph-font);
@@ -202,7 +205,7 @@ nav{
     display: flex;
     flex-direction: row;
     border-radius: 2px;
-    background: rgb(199, 199, 199);
+    background: rgb(220, 220, 220);
     box-shadow: 2px 5px 10px -5px;
     margin: 3% auto 0;
     position: relative;
@@ -337,8 +340,9 @@ nav{
 }
 
 .alert-booking .content-one{
+    box-shadow: 8px 8px 10px -7px var(--black-brand);
     width:25%;
-    background: #5d1816;
+    background: #d4544f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,7 +351,9 @@ nav{
 }
 
 .alert-booking .content-two{
-    background: #d4544f;
+    background: rgb(219, 219, 219);
+    box-shadow: 8px 8px 10px -7px var(--black-brand);
+    border-radius: 0 5px 5px 0;
     font-size: 12px;
     font-family: var(--paragraph-font);
     width: 70%;
