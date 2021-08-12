@@ -25,15 +25,39 @@ nav{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 1% 13%;
+    padding: 1% 0;
     align-items: center;
     background: #efefef;
     position: fixed;
     z-index: 999;
 }
 
+.languages_changer_content{
+    margin: 0 6% 0 5%;
+    display: flex;
+}
+
+.language{
+    text-align: center;
+    margin: 0 30% 0 0;
+}
+    .language:hover{
+        transform: scale(1.1, 1.1);
+        transition: all .2s ease-in-out;
+    }
+
+.languages_changer_content .language img{
+    width: 60%;
+}
+
+.languages_changer_content .language p{
+    color: var(--blue-brand);
+    font-size: 14px;
+}
+
 .logo{
     width: 15%;
+    margin: 0 0 0 10%;
 }
 
 .links_header_container{
@@ -82,6 +106,8 @@ nav{
 .title_content h1 span{
     color: var(--blue-brand);
 }
+
+
 
 /* POSITION INPUTS */
 .position_typebooking_excursions{
@@ -333,10 +359,11 @@ nav{
     flex-direction: row;
     position: absolute;
     right: 0;
+    top:20%;
     width: 30%;
-    height: 70px;
     position: fixed;
     z-index: 80;
+    
 }
 
 .alert-booking .content-one{
@@ -354,15 +381,18 @@ nav{
     background: rgb(219, 219, 219);
     box-shadow: 8px 8px 10px -7px var(--black-brand);
     border-radius: 0 5px 5px 0;
-    font-size: 12px;
-    font-family: var(--paragraph-font);
     width: 70%;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
+}
+.alert-booking .content-two p{
+    color: #000;
+    padding: 10px 20px 0;
+    font-size: 13px;
+    font-family: var(--paragraph-font);
     align-items: center;
     text-align: center;
-}
+    }
 
 .car_selected_border{
     border: green solid 3px;
@@ -384,6 +414,7 @@ nav{
     border-bottom: var(--black-brand) solid 3px;
     color: var(--black-brand);
 }
+
 
 .banner_contacts{
     margin: 0 0 6% 5%;
@@ -420,3 +451,139 @@ nav{
 
 
 /* END */
+
+/* ABOUT US */
+
+.about_us_container{
+    margin: 15% 0 0;
+}
+
+.about_us_container .title_about_us{
+    width: 100%;
+}
+    .title_about_us h2{
+        width: 20%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.45rem;
+        font-family: var(--title-font);
+        font-weight: 700;
+        border-bottom: var(--black-brand) solid 3px;
+        color: var(--black-brand);
+    }
+    /* .title_about_us p{
+        text-align: center;
+        margin: 1% 0 0;
+    } */
+
+    .abou_us_content{
+        margin: 5% 0 0;
+        width: 100%;
+    }
+
+    .cristian_introduction_content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--red-brand);
+        width: 100%;
+        height: 30.25rem;
+    }
+        .cristian_introduction_content img{
+            width: 50%;
+        }
+        .cristian_introduction_content .cristian{
+            width: 70%;
+            text-align: center;
+            margin: auto 0;
+            padding: 0 5%;
+        }
+
+        .cristian_introduction_content .cristian h3{
+            margin: 0 0 3%;
+            font-size: 1.5625rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #fff;
+        }
+        
+        .cristian_introduction_content .cristian p{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(31, 31, 31);
+            font-weight: 400;
+        }
+/* END */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: rgb(36, 36, 36);
+    padding: 3% 4%;
+    margin: 20% 0 0;
+}
+
+.logo_footer{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_footer img{
+    width: 50%;
+
+}
+
+.contact_footer{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2% 0;
+    font-size: 13px;
+    padding: 0 15%;
+}
+    .contact div:first-child{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 0 4%;
+    }
+
+
+.contact_footer div h4{
+    font-size: 1.0625em;
+    font-family: var(--title-font);
+    color: rgb(161, 161, 161);
+}
+
+.contact_footer div a, .contact_footer div p{
+    font-size: 1.125em;
+    font-family: var(--paragraph-font);
+    text-decoration: none;
+    color: #fff;
+}
+
+.socialmedia_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socialmedia_footer a{
+    margin: 0 2%;
+}
+
+.socialmedia_footer a i{
+    font-size: 26px;
+    
+}
