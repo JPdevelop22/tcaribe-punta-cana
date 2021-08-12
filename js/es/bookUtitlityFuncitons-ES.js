@@ -141,8 +141,10 @@ const drawPassengersSelect = (passgersCount) => {
         
         const excursionsValue = (document.fBook.excursions)? 
                                 document.fBook.excursions.value: undefined
-        
-        if (pickupLocationsValue || excursionsValue) drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+
+        if (pickupLocationsValue != undefined || excursionsValue != undefined) {
+            drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+        }
         
         $(selectPassengersId).removeAttr('required')
     }
@@ -233,3 +235,15 @@ const formatDate = (date, langFormat = "es-ES") => {
     return day + " de " + month + " del " + year; // Dia de Mes del Año
 }
 
+// A function for set actual date to a date input element by id
+const setActualDate = (elementId) => {
+    let datePicker = document.getElementById(elementId)
+    let actualDate = new Date(Date.now())
+    let day = actualDate.getDate();
+    let year = actualDate.getFullYear();
+    let month = actualDate.toLocaleDateString("es-ES", {month:'2-digit'})
+    
+    let actualDateFormated = year + "-" + month + "-" + day
+
+    datePicker.min = actualDateFormated
+}

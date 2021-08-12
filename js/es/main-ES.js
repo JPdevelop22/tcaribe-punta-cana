@@ -14,6 +14,9 @@ let commonErrorMessage =
     'para que podamos saber con que podemos rellenar esos campos'
 
 $(document).ready(() => {
+    // Set actual date as min value to our date picker
+    setActualDate("pickupDate")
+
     // Book type Select chaging event handler 
     $("#selectBookType").on('change', evt => {
         switch (evt.target.value) {
@@ -158,11 +161,12 @@ $(document).ready(() => {
                 }
 
                 wameMessage = 
-                    `Buenas quisiera hacer una reservacion a la ruta que va desde ` +
-                    `${pickupLocation} a ` +
-                    `${selectDestinies.value} para la fecha del ${date}, con una ` +
+                    `Hola, quiero hacer una reservación del servicio de ${bookType}, ` +
+                    `tomaré la ruta que va desde el punto de recogida ${pickupLocation} hasta ` +
+                    `${selectDestinies.value}, para la fecha del ${date}, con una ` +
                     `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
-                    `quiero que sea de ${trackSelectedValue} vias.`
+                    'quiero que sea de' + ((trackSelectedValue < 2)? "1 vía." : `${trackSelectedValue} vías.`) +
+                    ' ¿Me podrían ofrecer más información, por favor?'
                 
                 // Modal contruction
                 $('#selectedDateContainer').html(
@@ -199,7 +203,11 @@ $(document).ready(() => {
                     )
                 }
 
-                wameMessage = `Quiero la excursion: ${excursionSelectedValue}`
+                wameMessage = 
+                    `Hola, quiero hacer una reservación del servicio de ${bookType}, ` +
+                    `escogí: ${excursionSelectedValue}, para la fecha del ${date} ` +
+                    `con una cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, ` +
+                    ' ¿Me podrían ofrecer más información, por favor?'
 
                 // Modal contruction
                 $('#selectedDateContainer').html(

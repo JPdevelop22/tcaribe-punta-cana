@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- #region Meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="servicios turisticos, zonas turisticas de RD, reservacion de vehiculos, rutas en zonas turisticas en RD, excursiones turisticas en RD">
+    <meta name="description" content="Servicios de transportación con los mejores vehículos, para las mejores zonas turísticas de la República Dominicana.">
+    <meta name="author" content="TCARIBE Punta Cana Service" />
+    <meta name="theme-color" content="#E52E2A" />
+    <meta content="translate" name="google">
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="expires" content="43200"/>
+    <meta content="@TCaribePC" name="twitter:site" />
+    <meta content="@TCaribePC" name="twitter:creator" />
+    <meta content="Since 2005 tcaribepuntacana offering transfers and chauffeured cars service at Punta Cana, Puerto Plata, Samana and the rest of Dominican Republic." name="twitter:description" />
+    <meta content="T CARIBE - Transfer in Punta Cana and all DR" name="twitter:title" />
+    <meta name="geo.region" content="DO" /><meta name="geo.placename" content="Punta cana" />
+    <!-- #endregion -->
+    
+    <!-- Favicons-->
+	<link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png" /> -->
 
-    <!-- END -->
     <!-- #region Dependencias de la funcionalidad de la reservación-->
     <script    
         src="https://code.jquery.com/jquery-3.6.0.min.js" 
@@ -56,12 +75,12 @@
 <body>    
     <!-- #region Cabecera de la pagina-->
     <nav>
-        <img class="logo" src="./img/logo/logo.png" alt="">
+        <img class="logo" src="./img/logo/logo.png" alt="Marca de la empresa">
 
-        <div class="links_header_container">
-            <a class="link" href="#">RESERVACION</a>
-            <a class="link" href="#contact-zone">CONTACTANOS</a>
-            <a class="link" href="#about_us_container">ACERCA NOSOTROS</a>
+        <div class="links_header_container" role="menubar">
+            <a class="link" href="#" title="Zona de reservación">RESERVACIÓN</a>
+            <a class="link" href="#contact-zone" title="Contactanos">CONTACTANOS</a>
+            <a class="link" href="#about_us_container" title="Acerca de nosotros">ACERCA  DE NOSOTROS</a>
         </div>
     </nav>
     <!-- #endregion -->
@@ -82,7 +101,7 @@
             </div>  
 
             <!-- ALERTAS que se rellenaran con jquery -->
-            <div class="alert-booking" id="alertContainer">
+            <div class="alert-booking" id="alertContainer" role="alert" aria-modal="true">
                 <!-- <div class="content-one">
                     <i class="fas fa-exclamation-circle"></i>
                 </div>
@@ -175,7 +194,7 @@
             </div>
             <div id="carContainer1" class="car_content">
                 
-                <div class="car_img chevrolet_car"></div>
+                <div class="car_img chevrolet_car" role="img"></div>
 
 
                 <div class="position_brandname_alert">
@@ -195,7 +214,8 @@
                     <button 
                         onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" 
                         type="button"
-                        id="btnCarSelected">
+                        id="btnCarSelected"
+                        aria-details="Boton para seleccionar el Chevrolet suburban 2012">
                         SELECT
                     </button>
                 </div>
@@ -204,7 +224,7 @@
 
             <div id="carContainer2" class="car_content">
                 
-                <div class="car_img limosina_car"></div>
+                <div class="car_img limosina_car" role="img"></div>
 
 
                 <div class="position_brandname_alert">
@@ -224,7 +244,8 @@
                     <button 
                         onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" 
                         type="button"
-                        id="btnCarSelected">
+                        id="btnCarSelected"
+                        aria-details="Boton para seleccionar el Limosina Town Car 2007">
                         SELECT
                     </button>
                 </div>
@@ -233,7 +254,7 @@
 
             <div id="carContainer3" class="car_content">
                 
-                <div class="car_img mercedes_car"></div>
+                <div class="car_img mercedes_car" role="img"></div>
 
 
                 <div class="position_brandname_alert">
@@ -253,7 +274,8 @@
                     <button 
                         onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" 
                         type="button"
-                        id="btnCarSelected">
+                        id="btnCarSelected"
+                        aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012">
                         SELECT
                     </button>
                 </div>
@@ -421,14 +443,16 @@
             <div class="contact_us_content">
 
                 <div class="banner_contacts">
-                    <img src="./img/banners/banner-contacts.jpeg" alt="">
+                    <img src="./img/banners/banner-contacts.jpeg" alt="Banner indicando metodos de contacto">
                 </div>
 
                 <div class="location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
                 </div>
-                
-            </div>
+            </div>        
+        </div>
     </section>
 
     <section id="about_us_container">
