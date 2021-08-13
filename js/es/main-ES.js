@@ -29,7 +29,7 @@ $(document).ready(() => {
                 break;
         
             case bookTypesArr[1]:
-                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'stopsContainer', 'destiniesContainer'])
+                emptyContainers(['pickupLocationsContainer', 'tracksContainer', 'tracksTitleContainer', 'destiniesContainer'])
                 drawSelectExcursions(Object.keys(excursions))
                 drawPassengersSelect([])
                 break;

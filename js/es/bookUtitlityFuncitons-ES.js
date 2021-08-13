@@ -137,12 +137,15 @@ const drawPassengersSelect = (passgersCount) => {
         })
     } else {
         const pickupLocationsValue = (document.fBook.pickupLocations)? 
-                                document.fBook.pickupLocations.value: undefined
+                                document.fBook.pickupLocations.value: ""
         
         const excursionsValue = (document.fBook.excursions)? 
-                                document.fBook.excursions.value: undefined
+                                document.fBook.excursions.value: ""
 
-        if (pickupLocationsValue != undefined || excursionsValue != undefined) {
+        const bookTypeValue = document.fBook.bookType.value
+
+        if (bookTypeValue == bookTypesArr[0] && pickupLocationsValue ||
+            bookTypeValue == bookTypesArr[1] && excursionsValue) {
             drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
         }
         
