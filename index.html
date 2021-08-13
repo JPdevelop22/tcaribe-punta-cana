@@ -57,6 +57,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <script src="./js/scrollForAnimations.js"></script>
     <!-- #endregion -->
 
     <!-- Linking de las tipografias -->
@@ -74,7 +76,7 @@
 </head>
 <body>    
     <!-- #region Cabecera de la pagina-->
-    <nav>
+    <nav id="navBar">
         <img class="logo" src="./img/logo/logo.png" alt="Marca de la empresa">
 
         <div class="links_header_container" role="menubar">
@@ -454,7 +456,7 @@
 
             <div class="contact_us_content">
 
-                <div class="banner_contacts">
+                <div class="banner_contacts" id="contactBanner">
                     <img src="./img/banners/banner-contacts.png" alt="Banner indicando metodos de contacto">
                 </div>
 
@@ -523,10 +525,10 @@
             </div>
 
             <div class="socialmedia_footer">
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-whatsapp"></i></a>
-                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href="" id="instagramIcon"><i class="fab fa-instagram"></i></a>
+                <a href="" id="twitterIcon"><i class="fab fa-twitter"></i></a>
+                <a href="" id="whatsappIcon"><i class="fab fa-whatsapp"></i></a>
+                <a href="" id="facebookIcon"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
 
