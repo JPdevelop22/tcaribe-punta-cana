@@ -52,7 +52,7 @@ nav{
 
 .languages_changer_content .language p{
     color: var(--blue-brand);
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 .logo{
@@ -75,7 +75,7 @@ nav{
     color: var(--red-brand);
     /* border-bottom: var(--blue-brand) solid .1875rem; */
     font-weight: 700;
-    letter-spacing: 0.4px;
+    letter-spacing: .025rem;
     margin: 0 2%;
 }
 
@@ -136,26 +136,24 @@ nav{
 
 .booking_content{
     background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
     width: 70%;
     margin: 3% auto 0;
-    border-radius: 10px;
-    padding: 10px 0;
+    border-radius: .625rem;
+    padding: .625rem 0;
 }
 
 
 .booking_content select, .select{
-    width: 180px;
-    height: 34px;
-    /* padding: 6px 5.25rem; */
+    width: 11.25rem;
+    height: 2.125rem;
     text-align: center;
     border: none;
     background: #E0E0E0;
-    border: var(--black-brand) solid 0.5px;
+    border: var(--black-brand) solid .03125rem;
 }
 
 .select_from select, .select_to select{
-    width: 250px;
+    width: 15.625rem;
     text-align: center;
     
 }
@@ -166,7 +164,7 @@ nav{
 
 
 .booking_content h3{
-    font-size: 13px;
+    font-size: .8125rem;
     font-family: var(--paragraph-font);
     color: var(--black-brand);
 }
@@ -199,7 +197,7 @@ nav{
 }
 
 .booking_content .select_via .option_tracks{
-    margin: 0 10px;
+    margin: 0 .625rem;
 
 }
 
@@ -213,10 +211,10 @@ nav{
 }
 
 .tittle_select_car h1{
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-family: var(--title-font);
     color: var(--black-brand);
-    border-bottom: var(--blue-brand) solid 3px;
+    border-bottom: var(--blue-brand) solid .1875rem;
     padding: 0 2%;
 }
 
@@ -230,9 +228,9 @@ nav{
     width: 70%;
     display: flex;
     flex-direction: row;
-    border-radius: 2px;
+    border-radius: .125rem;
     background: rgb(220, 220, 220);
-    box-shadow: 2px 5px 10px -5px;
+    box-shadow: .125rem .3125rem .625rem -0.3125rem;
     margin: 3% auto 0;
     position: relative;
 }
@@ -258,7 +256,6 @@ nav{
     background-repeat: no-repeat;
     position: relative;
     left: 5%;
-    /* margin-top: 4%; */
 }
 
 .limosina_car{
@@ -282,7 +279,7 @@ nav{
 
 .name_car{
     width: 100%;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-family: var(--title-font);
     font-weight: 800;
     color: var(--blue-brand);
@@ -296,7 +293,7 @@ nav{
 
 .car_content .alert p{
     text-align: center;
-    font-size: 12px;
+    font-size: .75rem;
     font-family: var(--paragraph-font);
     margin: 0 0 20% 0;
 }
@@ -312,7 +309,7 @@ nav{
 }
     .btn_select_content button:hover{
         background: #e52d2a00;
-        border: var(--red-brand) solid 2px;
+        border: var(--red-brand) solid .125rem;
         color: var(--red-brand);
         transition: all .2s ease-in-out;
     }
@@ -320,13 +317,13 @@ nav{
 .btn_select_content button{
     border: none;
     background: var(--red-brand);
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 13px;
+    padding: .625rem 1.25rem;
+    border-radius: 1.25rem;
+    font-size: .8125rem;
     font-family: var(--title-font);
     font-weight: 800;
     color: #fff;
-    box-shadow: 3px 3px 4px -1px var(--black-brand);
+    box-shadow: .1875rem .1875rem .25rem -0.0625rem var(--black-brand);
 }
 
 .tobook_content{
@@ -337,7 +334,7 @@ nav{
 }
     .tobook_content .btn_tobook:hover{
         background: #fff0;
-        border: var(--red-brand) solid 3px;
+        border: var(--red-brand) solid .1875rem;
         color: var(--red-brand);
         transform: scale(1.02,1.02);
         transition: all .2s ease-in-out;
@@ -346,11 +343,11 @@ nav{
 .btn_tobook{
     border: none;
     background: var(--blue-brand);
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: .625rem 1.25rem;
+    border-radius: 1.5625rem;
     text-align: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--title-font);
 }
 
@@ -367,35 +364,35 @@ nav{
 }
 
 .alert-booking .content-one{
-    box-shadow: 8px 8px 10px -7px var(--black-brand);
+    box-shadow: .5rem .5rem .625rem -0.4375rem var(--black-brand);
     width:25%;
     background: #d4544f;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
-    border-radius: 5px 0 0 5px;
+    font-size: 1.0625rem;
+    border-radius: .3125rem 0 0 .3125rem;
 }
 
 .alert-booking .content-two{
     background: rgb(219, 219, 219);
-    box-shadow: 8px 8px 10px -7px var(--black-brand);
-    border-radius: 0 5px 5px 0;
+    box-shadow: .5rem .5rem .625rem -0.4375rem var(--black-brand);
+    border-radius: 0 .3125rem .3125rem 0;
     width: 70%;
     display: flex;
     justify-content: center;
 }
 .alert-booking .content-two p{
     color: #000;
-    padding: 10px 20px 0;
-    font-size: 13px;
+    padding: .625rem 1.25rem 0;
+    font-size: .8125rem;
     font-family: var(--paragraph-font);
     align-items: center;
     text-align: center;
     }
 
 .car_selected_border{
-    border: green solid 3px;
+    border: green solid .1875rem;
 }
 
 /* CONTACT US ZONE */
@@ -411,7 +408,7 @@ nav{
     font-size: 1.45rem;
     font-family: var(--title-font);
     font-weight: 700;
-    border-bottom: var(--black-brand) solid 3px;
+    border-bottom: var(--black-brand) solid .1875rem;
     color: var(--black-brand);
 }
 
@@ -423,7 +420,7 @@ nav{
 
 .banner_contacts img{
     width: 55%;
-    box-shadow: 7px 7px 10px -7px var(--black-brand);
+    box-shadow: .4375rem .4375rem .625rem -0.4375rem var(--black-brand);
 } 
     .banner_contacts img:hover{
         transform: scale(1.1,1.1);
@@ -438,7 +435,7 @@ nav{
 
 .location iframe{
     width: 60%;
-    box-shadow: -7px -7px 10px -7px var(--black-brand);
+    box-shadow: -0.4375rem -0.4375rem .625rem -0.4375rem var(--black-brand);
     
 }
 
@@ -468,7 +465,7 @@ nav{
         font-size: 1.45rem;
         font-family: var(--title-font);
         font-weight: 700;
-        border-bottom: var(--black-brand) solid 3px;
+        border-bottom: var(--black-brand) solid .1875rem;
         color: var(--black-brand);
     }
     /* .title_about_us p{
@@ -507,7 +504,7 @@ nav{
         }
         
         .cristian_introduction_content .cristian p{
-            font-size: 17px;
+            font-size: 1.0625rem;
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(31, 31, 31);
             font-weight: 400;
@@ -549,7 +546,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 2% 0;
-    font-size: 13px;
+    font-size: .8125rem;
     padding: 0 15%;
 }
     .contact div:first-child{
@@ -584,6 +581,247 @@ footer{
 }
 
 .socialmedia_footer a i{
-    font-size: 26px;
+    font-size: 1.625rem;
     
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1000px){
+        :root{
+            font-size: 14px;
+        }
+
+        .links_header_container .link{
+            font-size: 13px;
+        }
+        .car_content .alert{
+            width: 45%;
+            padding: 0;
+        }
+
+        .cristian_introduction_content{
+            height: 25rem;
+        }
+
+        .logo{
+            width: 17%;
+        }
+}
+
+@media screen and (max-width:790px){
+        :root{
+            font-size: 14px;
+        }
+
+        .links_header_container{
+            justify-content: center;
+            margin: 5% 0;
+        }
+
+        .links_header_container .link{
+            font-size: 13px;
+        }
+        .car_content .alert{
+            width: 45%;
+            padding: 2% 0 0;
+        }
+
+        .cristian_introduction_content{
+            height: 25rem;
+        }
+
+        .logo{
+            width: 17%;
+            margin: 0;
+        }
+
+        nav{
+            flex-direction: column;
+            position: initial;
+            position: relative;
+        }
+
+        .languages_changer_content{
+            position: absolute;
+            top: 16%;
+            right: 6%;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .languages_changer_content .language{
+            margin: 0 0 10%;
+        }
+
+        .languages_changer_content .language img{
+            width: 100%;
+        }
+
+        .banner_contacts{
+            display: flex;
+            justify-content: center;
+        }
+
+        .car_content{
+            width: 90%;
+        }
+        
+        .booking_content{
+            width: 80%;
+        }
+
+        .booking_content h3{
+            font-size: 14px;
+            text-align: start;
+        }
+
+        .banner_contacts img{
+            width: 90%;
+        }
+
+        .booking_content .select_via label{
+            font-size: 17px;
+        }
+
+        .location{
+            justify-content: center;
+        }
+
+        .location{
+            margin: 0 auto;
+        }
+
+        .location iframe{
+            width: 90%;
+        }
+
+        .title_about_us h2{
+            width: 30%;
+        }
+
+        footer{
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact_footer{
+            width: 70%;
+        }
+
+        .contact div{
+            padding: 0 10%;
+        }
+
+        .logo_footer{
+            width: 100%;
+            margin: 0 0 5%;
+        }
+
+        .logo_footer img{
+            width: 25%;
+        }
+
+        .socialmedia_footer{
+            margin: 5% 0 0;
+        }
+
+        .socialmedia_footer a{
+            margin: 0 5%;
+        }
+
+}
+
+@media screen and (max-width:764px){
+    .languages_changer_content{
+        top: 10%;
+    }
+
+    .logo{
+        width: 18%;
+    }
+}
+
+@media screen and (max-width:678px){
+    .languages_changer_content{
+        top:8%;
+    }
+
+    .languages_changer_content .language img{
+        width: 70%;
+    }
+
+    .logo{
+        width: 19%;
+    }
+}
+
+@media screen and (max-width:678px){
+    .title_content h1{
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .booking_content{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:678px){
+    .logo{
+        width: 22%;
+    }
+
+    .links_header_container{
+        margin: 7% 0 5%;
+    }
+
+    .links_header_container .link{
+        font-size: 12px;
+    }
+
+    .cristian_introduction_content{
+        height: 22rem;
+    }
+
+    .title_about_us h2{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:544px){
+    .select_from select, .select_to select{
+        width: 13rem;
+    }
+
+    .cristian_introduction_content{
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+        background: none;
+        height: auto;
+    }
+
+    .cristian_introduction_content img{
+        width: 100%;
+    }
+
+    .cristian_introduction_content .cristian{
+        width: 100%;
+        background: #E52E2A;
+        padding: 5% 7%;
+    }
+
+    .cristian_introduction_content .cristian h3{
+        margin: 3% 0;
+    }
+
+    .contact_footer{
+        width: 85%;
+    }
+
+    .contact div{
+        padding: 0;
+    }
 }
