@@ -150,6 +150,7 @@ const drawPassengersSelect = (passgersCount) => {
         }
         
         $(selectPassengersId).removeAttr('required')
+        $(selectPassengersId).attr('disabled', true)
     }
 
     $(passengersContainerId).ready(() => {

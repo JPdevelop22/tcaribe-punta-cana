@@ -165,7 +165,7 @@ $(document).ready(() => {
                     `tomaré la ruta que va desde el punto de recogida ${pickupLocation} hasta ` +
                     `${selectDestinies.value}, para la fecha del ${date}, con una ` +
                     `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
-                    'quiero que sea de' + ((trackSelectedValue < 2)? "1 vía." : `${trackSelectedValue} vías.`) +
+                    'quiero que sea de ' + ((trackSelectedValue < 2)? "1 vía." : `${trackSelectedValue} vías.`) +
                     ' ¿Me podrían ofrecer más información, por favor?'
                 
                 // Modal contruction
@@ -206,7 +206,7 @@ $(document).ready(() => {
                 wameMessage = 
                     `Hola, quiero hacer una reservación del servicio de ${bookType}, ` +
                     `escogí: ${excursionSelectedValue}, para la fecha del ${date} ` +
-                    `con una cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, ` +
+                    ((selectPassengers.value)? `con una cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, ` : "") +
                     ' ¿Me podrían ofrecer más información, por favor?'
 
                 // Modal contruction
