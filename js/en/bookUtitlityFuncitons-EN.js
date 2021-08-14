@@ -5,7 +5,7 @@ const drawPickupsLocationSelect = (pickupLocations) => {
     // If pickupLocationsContainerId dons't have html inside we can add html into it
     if (!$(pickupLocationsContainerId).html()) {
         $(pickupLocationsContainerId).hide().html(
-            '<h3>Desde:</h3>' +
+            '<h3>From:</h3>' +
             '<select name="pickupLocations" id="selectPickupLocations" required>' +
                 '<option value=""></option>' +
             '</select>'
@@ -16,13 +16,13 @@ const drawPickupsLocationSelect = (pickupLocations) => {
     }
 
     pickupLocations.forEach(location => {
-        let optionValue = location["name-ES"] + optionValueSeparator + 
-                            location["destinies-ES"] + optionValueSeparator +
+        let optionValue = location["name-EN"] + optionValueSeparator + 
+                            location["destinies-EN"] + optionValueSeparator +
                             location["tracks"] + optionValueSeparator +
                             location["passengers ranges"]
 
         $('#selectPickupLocations').append(
-            `<option value="${optionValue}">${location["name-ES"]}</option>`
+            `<option value="${optionValue}">${location["name-EN"]}</option>`
         )
     })
 }
@@ -33,7 +33,7 @@ const drawSelectExcursions = (excursionNames) => {
     // If excursionContainerId dons't have html inside we can add html into it
     if (!$(excursionContainerId).html()) {
         $(excursionContainerId).hide().html(
-            '<h3>Excursiones:</h3>' +
+            '<h3>Excursion:</h3>' +
             '<select name="excursions" id="selectExcursions" required>' +
                 '<option value=""></option>' +
             '</select>'       
@@ -62,12 +62,12 @@ const drawTracksSelect = (tracks) => {
     const tracksContainerId = "#tracksContainer"
 
     if (!document.fBook.tracks || document.fBook.tracks.length != tracks) {
-        $(tracksTitleContainerId).html("Vías:")
+        $(tracksTitleContainerId).html("Tracks:")
 
         $(tracksContainerId).hide().html(
             '<div class="option_tracks">' +
                 '<input type="radio" name="tracks" id="tracks1" value="1" required />' +       
-                '<label for="tracks1">1 via</label>' +
+                '<label for="tracks1">1 track</label>' +
             '</div>'
         )
     
@@ -76,7 +76,7 @@ const drawTracksSelect = (tracks) => {
                 $('#tracksContainer').append(
                     '<div class="option_tracks">' +
                         `<input type="radio" name="tracks" id="tracks${i}" value="${i}" required />` +       
-                        `<label for="tracks${i}">${i} vias</label>` +
+                        `<label for="tracks${i}">${i} tracks</label>` +
                     '</div>'
                 )
             }
@@ -93,7 +93,7 @@ const drawDestinySelect = (destinies) => {
     const destiniesContainerId = "#destiniesContainer"
 
     $(destiniesContainerId).hide().html(
-        '<h3>Hacia:</h3>' +
+        '<h3>To:</h3>' +
         '<select name="destinies" id="selectDestinies" required>' +
             '<option value=""></option>' +
         '</select>'        
@@ -114,7 +114,7 @@ const drawPassengersSelect = (passgersCount) => {
     const selectPassengersId = '#selectPassengers'
 
     $(passengersContainerId).hide().html(
-        '<h3>Cantidad de Persona:</h3>' +
+        '<h3>Amount of people:</h3>' +
         '<select name="passengers" id="selectPassengers" required>' +
             '<option value=""></option>' +
         '</select>'
@@ -124,7 +124,7 @@ const drawPassengersSelect = (passgersCount) => {
     if (passgersCount[0]) {
         passgersCount.forEach(passengers => {
             $(selectPassengersId).append(
-                `<option value="${passengers}">De ${passengers} pasajeros</option>`
+                `<option value="${passengers}">${passengers} passengers</option>`
             )
         })
     } else {
@@ -138,7 +138,7 @@ const drawPassengersSelect = (passgersCount) => {
 
         if (bookTypeValue == bookTypesArr[0] && pickupLocationsValue ||
             bookTypeValue == bookTypesArr[1] && excursionsValue) {
-            drawAlert("El numero de pasajeros lo tiene que consultar con la empresa")
+            drawAlert("The number of passengers must be consulted with the company")
         }
         
         $(selectPassengersId).removeAttr('required')
@@ -152,10 +152,10 @@ const drawPassengersSelect = (passgersCount) => {
 }
 
 // A function for format a date by its language
-const formatDate = (date, langFormat = "es-ES") => {
+const formatDate = (date, langFormat = "en-EN") => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
     let year = dateToFormat.getFullYear();
     let month = dateToFormat.toLocaleDateString(langFormat, {month:'long'})
-    return day + " de " + month + " del " + year; // Dia de Mes del Año
+    return month + " " + day + ",  " + year; // Month Day, Year
 }

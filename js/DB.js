@@ -4,6 +4,45 @@ const DB =
     {
         "pickup locations": 
         {
+            "PUJ": 
+            {
+                "name-ES": "Aeropuerto Internacional de Punta Cana",
+                "name-EN": "Punta Cana Internacional airport",
+                "stops": [],
+                "destinies-ES": [
+                                "Hoteles de la zona Bávaro, Punta Cana ", 
+                                " Hoteles en Uvero Alto ", 
+                                " Hoteles en La Romana ", 
+                                " San Pedro de Macorís ", 
+                                " El Seibo ", 
+                                " Boca Chica ", 
+                                " Santo Domingo ", 
+                                " Santiago ", 
+                                " Samaná ", 
+                                " Puerto Plata"
+                            ],
+                "destinies-EN": [
+                                "Hotels in Bávaro, Punta Cana area ", 
+                                " Hotels in Uvero Alto ", 
+                                " Hotels in La Romana ", 
+                                " San Pedro de Macorís ", 
+                                " El Seibo ", " Boca Chica ", 
+                                " Santo Domingo ", 
+                                " Santiago ", 
+                                " Samaná ", 
+                                " Puerto Plata"
+                            ],
+                "tracks": 2,
+                "passengers ranges": [
+                                    "1 - 6", 
+                                    "7 - 21", 
+                                    "22 - 33", 
+                                    "34 - 45", 
+                                    "46 - 54", 
+                                    "55 - 59"
+                                ] 
+            },
+            
             "Bavaro Punta Cana": 
             {
                 "name-ES": "Hoteles de la zona Bávaro, Punta Cana",
@@ -229,46 +268,7 @@ const DB =
                                     "46 - 54", 
                                     "55 - 59"
                                 ] 			
-            },
-
-            "PUJ": 
-            {
-                "name-ES": "Aeropuerto Internacional de Punta Cana",
-                "name-EN": "Punta Cana Internacional airport",
-                "stops": [],
-                "destinies-ES": [
-                                "Hoteles de la zona Bávaro, Punta Cana ", 
-                                " Hoteles en Uvero Alto ", 
-                                " Hoteles en La Romana ", 
-                                " San Pedro de Macorís ", 
-                                " El Seibo ", 
-                                " Boca Chica ", 
-                                " Santo Domingo ", 
-                                " Santiago ", 
-                                " Samaná ", 
-                                " Puerto Plata"
-                            ],
-                "destinies-EN": [
-                                "Hotels in Bávaro, Punta Cana area ", 
-                                " Hotels in Uvero Alto ", 
-                                " Hotels in La Romana ", 
-                                " San Pedro de Macorís ", 
-                                " El Seibo ", " Boca Chica ", 
-                                " Santo Domingo ", 
-                                " Santiago ", 
-                                " Samaná ", 
-                                " Puerto Plata"
-                            ],
-                "tracks": 2,
-                "passengers ranges": [
-                                    "1 - 6", 
-                                    "7 - 21", 
-                                    "22 - 33", 
-                                    "34 - 45", 
-                                    "46 - 54", 
-                                    "55 - 59"
-                                ] 
-            } 
+            }
         }
     },
 

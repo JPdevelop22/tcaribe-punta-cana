@@ -5,11 +5,11 @@
 */
 
 // Globals vars
-let bookTypesArr = ['Viaje turístico', 'Excursión']
-const { travels, "excursions-ES": excursions, "prices-ES": prices } = DB
+let bookTypesArr = ['Tourist trip', 'Excursion']
+const { travels, "excursions-EN": excursions, "prices-EN": prices } = DB
 let commonErrorMessage = 
-    'Primero debe seleccionar un tipo de reservacion, ' +
-    'para que podamos saber con que podemos rellenar esos campos'
+    'You must first select a reservation type, '+
+    'so we can know what we can fill in those fields with'
 
 $(document).ready(() => {
     // Set actual date as min value to our date picker
@@ -75,13 +75,13 @@ $(document).ready(() => {
             animateCSS('#bookTypeContainer', 'bounce', 'faster')
         } 
         else if (document.fBook.bookType.value == bookTypesArr[0] && !document.fBook.pickupLocations.value) {
-            errorMessage = 'Primero debe seleccionar un lugar de recogida, ' + 
-                            'para que podamos saber con que podemos rellenar esos campos'
+            errorMessage = 'You must first select a pick up location, ' +
+                            'so we can know what we can fill in those fields with'
             drawAlert(errorMessage)
             animateCSS('#pickupLocationsContainer', 'bounce', 'faster')
         } else if (document.fBook.bookType.value == bookTypesArr[1] && !document.fBook.excursions.value) {
-            errorMessage = 'Primero debe seleccionar una excursion, ' +
-                            'para que podamos saber con que podemos rellenar esos campos' 
+            errorMessage = 'You must first select an excursion, ' +
+                            'so we can know what we can fill in those fields with' 
             drawAlert(errorMessage)
             animateCSS('#excursionContainer', 'bounce', 'faster')
         }
@@ -128,7 +128,7 @@ $(document).ready(() => {
         let totalPrice
 
         if (!carSelected) {
-            drawAlert("Debe seleccionar un vehiculo")
+            drawAlert("You should choose a vehicle first!")
             window.location = '#carContainer1'
             return;
         } 
@@ -143,36 +143,36 @@ $(document).ready(() => {
                                     ["passengers ranges"][selectPassengers.value]
                     
                     $("#totalPriceContainer").html(
-                        '<h3>Total Estimado:</h3>' +
+                        '<h3>Total estimated:</h3>' +
                         `<p>USD$ ${totalPrice}</p>`
                     )
                 } catch (error) {
                     $("#totalPriceContainer").html(
-                        '<p>Consulte el precio con la empresa</p>'
+                        '<p>Check the price with the company</p>'
                     )
                 }
 
                 wameMessage = 
-                    `Hola, quiero hacer una reservación del servicio de ${bookType}, ` +
-                    `tomaré la ruta que va desde el punto de recogida ${pickupLocation} hasta ` +
-                    `${selectDestinies.value}, para la fecha del ${date}, con una ` +
-                    `cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, y en el cual ` +
-                    'quiero que sea de ' + ((trackSelectedValue < 2)? "1 vía." : `${trackSelectedValue} vías.`) +
-                    ' ¿Me podrían ofrecer más información, por favor?'
+                    `Hi!, i want to make a reservation for the ${bookType} service, ` +
+                    `I'll take the route that goes from the pickup point ${pickupLocation} to ` +
+                    `${selectDestinies.value}, for the date of ${date}, with a range ` +
+                    `of ${selectPassengers.value} passengers, and in which ` +
+                    "It'll take " + ((trackSelectedValue < 2)? "1 track." : `${trackSelectedValue} tracks.`) +
+                    ' Could you offer me more information, please?'
                 
                 // Modal contruction
                 $('#selectedDateContainer').html(
-                    '<h3 class="title">Fecha selecionada:</h3>' +
+                    '<h3 class="title">Selected date:</h3>' +
                     `<p>${date}</p>`
                 )
 
                 $('#selectedRouteContainer').html(
-                    '<h3 class="title">Ruta Selecionada:</h3>' +
-                    `<p>${pickupLocation} hacia ${selectDestinies.value}</p>`
+                    '<h3 class="title">Selected route:</h3>' +
+                    `<p>${pickupLocation} to ${selectDestinies.value}</p>`
                 )
 
                 $('#selectedCarContainer').html(
-                    '<h3 class="title">Auto seleccionado:</h3>' +
+                    '<h3 class="title">Selected vehicle:</h3>' +
                     `<p>${carSelected}</p>`
                 )
 
@@ -186,34 +186,34 @@ $(document).ready(() => {
                             ["passengers ranges"][selectPassengers.value]          
                     
                     $("#totalPriceContainer").html(
-                        '<h3>Total Estimado:</h3>' +
+                        '<h3>Total estimated::</h3>' +
                         `<p>USD$ ${totalPrice}</p>`
                     )
                 } catch (error) {
                     $("#totalPriceContainer").html(
-                        '<p>Consulte el precio con la empresa</p>'
+                        '<p>Check the price with the company</p>'
                     )
                 }
 
                 wameMessage = 
-                    `Hola, quiero hacer una reservación del servicio de ${bookType}, ` +
-                    `escogí: ${excursionSelectedValue}, para la fecha del ${date} ` +
-                    ((selectPassengers.value)? `con una cantidad de pasajeros que va desde ${selectPassengers.value} pasajeros, ` : "") +
-                    ' ¿Me podrían ofrecer más información, por favor?'
+                    `Hi!, i want to make a reservation for the ${bookType} service, ` +
+                    `I chose: ${excursionSelectedValue}, for the date of ${date} ` +
+                    ((selectPassengers.value)? `with a range of ${selectPassengers.value} passengers,` : "") +
+                    ' Could you offer me more information, please?'
 
                 // Modal contruction
                 $('#selectedDateContainer').html(
-                    '<h3 class="title">Fecha selecionada:</h3>' +
+                    '<h3 class="title">Selected date:</h3>' +
                     `<p>${date}</p>`
                 )
                 
                 $('#selectedRouteContainer').html(
-                    '<h3 class="title">Excursion Selecionada:</h3>' +
+                    '<h3 class="title">Selected excursion:</h3>' +
                     `<p>${excursionSelectedValue}</p>`
                 )
 
                 $('#selectedCarContainer').html(
-                    '<h3 class="title">Auto seleccionado:</h3>' +
+                    '<h3 class="title">Selected vehicle:</h3>' +
                     `<p>${carSelected}</p>`
                 )
 

@@ -15,7 +15,7 @@ const animationByScroll = (idOfElement, animation, duration = "fast", prefix = '
 }
 
 $(document).ready(() => {
-    animationByScroll("navBar", "slideInDown", "faster")
+    animationByScroll("langContainer", "fadeIn", "slower")
     $(window).on('scroll', () => {
         //Scroll event listener
         animationByScroll("carContainer1", "slideInRight")

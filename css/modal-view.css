@@ -1,0 +1,81 @@
+/* Modal style view */
+.itempay-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    .itempay-content h3{
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .itempay-content p{
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+.total_topay_content{
+    text-align: center;
+    margin: 2% 0 0;
+}
+    .total_topay_content h3{
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    .total_topay_content p{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #E52E2A;
+    }
+
+.btn_tobook_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10% auto 0;
+}
+    .btn_tobook_content button{
+        border: none;
+        background-color: green;
+        color: #fff;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        border-radius: 20px;
+        padding: 10px 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .btn_tobook_content button:hover{
+        background: #fff0;
+        border: green solid 3px;
+        transition: all .3s ease;
+        color: green;
+    }
+
+    .btn_tobook_content button i{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+.alert_viawa_content{
+    text-align: center;
+    width: 90%;
+    margin: 10% auto 0;
+}
+    .alert_viawa_content p{
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .alert_viawa_content p i{
+        font-size: 16px;
+        margin-right: 2%;
+        color: #E52E2A;
+    }
+    .alert_viawa_content span{
+        color: green;
+    }
