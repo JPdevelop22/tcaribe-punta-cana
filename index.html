@@ -21,9 +21,11 @@
     
     <!-- Favicons-->
 	<link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="./img/favicon/apple-touch-icon.png" />
-    <!-- <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png" /> -->
+    <link rel="apple-touch-icon" type="image/x-icon" href="./img/favicon/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="180x180" type="image/x-icon" href="./img/favicon/apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-square150x150logo" content="./img/favicon/Icon-192x192.png">
+    <meta name="msapplication-square310x310logo" content="./img/favicon/Icon-512x512.png">
+
 
     <!-- #region Dependencias de la funcionalidad de la reservación-->
     <script    
@@ -72,6 +74,7 @@
     <!-- END -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./css/home-style.css">
+    <link rel="stylesheet" href="./css/modal-view.css">
     <title>Home - T.CARIBE</title>
 </head>
 <body>    
@@ -81,11 +84,11 @@
 
         <div class="links_header_container" role="menubar">
             <a class="link" href="#" title="Zona de reservación">RESERVACIÓN</a>
-            <a class="link" href="#contact-zone" title="Contactanos">CONTACTANOS</a>
-            <a class="link" href="#about_us_container" title="Acerca de nosotros">ACERCA  DE NOSOTROS</a>
+            <a class="link" href="#contact-zone" title="Contactanos">CONTÁCTANOS</a>
+            <a class="link" href="#about_us_container" title="Acerca de nosotros">ACERCA DE NOSOTROS</a>
         </div>
 
-        <div class="languages_changer_content" id="langContainer" >
+        <div class="languages_changer_content" id="langContainer">
             <div class="language" role="link" title="Página en Español">
                 <img src="./img/icons/spain-flag.svg" alt="Idioma Español">
                 <P>Español</P>
@@ -107,12 +110,12 @@
     <!-- #region Seccion de Reservacion -->
     <section>
         <form id="formBook" name="fBook">
-            <div> <!-- Apartado del titulo de la reservacion -->
+            <!-- <div> <-- Apartado del titulo de la reservacion 
                 <title>
                     Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
                     Hoteld Hard Rock, Punta Cana
                 </title>
-            </div>  
+            </div>   -->
 
             <!-- ALERTAS que se rellenaran con jquery -->
             <div class="alert-booking" id="alertContainer" role="alert" aria-modal="true">
@@ -129,7 +132,7 @@
         
         <div class="booking_container">
             <div class="title_content">
-                <h1>ENCUENTRA TU MEJOR <span>RESERVACION</span> AQUI</h1>
+                <h1>ENCUENTRA TU MEJOR <span>RESERVACIÓN</span> AQUÍ</h1>
             </div>
             
             <div class="booking_content">
@@ -139,12 +142,12 @@
                     <div class="option_input" id="tracksContainer">
                         <div class="option_tracks">
                             <input type="radio" name="tracks" id="tracks1" value="1" required />       
-                            <label for="tracks1">1 via</label>
+                            <label for="tracks1">1 vía</label>
                             </div>
 
                             <div class="option_tracks">
                                 <input type="radio" name="tracks" id="tracks2" value="2" required />
-                                <label for="tracks2">2 vias</label>
+                                <label for="tracks2">2 vías</label>
                             </div>
                         </div>
                     </div>
@@ -153,7 +156,7 @@
                         
                         <div class="select_booking_type input_container" id="bookTypeContainer">
                             
-                            <h3>Tipo de reservacion:</h3>
+                            <h3>Tipo de reservación:</h3>
                             <select name="bookType" id="selectBookType" required>
                                 <option value=""></option>
                                 <option value="Viaje turístico">Viaje turístico</option>
@@ -204,12 +207,11 @@
         </div>
 
             <div class="tittle_select_car">
-                <h1>ELIGE EL <span>VEHICULO</span> DE TU PREFERENCIA</h1>
+                <h1>ELIGE EL <span>VEHÍCULO</span> DE TU PREFERENCIA</h1>
             </div>
             <div id="carContainer1" class="car_content">
                 
                 <div class="car_img chevrolet_car" role="img"></div>
-
 
                 <div class="position_brandname_alert">
                     <h3 class="name_car">Chevrolet suburban 2012</h3>
@@ -217,8 +219,8 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            The photographs are intended to illustrate the type of vehicle only, 
-                            the color of your selected vehicle may be different
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
 
@@ -229,8 +231,10 @@
                         onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" 
                         type="button"
                         id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Chevrolet suburban 2012">
-                        SELECT
+                        aria-details="Boton para seleccionar el Chevrolet suburban 2012"
+                        aria-label="Seleccionar Chevrolet suburban 2012"
+                        >
+                        Seleccionar
                     </button>
                 </div>
 
@@ -247,8 +251,8 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            The photographs are intended to illustrate the type of vehicle only, 
-                            the color of your selected vehicle may be different
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
 
@@ -259,8 +263,10 @@
                         onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" 
                         type="button"
                         id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Limosina Town Car 2007">
-                        SELECT
+                        aria-details="Boton para seleccionar el Limosina Town Car 2007"
+                        aria-label="Seleccionar Limosina Town Car 2007"
+                        >
+                        Seleccionar
                     </button>
                 </div>
 
@@ -277,8 +283,8 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            The photographs are intended to illustrate the type of vehicle only, 
-                            the color of your selected vehicle may be different
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
 
@@ -289,8 +295,10 @@
                         onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" 
                         type="button"
                         id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012">
-                        SELECT
+                        aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
+                        aria-label="Seleccionar Mercedes Benz Clase C 2012"
+                        >
+                        Seleccionar
                     </button>
                 </div>
 
@@ -307,139 +315,62 @@
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title">Finalizar Reservacion</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h5 class="modal-title">Finalizar Reservación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>
                 <div class="modal-body">
-                        <div class="modal-body">
-                            <div class="position-center">
-                                <!-- SE MUESTRA LA FECHA SELECCIONADA POR EL USUARIO -->
-                                <div class="itempay-content" id="selectedDateContainer">
-                                    <!-- <h3 class="title">Fecha selecionada:</h3> 
-                                    <p>01 - 01 - 2021</p> -->
-                                </div>
+                    <div class="modal-body">
+                        <div class="position-center">
+                            <!-- SE MUESTRA LA FECHA SELECCIONADA POR EL USUARIO -->
+                            <div class="itempay-content" id="selectedDateContainer">
+                                <!-- <h3 class="title">Fecha selecionada:</h3> 
+                                <p>01 - 01 - 2021</p> -->
+                            </div>
 
-                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
-                                <div class="itempay-content" id="selectedRouteContainer">
-                                    <!-- <h3 class="title">Ruta Selecionada:</h3> 
-                                    <p>Una ruta - otra runta</p> -->
-                                </div>
+                            <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
+                            <div class="itempay-content" id="selectedRouteContainer">
+                                <!-- <h3 class="title">Ruta Selecionada:</h3> 
+                                <p>Una ruta - otra runta</p> -->
+                            </div>
+                        
+                            <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
+                            <div class="itempay-content" id="selectedCarContainer">
+                                <!-- <h3 class="title">Vehiculo seleccionado</h3>
+                                <p>Mercedes Benz Clase C</p> -->
+                            </div>
                             
-                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
-                                <div class="itempay-content" id="selectedCarContainer">
-                                    <!-- <h3 class="title">Vehiculo seleccionado</h3>
-                                    <p>Mercedes Benz Clase C</p> -->
-                                </div>
-                                
-                                <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
-                                <div class="total_topay_content" id="totalPriceContainer">
-                                    <!-- <h3>Total Estimado:</h3> -->
-                                    <!-- <p>Precio a pagar: XX$</p> -->
-                                </div>
-                            
-                                <div class="alert_viawa_content">
-                                    <p> <i class="fas fa-exclamation-circle"></i> La reservacion se realizara por <span>Whatsapp</span> y se pondra en contacto con la agencia para confirmar su reservacion</p>
-                                </div>
+                            <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
+                            <div class="total_topay_content" id="totalPriceContainer">
+                                <!-- <h3>Total Estimado:</h3> -->
+                                <!-- <p>Precio a pagar: XX$</p> -->
+                            </div>
+                        
+                            <div class="alert_viawa_content">
+                                <p> 
+                                    <i class="fas fa-exclamation-circle"></i> 
+                                    La reservación se realizará por <span>Whatsapp</span> y 
+                                    se pondra en contácto con la agencia para confirmar su reservación.
+                                </p>
+                            </div>
 
-                                <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
-                                <div class="btn_tobook_content">
-                                    <button id="btnWaMe" type="button">RESERVAR</button>
+                            <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
+                            <div class="btn_tobook_content">
+                                <button 
+                                    id="btnWaMe" 
+                                    type="button" 
+                                    aria-details="Hacer la reservación mediante un mensaje de Whatsapp"
+                                    aria-label="Reservar mediante un mensaje de Whatsapp"
+                                >
+                                RESERVAR</button>
                                 <!-- <i class="fab fa-whatsapp"></i> -->
-                                </div>
                             </div>
                         </div>
-                        
-                        <style>
-                        
-                        
-                        .itempay-content{
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                        }
-                            .itempay-content h3{
-                                font-size: 14px;
-                                font-family: Arial, Helvetica, sans-serif;
-                            }
-                    
-                            .itempay-content p{
-                                font-size: 15px;
-                                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                            }
-                    
-                        .total_topay_content{
-                            text-align: center;
-                            margin: 2% 0 0;
-                        }
-                        .total_topay_content h3{
-                            font-size: 16px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            
-                        }
-                    
-                        .total_topay_content p{
-                            font-size: 18px;
-                            font-weight: bold;
-                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                            color: #E52E2A;
-                        }
-                    
-                        .btn_tobook_content{
-                            width: 100%;
-                            display: flex;
-                            justify-content: center;
-                            margin: 10% auto 0;
-                        }
-                            .btn_tobook_content button{
-                                border: none;
-                                background-color: green;
-                                color: #fff;
-                                font-size: 13px;
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-weight: 700;
-                                border-radius: 20px;
-                                padding: 10px 20px;
-                                text-align: center;
-                                display: flex;
-                                flex-wrap: nowrap;
-                            }
-                    
-                            .btn_tobook_content button:hover{
-                                background: #fff0;
-                                border: green solid 3px;
-                                transition: all .3s ease;
-                                color: green;
-                            }
-                    
-                            .btn_tobook_content button i{
-                                margin-right: 10px;
-                                font-size: 20px;
-                            }
-                    
-                        .alert_viawa_content{
-                            text-align: center;
-                            width: 90%;
-                            margin: 10% auto 0;
-                        }
-                            .alert_viawa_content p{
-                                font-size: 14px;
-                                font-family: Arial, Helvetica, sans-serif;
-                            }
-                            .alert_viawa_content p i{
-                                font-size: 16px;
-                                margin-right: 2%;
-                                color: #E52E2A;
-                            }
-                            .alert_viawa_content span{
-                                color: green;
-                            }
-                        
-                        </style>
                     </div>
+                </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
             </div>
@@ -478,10 +409,16 @@
 
         <div class="abou_us_content">
             <div class="cristian_introduction_content">
-                <img src="./img/logo/niler-avatar.jpg" alt="" class="cristian_selfie">
+                <img src="./img/logo/niler-avatar.jpg" alt="Selfie del dueño de la empresa" class="cristian_selfie">
                 <div class="cristian">
                     <h3>Cristian Reyes</h3>
-                    <p>Cristian Reyes es el cerebro detrás de T.Caribe. Cristian, un dominicano de nacimiento, ha sido dueño de su propio negocio de transporte durante los últimos doce años. Durante sus primeros años, trabajó como conductor en el campo del transporte. Fue entonces cuando afinó y perfeccionó sus habilidades, aprendiendo el significado de profesionalismo, servicio, puntualidad, compromiso y confiabilidad.</p>
+                    <p>
+                        Cristian Reyes es el cerebro detrás de T.Caribe. Cristian, un dominicano de nacimiento,
+                        ha sido dueño de su propio negocio de transporte durante los últimos doce años. 
+                        Durante sus primeros años, trabajó como conductor en el campo del transporte. 
+                        Fue entonces cuando afinó y perfeccionó sus habilidades, aprendiendo el significado 
+                        de profesionalismo, servicio, puntualidad, compromiso y confiabilidad.
+                    </p>
                 </div>
             </div>
 
@@ -498,7 +435,7 @@
     <footer>
 
         <div class="logo_footer">
-            <img src="./img/logo/logo.png" alt="">
+            <img src="./img/logo/logo.png" alt="Marca de la empresa">
         </div>
 
         <div class="contact_footer">

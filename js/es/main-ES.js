@@ -108,7 +108,7 @@ $(document).ready(() => {
     // On button wame clicking event handler
     $("#btnWaMe").on('click', () => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
-        window.location = "https://wa.me/18494529589?text=" +  wameMessage
+        window.location = "https://wa.me/18097576254?text=" +  wameMessage
     })
 
     // On book form submiting event handler
