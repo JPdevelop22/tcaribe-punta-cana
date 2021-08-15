@@ -641,6 +641,10 @@ footer{
             height: 25rem;
         }
 
+        .alert-booking{
+            width: 40%;
+        }
+
         .logo{
             width: 17%;
             margin: 0;
@@ -752,6 +756,10 @@ footer{
     .logo{
         width: 18%;
     }
+
+    .alert-booking{
+        width: 45%;
+    }
 }
 
 @media screen and (max-width:678px){
@@ -802,6 +810,11 @@ footer{
 }
 
 @media screen and (max-width:544px){
+
+    .alert-booking{
+        width: 50%;
+    }
+
 
     .languages_changer_content{
         flex-direction: row;
@@ -856,6 +869,11 @@ footer{
 }
 
 @media screen and (max-width:450px){
+
+    .alert-booking{
+        width: 60%;
+    }
+
     .booking_content{
         width: 97%;
         padding: 10% 0;
@@ -911,11 +929,30 @@ footer{
     }
 
     .logo{
-        width: 30px;
+        width: 100px;
     }
 
     .languages_changer_content .language img{
         width: 25px;
+    }
+
+    .links_header_container{
+        margin: 13% 0 5%;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .btn_select_content button{
+        padding: 7px 10px;
+        font-size: 6px;
+    }
+
+    .name_car{
+        margin: 5% 0 0;
+        font-size: 12px;
+        text-align: center;
     }
 }
 @media screen and (max-width:286px){
