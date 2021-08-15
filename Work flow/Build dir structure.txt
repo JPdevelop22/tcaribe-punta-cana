@@ -1,0 +1,24 @@
+build/
+	css/
+		home-style.css
+		modal-view.css
+	images/
+		favicons/
+		icons/
+		logos/
+		cars/
+		banners/
+		backgrounds/
+	js/
+		DB.json
+		general.js
+		animationsByScroll.js
+		main.js
+		bookUtitlities.js
+	es/
+		js/
+			main.js
+			bookUtitlities.js
+		index.html
+	index.html
+	robots.txt

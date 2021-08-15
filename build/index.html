@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- #region Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="TCaribe, punta cana turistic excursions, turistic services, RD turistic areas, vehicle reservation, routes in rd turistic areas, turistic excursions in RD">
+    <meta name="description" content="Transportation services with the best vehicles, for the best tourist areas of Dominican Republic. Let's go on a trip!!">
+    <meta name="author" content="TCaribe development team" />
+    <meta name="theme-color" content="#E52E2A" />
+    <meta content="translate" name="google">
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="expires" content="43200"/>
+    <meta content="@TCaribePC" name="twitter:site" />
+    <meta content="@TCaribePC" name="twitter:creator" />
+    <meta content="Since 2005 tcaribepuntacana offering transfers and chauffeured cars service at Punta Cana, Puerto Plata, Samana and the rest of Dominican Republic." name="twitter:description" />
+    <meta content="T CARIBE - Transfer in Punta Cana and all DR" name="twitter:title" />
+    <meta name="geo.region" content="DO" /><meta name="geo.placename" content="Punta cana" />
+    <!-- #endregion -->
+    
+    <title>Book your best touristic experience - T.CARIBE</title>
+
+    <!-- Favicons-->
+	<link rel="shortcut icon" href="./images/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="./images/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="180x180" type="image/x-icon" href="./images/favicons/apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-square150x150logo" content="./images/favicons/Icon-192x192.png">
+    <meta name="msapplication-square310x310logo" content="./images/favicons/Icon-512x512.png">
+
+    <script    
+        src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous">
+    </script>
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+        crossorigin="anonymous">
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Main scripts -->
+    <script src="./js/DB.js"></script>
+    <script src="./js/general.js"></script>
+    <script src="./js/bookUtitlities.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- #region Animations dependencies -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="./js/animationsByScroll.js"></script>
+    <!-- #endregion -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/home-style.css">
+    <link rel="stylesheet" href="./css/modal-view.css">
+</head>
+<body>    
+    <nav>
+        <img class="logo" src="./images/logos/logo-tcaribe.png" alt="Brand logo">
+
+        <div class="links_header_container" role="menubar">
+            <a class="link" href="#" title="Reservation area">RESERVATION</a>
+            <a class="link" href="#contact-zone" title="Contact us">CONTACT US</a>
+            <a class="link" href="#about_us_container" title="About us">ABOUT US</a>
+        </div>
+
+        <div class="languages_changer_content" id="langContainer">
+            <div class="language" id="toSpanish" role="link" title="Página en Español">
+                <img class="img_flag" src="./images/icons/spain-flag.png" alt="Idioma Español">
+                <P>Español</P>
+            </div>
+
+            <div class="language" id="toEnglish" role="link" title="English page">
+                <img class="img_flag" src="./images/icons/usa-flag.png" alt="English Language">
+                <P>English</P>
+            </div>
+        </div>
+    </nav>
+    
+    <section>
+        <form id="formBook" name="fBook">
+            <div class="alert-booking" id="alertContainer" role="alert" aria-modal="true"></div>
+        
+        <div class="booking_container">
+            <div class="title_content">
+                <h1>LOOK FOR YOUR BEST <span>RESERVATION</span> HERE</h1>
+            </div>
+            
+            <div class="booking_content">
+                <div class="select_via ">
+                    <h3 id="tracksTitleContainer"></h3>
+                    <div class="option_input" id="tracksContainer">
+                        <div class="option_tracks">
+                            <input type="radio" name="tracks" id="tracks1" value="1" required />       
+                            <label for="tracks1">1 track</label>
+                        </div>
+
+                        <div class="option_tracks">
+                            <input type="radio" name="tracks" id="tracks2" value="2" required />
+                            <label for="tracks2">2 tracks</label>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <div class="position_typebooking_excursions">
+                        
+                        <div class="select_booking_type input_container" id="bookTypeContainer">
+                            <h3>type of travel reservation:</h3>
+                            <select name="bookType" id="selectBookType" required>
+                                <option value=""></option>
+                                <option value="Tourist trip">Tourist trip</option>
+                                <option value="Excursion">Excursion</option>
+                            </select>
+                        </div>
+                        
+                        <div class="select_excursion" id="excursionContainer">
+                            <h3>Excursion:</h3>
+                            <select name="excursions" id="selectExcursions" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    
+                    </div>
+                        <div class="position_from_stop_to">
+                            <div class="select_from" id="pickupLocationsContainer">
+                                <h3>From:</h3>
+                                <select name="pickupLocations" id="selectPickupLocations" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            
+                            <div class="select_to" id="destiniesContainer">
+                                <h3>To:</h3>
+                                <select name="destinies" id="selectDestinies" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                    <div class="position_date_amountperson">
+                            <div class="select_arrivaldate">
+                                <h3>Pick up date:</h3>
+                                <input class="select" type="date" name="pickupDate" id="pickupDate" required>
+                            </div>
+
+                            <div class="select_amount_person" id="passengersContainer">
+                                <h3>Amount of people:</h3>
+                                <select name="passengers" id="selectPassengers" required>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                    </div>  
+                </div>
+        </div>
+
+            <div class="tittle_select_car">
+                <h1>CHOOSE YOUR PERFECT <span>VEHICLE</span></h1>
+            </div>
+            <div id="carContainer1" class="car_content">
+                <div class="car_img chevrolet_car" role="img"></div>
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Chevrolet suburban 2012</h3>
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="btn_select_content">
+                    <button 
+                        onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" 
+                        type="button"
+                        id="btnCarSelected"
+                        aria-details="Button for select Chevrolet suburban 2012 car"
+                        aria-label="Select Chevrolet suburban 2012 car"
+                        >
+                        SELECT
+                    </button>
+                </div>
+            </div>
+
+            <div id="carContainer2" class="car_content">
+                <div class="car_img limosina_car" role="img"></div>
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Limosina Town Car 2007</h3>
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="btn_select_content">
+                    <button 
+                        onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" 
+                        type="button"
+                        id="btnCarSelected"
+                        aria-details="Button for select Limosina Town Car 2007 car"
+                        aria-label="Select Limosina Town Car 2007 car"
+                        >
+                        SELECT
+                    </button>
+                </div>
+            </div>
+
+            <div id="carContainer3" class="car_content">
+                <div class="car_img mercedes_car" role="img"></div>
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Mercedes Benz Clase C 2012</h3>
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            The photographs are intended to illustrate the type of vehicle only, 
+                            the color of your selected vehicle may be different.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="btn_select_content">
+                    <button 
+                        onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" 
+                        type="button"
+                        id="btnCarSelected"
+                        aria-details="Button for select Mercedes Benz Clase C 2012 car"
+                        aria-label="Select Mercedes Benz Clase C 2012 car"
+                        >
+                        SELECT
+                    </button>
+                </div>
+            </div>
+
+            <div class="tobook_content">
+                <button id="btn-pay" class="btn_tobook" type="submit">SEE YOUR RECIPT</button>
+            </div>
+        </form >
+
+        <div class="modal" id="ventanaModal" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Finish your reservation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body">
+                            <div class="position-center">
+                                <div class="itempay-content" id="selectedDateContainer"></div>
+                                <div class="itempay-content" id="selectedRouteContainer"></div>
+                                <div class="itempay-content" id="selectedCarContainer"></div>                            
+                            </div>
+                                
+                            <div class="total_topay_content" id="totalPriceContainer"></div>                        
+                            <div class="alert_viawa_content">
+                                <p> 
+                                    <i class="fas fa-exclamation-circle"></i> 
+                                    The reservation will be made by <span>WhatsApp</span> and
+                                    You will contact the agency to confirm your reservation.
+                                </p>
+                            </div>
+
+                            <div class="btn_tobook_content">
+                                <button 
+                                    id="btnWaMe" 
+                                    type="button" 
+                                    aria-details="Make the reservation through a WhatsApp message"
+                                    aria-label="Book through a WhatsApp message"
+                                >
+                                    BOOK IT
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-zone">
+        <hr>
+        <div class="contact_us_container">
+            <div class="title_contact_us">
+                <h2>CONTACT US</h2>
+            </div>
+            <div class="contact_us_content">
+                <div class="banner_contacts" id="contactBanner">
+                    <img src="./images/banners/banner-contacts.png" alt="Contact methods banner">
+                </div>
+
+                <div class="location">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <section class="about_us_container" id="about_us_container">
+        <div class="title_about_us">
+            <h2>ABOUT US</h2>
+        </div>
+
+        <div class="abou_us_content">
+            <div class="cristian_introduction_content">
+                <img src="./images/logos/Cristian-selfie.png" alt="Business Owner' selfie" class="cristian_selfie">
+                <div class="cristian">
+                    <h3>Cristian Reyes</h3>
+                    <p>
+                        Cristian Reyes is the brain power behind T.Caribe. 
+                        A native-born Dominican, Cristian has owned his own 
+                        transportation business for the past twelve years. 
+                        During his early years, he worked as a driver in 
+                        the transportation field. It was then that 
+                        he sharpened and honed his skills, learning 
+                        the meaning of professionalism, service, timeliness, commitment
+                        and dependability.
+                    </p>
+                </div>
+            </div>
+
+            <div class="values_content">
+                <div>
+                    <i class="icon_set_1_icon-30"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo_footer" role="link">
+            <img src="./images/logos/logo-tcaribe.png" alt="Business brand">
+        </div>
+
+        <div class="contact_footer">
+            <div class="contact">
+                <div class="address">
+                    <h4>Directions:</h4>
+                    <p>Calle Veron-Bavaro, Km 4.5, Plaza Trio (local 1-2)</p>
+                </div>
+                <div class="phone-reservation">
+                    <h4>Reservation numbers:</h4>
+                    <a href="tel:+18094663088">+1 (809) 466 3088</a>
+                    <a href="tel:+18094663090">+1 (809) 466 3090</a>
+                </div>
+
+                <div class="phone-operations">
+                    <h4>number of operations:</h4>
+                    <a href="tel:+18094663069">+1 (809) 466 3069</a>
+                </div>
+
+                <div class="cell-num">
+                    <h4>Cellphone number:</h4>
+                    <a href="tel:+18097576254">+1 (809) 757 6254</a>
+                </div>
+            </div>
+
+            <div class="socialmedia_footer">
+                <a target="_blank" href="https://www.instagram.com/t.caribepuntacana/" id="instagramIcon"  title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/TCaribePC" id="twitterIcon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://wa.me/18097576254" id="whatsappIcon" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a target="_blank" href="https://www.facebook.com/T.CaribePuntaCana" id="facebookIcon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@puntacanatransportation.com" id="emailIcon" title="E-mail"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
