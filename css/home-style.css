@@ -47,7 +47,7 @@ nav{
     }
 
 .languages_changer_content .language img{
-    width: 60%;
+    width: 30px;
 }
 
 .languages_changer_content .language p{
@@ -555,6 +555,15 @@ footer{
         text-align: center;
         margin: 0 0 4%;
     }
+    
+
+.phone-reservation div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: -3% 0 0;
+    padding: 0;
+}
 
 
 .contact_footer div h4{
@@ -650,16 +659,14 @@ footer{
             margin: 0;
         }
 
-        .languages_changer_content{
-            display: none;
-        }
+        
 
         .languages_changer_content .language{
             margin: 0 0 10%;
         }
 
-        .languages_changer_content .language img{
-            width: 100%;
+        .languages_changer_content img{
+            width:  10px;
         }
 
         .banner_contacts{
@@ -752,7 +759,7 @@ footer{
     }
 
     .languages_changer_content .language img{
-        width: 70%;
+        width: 35 px;
     }
 
     .logo{
@@ -794,9 +801,26 @@ footer{
 }
 
 @media screen and (max-width:544px){
+
+    .languages_changer_content{
+        flex-direction: row;
+        margin: 0 4% 0 0;
+    }
+    
+    .languages_changer_content .language{
+        margin: 0 10%;
+        
+    }
+
     .select_from select, .select_to select{
         width: 13rem;
     }
+
+    .btn_select_content button{
+        padding: 0.625rem 0.8125rem;
+        font-size: 0.625rem;
+    }
+
 
     .cristian_introduction_content{
         flex-direction: column;
@@ -827,5 +851,74 @@ footer{
 
     .contact div{
         padding: 0;
+    }
+}
+
+@media screen and (max-width:450px){
+    .booking_content{
+        width: 97%;
+        padding: 10% 0;
+    }
+    .btn_select_content button{
+        padding: 8px 11px;
+        font-size: 9px;
+    }
+
+    .car_content .alert p{
+        font-size: .68rem;
+    }
+
+    .car_content .alert{
+        padding: 1% 0 0;
+        width: 50%;
+        margin-left: 7%;
+    }
+
+    .chevrolet_car, .limosina_car, .mercedes_car{
+        background-position: center;
+        margin-right: 2%;
+    }
+
+    .title_about_us h2{
+        font-size: 16px;
+    }
+
+    .cristian_introduction_content .cristian p{
+        font-size: 12px;
+    }
+
+    
+}
+
+@media screen and (max-width:413px){
+    :root{
+        font-size: 12px;
+    }
+
+    .position_typebooking_excursions{
+        padding: 0;
+    }
+
+    .select_from, .select_to, .select_arrivaldate, .select_amount_person, .select_booking_type, .select_excursion{
+        margin: 0 4%;
+    }
+}
+
+@media screen and (max-width:349px){
+    :root{
+        font-size: 10px;
+    }
+
+    .logo{
+        width: 30px;
+    }
+
+    .languages_changer_content .language img{
+        width: 25px;
+    }
+}
+@media screen and (max-width:286px){
+    :root{
+        font-size: 8px;
     }
 }
