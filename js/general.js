@@ -24,6 +24,10 @@ $(document).ready(() => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
         window.location = "https://wa.me/18097576254?text=" +  wameMessage
     })
+
+    $(".logo_footer").on('click', () => {
+        window.location = "#"
+    })
 })
 
 // Draw an alert in DOM with a animation

@@ -28,5 +28,6 @@ $(document).ready(() => {
         animationByScroll("twitterIcon", "tada", "slow")
         animationByScroll("whatsappIcon", "tada", "slow")
         animationByScroll("facebookIcon", "tada", "slow")
+        animationByScroll("emailIcon", "tada", "slow")
     })
 })
