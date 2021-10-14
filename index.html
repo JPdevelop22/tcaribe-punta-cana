@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- #region Meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="TCaribe, excursiones turisticas punta cana, servicios turisticos, zonas turisticas de RD, reservacion de vehiculos, rutas en zonas turisticas en RD, excursiones turisticas en RD">
-    <meta name="description" content="Servicios de transportación con los mejores vehículos, para las mejores zonas turísticas de la República Dominicana. ¡Ven y vamonos de viajes!">
+    <meta name="keywords"
+        content="TCaribe, excursiones turisticas punta cana, servicios turisticos, zonas turisticas de RD, reservacion de vehiculos, rutas en zonas turisticas en RD, excursiones turisticas en RD">
+    <meta name="description"
+        content="Servicios de transportación con los mejores vehículos, para las mejores zonas turísticas de la República Dominicana. ¡Ven y vamonos de viajes!">
     <meta name="author" content="TCaribe development team" />
     <meta name="theme-color" content="#E52E2A" />
     <meta content="translate" name="google">
     <meta name="robots" content="index,follow" />
-    <meta http-equiv="expires" content="43200"/>
+    <meta http-equiv="expires" content="43200" />
     <meta content="@TCaribePC" name="twitter:site" />
     <meta content="@TCaribePC" name="twitter:creator" />
-    <meta content="Since 2005 tcaribepuntacana offering transfers and chauffeured cars service at Punta Cana, Puerto Plata, Samana and the rest of Dominican Republic." name="twitter:description" />
+    <meta
+        content="Since 2005 tcaribepuntacana offering transfers and chauffeured cars service at Punta Cana, Puerto Plata, Samana and the rest of Dominican Republic."
+        name="twitter:description" />
     <meta content="T CARIBE - Transfer in Punta Cana and all DR" name="twitter:title" />
-    <meta name="geo.region" content="DO" /><meta name="geo.placename" content="Punta cana" />
+    <meta name="geo.region" content="DO" />
+    <meta name="geo.placename" content="Punta cana" />
     <!-- #endregion -->
-    
+
     <!-- Favicons-->
-	<link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" type="image/x-icon" href="./img/favicon/apple-touch-icon-precomposed.png" />
-    <link rel="apple-touch-icon" sizes="180x180" type="image/x-icon" href="./img/favicon/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="180x180" type="image/x-icon"
+        href="./img/favicon/apple-touch-icon-precomposed.png" />
     <meta name="msapplication-square150x150logo" content="./img/favicon/Icon-192x192.png">
     <meta name="msapplication-square310x310logo" content="./img/favicon/Icon-512x512.png">
 
 
     <!-- #region Dependencias de la funcionalidad de la reservación-->
-    <script    
-        src="https://code.jquery.com/jquery-3.6.0.min.js" 
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
 
     <!-- BOOTSRAP LINKING -->
-    <link 
-        rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- BOOTSTAP SCRIPT -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
-        crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
     <!-- END -->
 
-    <script src="./js/DB.js"></script>
-    <script src="./js/general.js"></script>
-    <script src="./js/es/bookUtitlityFuncitons-ES.js"></script>
-    <script src="./js/es/main-ES.js"></script>
+    <!-- <script src="./js/DB.js"></script> -->
+    <!-- <script src="./js/general.js"></script> -->
+    <!-- <script src="./js/es/bookUtitlityFuncitons-ES.js"></script> -->
+    <!-- <script src="./js/es/main-ES.js"></script> -->
+    <script type="module" src="./js/Tests/Tests.js"></script>
     <!-- #endregion -->
 
     <!-- #region Animations dependencies -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <script src="./js/scrollForAnimations.js"></script>
     <!-- #endregion -->
@@ -68,17 +66,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- END -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/home-style.css">
     <link rel="stylesheet" href="./css/modal-view.css">
     <title>Reserva tu mejor experiencia turística - T.CARIBE</title>
 </head>
-<body>    
+
+<body>
     <!-- #region Cabecera de la pagina-->
     <nav>
         <img class="logo" src="./img/logo/logo.png" alt="Marca de la empresa">
@@ -102,7 +102,7 @@
         </div>
     </nav>
     <!-- #endregion -->
-    
+
     <!-- 
         Los campos documentados son los que se rellenaran con jquery
         Puedes modificarlos descomentandolos y cuando quede el diseño lo
@@ -130,20 +130,20 @@
                     </p>
                 </div> -->
             </div>
-        
-        <div class="booking_container">
-            <div class="title_content">
-                <h1>ENCUENTRA TU MEJOR <span>RESERVACIÓN</span> AQUÍ</h1>
-            </div>
-            
-            <div class="booking_content">
-                <div class="select_via ">
-                    
-                    <h3 id="tracksTitleContainer"></h3>
-                    <div class="option_input" id="tracksContainer">
-                        <div class="option_tracks">
-                            <input type="radio" name="tracks" id="tracks1" value="1" required />       
-                            <label for="tracks1">1 vía</label>
+
+            <div class="booking_container">
+                <div class="title_content">
+                    <h1>ENCUENTRA TU MEJOR <span>RESERVACIÓN</span> AQUÍ</h1>
+                </div>
+
+                <div class="booking_content">
+                    <div class="select_via ">
+
+                        <h3 id="tracksTitleContainer"></h3>
+                        <div class="option_input" id="tracksContainer">
+                            <div class="option_tracks">
+                                <input type="radio" name="tracks" id="tracks1" value="1" required />
+                                <label for="tracks1">1 vía</label>
                             </div>
 
                             <div class="option_tracks">
@@ -152,66 +152,66 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="position_typebooking_excursions">
-                        
+
                         <div class="select_booking_type input_container" id="bookTypeContainer">
-                            
+
                             <h3>Tipo de reservación:</h3>
                             <select name="bookType" id="selectBookType" required>
                                 <option value=""></option>
                                 <option value="Viaje turístico">Viaje turístico</option>
                                 <option value="Excursión">Excursión</option>
                             </select>
-                            
+
                         </div>
-                        
-                        
+
+
                         <div class="select_excursion" id="excursionContainer">
                             <h3>Excursiones:</h3>
                             <select name="excursions" id="selectExcursions" required>
                                 <option value=""></option>
                             </select>
                         </div>
-                    
-                    </div>
-                        <div class="position_from_stop_to">
-                            <div class="select_from" id="pickupLocationsContainer">
-                                <h3>Desde:</h3>
-                                <select name="pickupLocations" id="selectPickupLocations" required>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            
-                            <div class="select_to" id="destiniesContainer">
-                                <h3>Hasta:</h3>
-                                <select name="destinies" id="selectDestinies" required>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                    
-                    <div class="position_date_amountperson">
-                            <div class="select_arrivaldate">
-                                <h3>Fecha de llegada o Transporte:</h3>
-                                <input class="select" type="date" name="pickupDate" id="pickupDate" required>
-                            </div>
 
-                            <div class="select_amount_person" id="passengersContainer">
-                                <h3>Cantidad de Persona:</h3>
-                                <select name="passengers" id="selectPassengers" required>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                    </div>  
+                    </div>
+                    <div class="position_from_stop_to">
+                        <div class="select_from" id="pickupLocationsContainer">
+                            <h3>Desde:</h3>
+                            <select name="pickupLocations" id="selectPickupLocations" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="select_to" id="destiniesContainer">
+                            <h3>Hasta:</h3>
+                            <select name="destinies" id="selectDestinies" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="position_date_amountperson">
+                        <div class="select_arrivaldate">
+                            <h3>Fecha de llegada o Transporte:</h3>
+                            <input class="select" type="date" name="pickupDate" id="pickupDate" required>
+                        </div>
+
+                        <div class="select_amount_person" id="passengersContainer">
+                            <h3>Cantidad de Persona:</h3>
+                            <select name="passengers" id="selectPassengers" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-        </div>
+            </div>
 
             <div class="tittle_select_car">
                 <h1>ELIGE EL <span>VEHÍCULO</span> DE TU PREFERENCIA</h1>
             </div>
             <div id="carContainer1" class="car_content">
-                
+
                 <div class="car_img chevrolet_car" role="img"></div>
 
                 <div class="position_brandname_alert">
@@ -220,7 +220,7 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente,
                             el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
@@ -228,13 +228,9 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button 
-                        onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" 
-                        type="button"
-                        id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Chevrolet suburban 2012"
-                        aria-label="Seleccionar Chevrolet suburban 2012"
-                        >
+                    <button onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" type="button"
+                        id="btnCarSelected" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
+                        aria-label="Seleccionar Chevrolet suburban 2012">
                         SELECCIONAR
                     </button>
                 </div>
@@ -242,7 +238,7 @@
             </div>
 
             <div id="carContainer2" class="car_content">
-                
+
                 <div class="car_img limosina_car" role="img"></div>
 
 
@@ -252,7 +248,7 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente,
                             el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
@@ -260,13 +256,9 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button 
-                        onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" 
-                        type="button"
-                        id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Limosina Town Car 2007"
-                        aria-label="Seleccionar Limosina Town Car 2007"
-                        >
+                    <button onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" type="button"
+                        id="btnCarSelected" aria-details="Boton para seleccionar el Limosina Town Car 2007"
+                        aria-label="Seleccionar Limosina Town Car 2007">
                         SELECCIONAR
                     </button>
                 </div>
@@ -274,7 +266,7 @@
             </div>
 
             <div id="carContainer3" class="car_content">
-                
+
                 <div class="car_img mercedes_car" role="img"></div>
 
 
@@ -284,7 +276,7 @@
                     <div class="alert">
                         <p>
                             <i class="fas fa-exclamation-circle"></i>
-                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente, 
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente,
                             el color de su vehículo seleccionado puede ser diferente.
                         </p>
                     </div>
@@ -292,88 +284,81 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button 
-                        onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" 
-                        type="button"
-                        id="btnCarSelected"
-                        aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
-                        aria-label="Seleccionar Mercedes Benz Clase C 2012"
-                        >
+                    <button onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" type="button"
+                        id="btnCarSelected" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
+                        aria-label="Seleccionar Mercedes Benz Clase C 2012">
                         SELECCIONAR
                     </button>
                 </div>
 
-                </div>
+            </div>
             </div>
 
             <div class="tobook_content">
                 <button id="btn-pay" class="btn_tobook" type="submit">Consultar</button>
             </div>
 
-        </form >
+        </form>
 
         <div class="modal" id="ventanaModal" tabindex="-1">
             <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title">Finalizar Reservación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Finalizar Reservación</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <div class="modal-body">
-                        <div class="position-center">
-                            <!-- SE MUESTRA LA FECHA SELECCIONADA POR EL USUARIO -->
-                            <div class="itempay-content" id="selectedDateContainer">
-                                <!-- <h3 class="title">Fecha selecionada:</h3> 
+                        <div class="modal-body">
+                            <div class="position-center">
+                                <!-- SE MUESTRA LA FECHA SELECCIONADA POR EL USUARIO -->
+                                <div class="itempay-content" id="selectedDateContainer">
+                                    <!-- <h3 class="title">Fecha selecionada:</h3> 
                                 <p>01 - 01 - 2021</p> -->
-                            </div>
+                                </div>
 
-                            <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
-                            <div class="itempay-content" id="selectedRouteContainer">
-                                <!-- <h3 class="title">Ruta Selecionada:</h3> 
+                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL TRASLADO DESDE TAL PUNTO HASTA TAL PUNTO -->
+                                <div class="itempay-content" id="selectedRouteContainer">
+                                    <!-- <h3 class="title">Ruta Selecionada:</h3> 
                                 <p>Una ruta - otra runta</p> -->
-                            </div>
-                        
-                            <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
-                            <div class="itempay-content" id="selectedCarContainer">
-                                <!-- <h3 class="title">Vehiculo seleccionado</h3>
-                                <p>Mercedes Benz Clase C</p> -->
-                            </div>
-                            
-                            <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
-                            <div class="total_topay_content" id="totalPriceContainer">
-                                <!-- <h3>Total Estimado:</h3> -->
-                                <!-- <p>Precio a pagar: XX$</p> -->
-                            </div>
-                        
-                            <div class="alert_viawa_content">
-                                <p> 
-                                    <i class="fas fa-exclamation-circle"></i> 
-                                    La reservación se realizará por <span>Whatsapp</span> y 
-                                    se pondra en contácto con la agencia para confirmar su reservación.
-                                </p>
-                            </div>
+                                </div>
 
-                            <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
-                            <div class="btn_tobook_content">
-                                <button 
-                                    id="btnWaMe" 
-                                    type="button" 
-                                    aria-details="Hacer la reservación mediante un mensaje de Whatsapp"
-                                    aria-label="Reservar mediante un mensaje de Whatsapp"
-                                >
-                                RESERVAR</button>
-                                <!-- <i class="fab fa-whatsapp"></i> -->
+                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->
+                                <div class="itempay-content" id="selectedCarContainer">
+                                    <!-- <h3 class="title">Vehiculo seleccionado</h3>
+                                <p>Mercedes Benz Clase C</p> -->
+                                </div>
+
+                                <!-- TOTAL A PAGAR SE MUESTRA AQUI; SUMANDO TODO LO ANTERIOR -->
+                                <div class="total_topay_content" id="totalPriceContainer">
+                                    <!-- <h3>Total Estimado:</h3> -->
+                                    <!-- <p>Precio a pagar: XX$</p> -->
+                                </div>
+
+                                <div class="alert_viawa_content">
+                                    <p>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        La reservación se realizará por <span>Whatsapp</span> y
+                                        se pondra en contácto con la agencia para confirmar su reservación.
+                                    </p>
+                                </div>
+
+                                <!-- BOTON PARA HACER LA RESERVAR CON WHATSAPP -->
+                                <div class="btn_tobook_content">
+                                    <button id="btnWaMe" type="button"
+                                        aria-details="Hacer la reservación mediante un mensaje de Whatsapp"
+                                        aria-label="Reservar mediante un mensaje de Whatsapp">
+                                        RESERVAR</button>
+                                    <!-- <i class="fab fa-whatsapp"></i> -->
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
             </div>
         </div>
     </section>
@@ -392,11 +377,11 @@
                 </div>
 
                 <div class="location">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo" 
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.843910258001!2d-68.39525118569959!3d18.626089170801272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8933d3ecde76b%3A0x9ed920260404261f!2sT%20CARIBE%20PUNTA%20CARIBE!5e0!3m2!1sen!2sdo!4v1628655562702!5m2!1sen!2sdo"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-            </div>        
+            </div>
         </div>
     </section>
 
@@ -414,9 +399,9 @@
                     <h3>Cristian Reyes</h3>
                     <p>
                         Cristian Reyes es el cerebro detrás de T.Caribe. Cristian, un dominicano de nacimiento,
-                        ha sido dueño de su propio negocio de transporte durante los últimos doce años. 
-                        Durante sus primeros años, trabajó como conductor en el campo del transporte. 
-                        Fue entonces cuando afinó y perfeccionó sus habilidades, aprendiendo el significado 
+                        ha sido dueño de su propio negocio de transporte durante los últimos doce años.
+                        Durante sus primeros años, trabajó como conductor en el campo del transporte.
+                        Fue entonces cuando afinó y perfeccionó sus habilidades, aprendiendo el significado
                         de profesionalismo, servicio, puntualidad, compromiso y confiabilidad.
                     </p>
                 </div>
@@ -466,17 +451,23 @@
             </div>
 
             <div class="socialmedia_footer">
-                <a target="_blank" href="https://www.instagram.com/t.caribepuntacana/" id="instagramIcon"  title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a target="_blank" href="https://twitter.com/TCaribePC" id="twitterIcon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a target="_blank" href="https://wa.me/18097576254" id="whatsappIcon" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a target="_blank" href="https://www.facebook.com/T.CaribePuntaCana" id="facebookIcon" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="mailto:info@puntacanatransportation.com" id="emailIcon" title="E-mail"><i class="far fa-envelope"></i></a>
+                <a target="_blank" href="https://www.instagram.com/t.caribepuntacana/" id="instagramIcon"
+                    title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/TCaribePC" id="twitterIcon" title="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://wa.me/18097576254" id="whatsappIcon" title="Whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a target="_blank" href="https://www.facebook.com/T.CaribePuntaCana" id="facebookIcon"
+                    title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@puntacanatransportation.com" id="emailIcon" title="E-mail"><i
+                        class="far fa-envelope"></i></a>
             </div>
-        
+
         </div>
 
     </footer>
-    
+
 
 </body>
+
 </html>
