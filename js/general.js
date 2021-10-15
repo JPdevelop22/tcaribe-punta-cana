@@ -6,22 +6,10 @@ let carSelected // This var will change while the user click the select car
 let timerId
 
 $(document).ready(() => {
-    $('#toSpanish').on('click', () => {
-        window.location = './index.html'
-    })
-
-    $('#toEnglish').on('click', () => {
-        window.location = './index-EN.html'
-    })
-    
     // On button wame clicking event handler
     $("#btnWaMe").on('click', () => {
         wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
         window.location = "https://wa.me/18097576254?text=" +  wameMessage
-    })
-
-    $(".logo_footer").on('click', () => {
-        window.location = "#"
     })
 })
 
