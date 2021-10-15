@@ -2,11 +2,6 @@
 let wameMessage = ''
 let carSelected // This var will change while the user click the select car
 
-// Separators for the data sending in string shape 
-const optionValueSeparator = ' . '
-const arraySeparator = ','
-const arraySeparator2 = ' , ' 
-
 // Timer controller for animations
 let timerId
 
@@ -112,6 +107,20 @@ const setActualDate = (elementId, langFormat = "es-ES") => {
     let actualDateFormated = year + "-" + month + "-" + day
 
     datePicker.min = actualDateFormated
+}
+
+// A function for format a date by its language return a 
+// correct date writed according the langFormat argument
+const formatDate = (date, langFormat = "es-ES") => {
+    let dateToFormat = new Date(date);
+    let day = dateToFormat.getDate();
+    let year = dateToFormat.getFullYear();
+    let month = dateToFormat.toLocaleDateString(langFormat, {month: 'long'})
+
+    // Now return a writed date in Spanish if langFormat is in spanish, anyways not
+    return (langFormat == "es-ES")?  
+        day + " de " + month + " del " + year: // Dia de Mes del Año
+        month + " " + day + ",  " + year; // Month Day, Year
 }
 
 export {
