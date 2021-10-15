@@ -113,3 +113,17 @@ const setActualDate = (elementId, langFormat = "es-ES") => {
 
     datePicker.min = actualDateFormated
 }
+
+export {
+    wameMessage, 
+    carSelected, 
+    optionValueSeparator, 
+    arraySeparator,
+    arraySeparator2, 
+    timerId, 
+    drawAlert, 
+    animateCSS, 
+    changeCarSelected,
+    emptyContainers, 
+    setActualDate
+}
