@@ -4,15 +4,13 @@ import Excursion from "../Models/Excursion.js"
 import { 
 	wameMessage, 
 	carSelected, 
-	optionValueSeparator, 
-	arraySeparator,
-    arraySeparator2, 
     timerId, 
     drawAlert, 
     animateCSS, 
     changeCarSelected,
     emptyContainers, 
-    setActualDate 
+    setActualDate,
+    formatDate
 } from "../general.js"
 
 console.log("Should my object travel send me data:");
@@ -22,3 +20,6 @@ console.log(travel.getTotalPrice())
 console.log("Should my object excursion send me data:");
 const excursion = new Excursion("EZBPC13H", "StretchLimo")
 console.log(excursion.getTotalPrice())
+
+console.log("Should my function return a writed date in english:")
+console.log(formatDate("2021-2-22", "en-EN"))

@@ -1,17 +1,6 @@
 // Globals vars
-let wameMessage = ''
-let carSelected // This var will change while the user click the select car
-
 // Timer controller for animations
 let timerId
-
-$(document).ready(() => {
-    // On button wame clicking event handler
-    $("#btnWaMe").on('click', () => {
-        wameMessage = wameMessage.replace(/\s+/g, '%20') // Replace every white space for a %20 what is a white space in a url 
-        window.location = "https://wa.me/18097576254?text=" +  wameMessage
-    })
-})
 
 // Draw an alert in DOM with a animation
 const drawAlert = (content) => {
@@ -108,19 +97,17 @@ const formatDate = (date, langFormat = "es-ES") => {
     // Now return a writed date in Spanish if langFormat is in spanish, anyways not
     return (langFormat == "es-ES")?  
         day + " de " + month + " del " + year: // Dia de Mes del Año
-        month + " " + day + ",  " + year; // Month Day, Year
+        month + " " + day + ", " + year; // Month Day, Year
 }
 
 export {
     wameMessage, 
     carSelected, 
-    optionValueSeparator, 
-    arraySeparator,
-    arraySeparator2, 
     timerId, 
     drawAlert, 
     animateCSS, 
     changeCarSelected,
     emptyContainers, 
-    setActualDate
+    setActualDate,
+    formatDate
 }
