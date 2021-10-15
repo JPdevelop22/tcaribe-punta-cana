@@ -2,13 +2,9 @@ import Travel from "../Models/Travel.js"
 import Excursion from "../Models/Excursion.js"
 
 import { 
-	wameMessage, 
-	carSelected, 
     timerId, 
     drawAlert, 
     animateCSS, 
-    changeCarSelected,
-    emptyContainers, 
     setActualDate,
     formatDate
 } from "../general.js"

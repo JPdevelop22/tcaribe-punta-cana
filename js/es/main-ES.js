@@ -13,7 +13,6 @@ import {
     here's all controllers and events handlers
     for make The booking works
 */
-
 // Globals vars
 let bookTypesArr = ['Viaje turístico', 'Excursión']
 const { travels, "excursions-ES": excursions, "prices-ES": prices } = DB

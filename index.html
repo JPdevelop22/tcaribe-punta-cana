@@ -49,10 +49,7 @@
         </script>
     <!-- END -->
 
-    <!-- <script src="./js/DB.js"></script> -->
-    <script type="module" src="./js/general.js"></script>
-    <!-- <script src="./js/es/bookUtitlityFuncitons-ES.js"></script> -->
-    <!-- <script src="./js/es/main-ES.js"></script> -->
+    <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/Tests/Tests.js"></script>
     <!-- #endregion -->
 
@@ -302,6 +299,7 @@
                         <div class="select_amount_person" id="passengersContainer">
                             <h3>Cantidad de Persona:</h3>
                             <select name="passengers" id="selectPassengers" required>
+                                <option value=""></option>
                                 <option value="1 - 6">De 1 - 6 personas</option>
                             </select>
                         </div>
@@ -330,8 +328,9 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button onclick="changeCarSelected('Chevrolet suburban 2012', 'carContainer1');" type="button"
-                        id="btnCarSelected" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
+                    <button
+                        type="button"
+                        id="btnCarSelected1" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
                         aria-label="Seleccionar Chevrolet suburban 2012">
                         SELECCIONAR
                     </button>
@@ -358,8 +357,9 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button onclick="changeCarSelected('Limosina Town Car 2007', 'carContainer2');" type="button"
-                        id="btnCarSelected" aria-details="Boton para seleccionar el Limosina Town Car 2007"
+                    <button 
+                        type="button"
+                        id="btnCarSelected2" aria-details="Boton para seleccionar el Limosina Town Car 2007"
                         aria-label="Seleccionar Limosina Town Car 2007">
                         SELECCIONAR
                     </button>
@@ -386,8 +386,9 @@
                 </div>
 
                 <div class="btn_select_content">
-                    <button onclick="changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');" type="button"
-                        id="btnCarSelected" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
+                    <button 
+                        type="button"
+                        id="btnCarSelected3" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
                         aria-label="Seleccionar Mercedes Benz Clase C 2012">
                         SELECCIONAR
                     </button>
