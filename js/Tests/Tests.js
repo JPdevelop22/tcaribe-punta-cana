@@ -10,7 +10,8 @@ import {
     animateCSS, 
     changeCarSelected,
     emptyContainers, 
-    setActualDate } from "../general.js"
+    setActualDate 
+} from "../general.js"
 
 console.log("Should my object travel send me data:");
 let travel = new Travel("Sgo", "PUJ", "ChevroletSuburban")

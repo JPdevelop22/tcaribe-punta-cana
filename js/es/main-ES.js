@@ -1,3 +1,13 @@
+import { 
+    wameMessage, 
+    carSelected, 
+    optionValueSeparator, 
+    drawAlert, 
+    animateCSS, 
+    emptyContainers, 
+    setActualDate 
+} from "../general.js"
+
 /* 
     Book functionality controller:
     here's all controllers and events handlers

@@ -1,3 +1,17 @@
+import { 
+    wameMessage, 
+    carSelected, 
+    optionValueSeparator, 
+    arraySeparator,
+    arraySeparator2, 
+    timerId, 
+    drawAlert, 
+    animateCSS, 
+    changeCarSelected,
+    emptyContainers, 
+    setActualDate 
+} from "../general.js"
+
 // DOM manipulation functions
 const drawPickupsLocationSelect = (pickupLocations) => {
     const pickupLocationsContainerId = "#pickupLocationsContainer"
