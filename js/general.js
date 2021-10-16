@@ -1,6 +1,8 @@
 // Globals vars
 // Timer controller for animations
 let timerId
+let carSelected // This var will change while the user click the select car
+let wameMessage = ''
 
 // Draw an alert in DOM with a animation
 const drawAlert = (content) => {
@@ -61,8 +63,40 @@ const formatDate = (date) => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
     let year = dateToFormat.getFullYear();
-    let month = dateToFormat.toLocaleDateString(langFormat, {month: 'long'})
+    let month = dateToFormat.toLocaleDateString("es-ES", {month: 'long'})
 
     // Now return a writed date in Spanish
     return  day + " de " + month + " del " + year; // Dia de Mes del Año
 }
+
+/**
+ * Check errors in the reservation form, handle those errors 
+ * and return true if get an error or false wherenot.
+ * @return {[bool]} [true if there is an error or false where not]
+ */
+const checkErrors = () => {
+    const {
+        bookType,
+        pickupLocations,
+        excursions,
+        destinies,
+        passengers,
+        pickupDate
+    } = document.fBook
+
+    if (!carSelected) {
+        drawAlert("Debe seleccionar un vehiculo")
+        window.location = '#carContainer1'
+        return true;
+    }
+
+    if (bookType.value == 'Travel') {
+        if (pickupLocations.value == destinies.value) {
+            drawAlert("No puede tener un destino igual que el punto de recogida")
+            window.location = '#formBook'
+            return true;
+        }
+    }
+
+    return false;
+}    

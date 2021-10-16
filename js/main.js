@@ -1,10 +1,6 @@
 import Travel from "./Models/Travel.js"
 import Excursion from "./Models/Excursion.js"
 
-// Globals vars
-let wameMessage = ''
-let carSelected // This var will change while the user click the select car
-
 /**
  * Global event handler, here he set up and manage the booking form. 
  */
@@ -17,24 +13,45 @@ $(document).ready(() => {
         switch (evt.target.value) {
             case "Travel":
                 $("#pickupLocationsContainer").show('fast');
+                $("#selectPickupLocations").removeAttr('disabled');
+
                 $("#destiniesContainer").show('fast');
+                $("#selectDestinies").removeAttr('disabled');
+
                 $('#excursionContainer').hide('faster')
+                $('#selectExcursions').attr('disabled', 'disabled')
                 break;
         
             case "Excursion":
                 $("#excursionContainer").show('faster');
+                $('#selectExcursions').removeAttr('disabled')
+
                 $('#pickupLocationsContainer').hide('faster')
+                $('#selectPickupLocations').attr('disabled', 'disabled')
+
                 $('#destiniesContainer').hide('faster')
+                $('#selectDestinies').attr('disabled', 'disabled')
                 break;
             
             default:
-                $("#excursionContainer").show('faster');
-                $("#pickupLocationsContainer").show('fast');
-                $("#destiniesContainer").show('fast');
+                $("#excursionContainer").show('faster')
+                $('#selectExcursions').removeAttr('disabled')
+
+                $("#pickupLocationsContainer").show('fast')
+                $("#selectPickupLocations").removeAttr('disabled');
+
+                $("#destiniesContainer").show('fast')
+                $("#selectDestinies").removeAttr('disabled');
                 break;
         }
     })
-    
+
+    $('#formBook').on('submit', (evt) => {
+        evt.preventDefault()
+        if (checkErrors()) {
+            return;
+        }
+    })
 
     //On click of select a car btn
     $("#btnCarSelected1").on('click', () => {
