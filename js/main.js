@@ -1,13 +1,3 @@
-import { 
-    timerId, 
-    drawAlert, 
-    animateCSS, 
-    hideContainer,
-    hideContainers,
-    setActualDate,
-    formatDate
-} from "./general.js"
-
 import Travel from "./Models/Travel.js"
 import Excursion from "./Models/Excursion.js"
 
@@ -40,6 +30,7 @@ $(document).ready(() => {
             default:
                 $("#excursionContainer").show('faster');
                 $("#pickupLocationsContainer").show('fast');
+                $("#destiniesContainer").show('fast');
                 break;
         }
     })
@@ -72,5 +63,18 @@ const changeCarSelected = (newCar, containerId) => {
     $('#carContainer1, #carContainer2, #carContainer3').removeClass("car_selected_border")
 
     $(`#${containerId}`).addClass("car_selected_border")
+}
+
+// A function for set actual date to a date input element by id
+const setActualDate = (elementId, langFormat = "es-ES") => {
+    let datePicker = document.getElementById(elementId)
+    let actualDate = new Date(Date.now())
+    let day = actualDate.getDate();
+    let year = actualDate.getFullYear();
+    let month = actualDate.toLocaleDateString(langFormat, {month:'2-digit'})
+    
+    let actualDateFormated = year + "-" + month + "-" + day
+
+    datePicker.min = actualDateFormated
 }
 

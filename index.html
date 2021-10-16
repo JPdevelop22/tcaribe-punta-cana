@@ -25,14 +25,14 @@
     <meta name="geo.placename" content="Punta cana" />
     <!-- #endregion -->
 
-    <!-- Favicons-->
+    <!-- #region Favicons-->
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" type="image/x-icon" href="./img/favicon/apple-touch-icon-precomposed.png" />
     <link rel="apple-touch-icon" sizes="180x180" type="image/x-icon"
         href="./img/favicon/apple-touch-icon-precomposed.png" />
     <meta name="msapplication-square150x150logo" content="./img/favicon/Icon-192x192.png">
     <meta name="msapplication-square310x310logo" content="./img/favicon/Icon-512x512.png">
-
+    <!-- #endregion -->
 
     <!-- #region Dependencias de la funcionalidad de la reservación-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -47,9 +47,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
         </script>
-    <!-- END -->
 
+    <script type="text/javascript" src="./js/general.js">
+        
+    </script>
     <script type="module" src="./js/main.js"></script>
+    <!-- Tests -->
     <script type="module" src="./js/Tests/Tests.js"></script>
     <!-- #endregion -->
 
@@ -59,19 +62,18 @@
     <script src="./js/scrollForAnimations.js"></script>
     <!-- #endregion -->
 
-    <!-- Linking de las tipografias -->
+    <!-- #region Linking de los CSS's y tipografias -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- END -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="./css/home-style.css">
     <link rel="stylesheet" href="./css/modal-view.css">
+    <!-- #endregion -->
+
     <title>Reserva tu mejor experiencia turística - T.CARIBE</title>
 </head>
 
@@ -114,13 +116,6 @@
     <!-- #region Seccion de Reservacion -->
     <section>
         <form id="formBook" name="fBook">
-            <!-- <div> <-- Apartado del titulo de la reservacion 
-                <title>
-                    Reservacion del Aeropuerto de Punta Cana <span class="red-word">a</span> 
-                    Hoteld Hard Rock, Punta Cana
-                </title>
-            </div>   -->
-
             <!-- ALERTAS que se rellenaran con jquery -->
             <div class="alert-booking" id="alertContainer" role="alert" aria-modal="true">
                 <!-- <div class="content-one">
@@ -140,22 +135,6 @@
                 </div>
 
                 <div class="booking_content">
-                    <!-- <div class="select_via ">
-
-                        <h3 id="tracksTitleContainer"></h3>
-                        <div class="option_input" id="tracksContainer">
-                            <div class="option_tracks">
-                                <input type="radio" name="tracks" id="tracks1" value="1" required />
-                                <label for="tracks1">1 vía</label>
-                            </div>
-
-                            <div class="option_tracks">
-                                <input type="radio" name="tracks" id="tracks2" value="2" required />
-                                <label for="tracks2">2 vías</label>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <div class="position_typebooking_excursions">
 
                         <div class="select_booking_type input_container" id="bookTypeContainer">
@@ -522,11 +501,9 @@
 
     <footer>
 
-        <a href="#">
-            <div class="logo_footer" role="link">
-                <img src="./img/logo/logo.png" alt="Marca de la empresa">
-            </div>
-        </a>
+        <div class="logo_footer" role="link">
+            <img src="./img/logo/logo.png" alt="Marca de la empresa">
+        </div>
 
         <div class="contact_footer">
             <div class="contact">

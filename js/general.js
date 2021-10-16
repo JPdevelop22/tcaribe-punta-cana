@@ -56,52 +56,13 @@ const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__')
     }
 );
 
-// Empty containers in the recived array by Id
-const hideContainer = (containerId) => {
-        let id = `#${containerId}`
-        animateCSS(id, 'fadeOut', 'faster').then(() => $(id).hide('fast'))
-}
-
-const hideContainers = (containerIds) => {
-    containerIds.forEach(containerId => {
-        let id = `#${containerId}`
-        animateCSS(id, 'fadeOut', 'faster').then(() => $(id).hide('fast'))
-    })
-}
-
-// A function for set actual date to a date input element by id
-const setActualDate = (elementId, langFormat = "es-ES") => {
-    let datePicker = document.getElementById(elementId)
-    let actualDate = new Date(Date.now())
-    let day = actualDate.getDate();
-    let year = actualDate.getFullYear();
-    let month = actualDate.toLocaleDateString(langFormat, {month:'2-digit'})
-    
-    let actualDateFormated = year + "-" + month + "-" + day
-
-    datePicker.min = actualDateFormated
-}
-
-// A function for format a date by its language return a 
-// correct date writed according the langFormat argument
-const formatDate = (date, langFormat = "es-ES") => {
+// A function for format a date into a writed date 
+const formatDate = (date) => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
     let year = dateToFormat.getFullYear();
     let month = dateToFormat.toLocaleDateString(langFormat, {month: 'long'})
 
-    // Now return a writed date in Spanish if langFormat is in spanish, anyways not
-    return (langFormat == "es-ES")?  
-        day + " de " + month + " del " + year: // Dia de Mes del Año
-        month + " " + day + ", " + year; // Month Day, Year
-}
-
-export {
-    timerId, 
-    drawAlert, 
-    animateCSS, 
-    hideContainer,
-    hideContainers,
-    setActualDate,
-    formatDate
+    // Now return a writed date in Spanish
+    return  day + " de " + month + " del " + year; // Dia de Mes del Año
 }
