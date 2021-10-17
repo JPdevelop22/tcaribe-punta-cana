@@ -115,6 +115,48 @@ const checkErrors = () => {
     return false;
 }
 
+/**
+ * A function for clean the value from a string that has \n and a lot of blank spaces
+ * @param  {string} txt The string to be clean
+ * @return {string}     The string cleanned
+ */
+const cleanName = (txt) => txt.replace(/\n/g, "").trim()
+
+/** A function for build the Whatsapp travel service message that will be send */
+const buildWaMeTravelMessage = () => {
+    const {
+        passengers,
+        pickupDate
+    } = document.fBook
+    const writedDate = formatDate(pickupDate.value)
+    const pickupName = cleanName($("#selectPickupLocations :selected").text())
+    const destinyName = cleanName($("#selectDestinies :selected").text())
+
+    wameMessage = 
+        `Hola, quiero hacer una reservación del servicio de Viaje, ` +
+        `tomaré la ruta que va desde el punto de recogida: ${pickupName} hasta ` +
+        `${destinyName}, para la fecha del ${writedDate}, con una ` +
+        `cantidad de pasajeros que va desde ${passengers.value} pasajeros. ` +
+        `He elegido el auto: ${carSelected}, ` + '¿Me podrían ofrecer más información, por favor?'
+}
+
+/** A function for build the Whatsapp excursion service message that will be send */
+const buildWaMeExcursionMessage = () => {
+    const {
+        passengers,
+        pickupDate
+    } = document.fBook
+    const writedDate = formatDate(pickupDate.value)
+    const excursionName = cleanName($("#selectExcursions :selected").text())
+
+    wameMessage = 
+        `Hola, quiero hacer una reservación del servicio de Excursión, ` +
+        `escogí la excursión: ${excursionName}, para la fecha del ${writedDate} ` +
+        `con una cantidad de pasajeros que va desde ${passengers.value} pasajeros, ` +
+        `He elegido el auto: ${carSelected}, ` + '¿Me podrían ofrecer más información, por favor?'
+}
+
+
 $(document).ready(() => {
     // pickupLocations select should change the destinies options according its value 
     $("#selectPickupLocations").on('change', () => {
