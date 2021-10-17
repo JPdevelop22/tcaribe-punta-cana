@@ -279,7 +279,7 @@
                             <h3>Cantidad de Persona:</h3>
                             <select name="passengers" id="selectPassengers" required>
                                 <option value=""></option>
-                                <option value="1 - 6">De 1 - 6 personas</option>
+                                <option value="1 - 6">De 1 a 6 personas</option>
                             </select>
                         </div>
                     </div>
@@ -308,7 +308,7 @@
 
                 <div class="btn_select_content">
                     <button
-                        onclick="$('#selectPassengers').html(`<option value=''></option>`+`<option value='1 - 6'>De 1 - 6 personas</option>`)"
+                        onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
                         type="button"
                         id="btnCarSelected1" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
                         aria-label="Seleccionar Chevrolet suburban 2012">
@@ -338,7 +338,7 @@
 
                 <div class="btn_select_content">
                     <button
-                        onclick="$('#selectPassengers').html(`<option value=''></option>`+`<option value='1 - 13'>De 1 - 13 personas</option>`)"
+                        onclick="drawAlert('Según el auto que eliga puede que cambie el numero de pasajeros que puede seleccionar'); $('#selectPassengers :selected').attr('value', '1 - 13').text('De 1 a 13 personas')"
                         type="button"
                         id="btnCarSelected2" aria-details="Boton para seleccionar el Limosina Town Car 2007"
                         aria-label="Seleccionar Limosina Town Car 2007">
@@ -368,7 +368,7 @@
 
                 <div class="btn_select_content">
                     <button
-                        onclick="$('#selectPassengers').html(`<option value=''></option>`+`<option value='1 - 6'>De 1 - 6 personas</option>`)"
+                        onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
                         type="button"
                         id="btnCarSelected3" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
                         aria-label="Seleccionar Mercedes Benz Clase C 2012">
@@ -411,6 +411,12 @@
                                         <span id="selectedPickupLocationContainer"></span>
                                         <span id="selectedDestinyContainer"></span>
                                     </p>
+                                </div>
+
+                                <!-- SE MUESTRA EL PRECIO QUE CUESTA EL NUMERO DE PASAJEROS SELECIONADO -->
+                                <div class="itempay-content">
+                                    <h3 class="title">Número de pasajeros:</h3>
+                                    <p>De <span id="selectedPassengersContainer"></span> pasajeros</p>
                                 </div>
 
                                 <!-- SE MUESTRA EL PRECIO QUE CUESTA EL USO DEL VEHICULO SELECIONADO CON SU NOMBRE Y PRECIO -->

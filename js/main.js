@@ -1,5 +1,6 @@
 import Travel from "./Models/Travel.js"
 import Excursion from "./Models/Excursion.js"
+let carKey
 
 /**
  * Global event handler, here he set up and manage the booking form. 
@@ -46,24 +47,64 @@ $(document).ready(() => {
         }
     })
 
+    // form for reservation submition handler here we build the modal view with a recipt
     $('#formBook').on('submit', (evt) => {
         evt.preventDefault()
+
+        // Check if the form have errors, if true don't continue with the submition
         if (checkErrors()) {
             return;
         }
+
+        const {
+            bookType,
+            pickupLocations,
+            excursions,
+            destinies,
+            passengers,
+            pickupDate
+        } = document.fBook
+
+        // Build modal depending if it's a travel or excursion
+        $("#selectedDateContainer").text(formatDate(pickupDate.value))
+        $("#selectedPassengersContainer").text(passengers.value)
+        $("#selectedCarContainer").text(carSelected)
+        
+        if (bookType.value == "Travel") {
+            const travel = new Travel(pickupLocations.value, destinies.value, carKey)
+
+            $("#selectedPickupLocationContainer").text(cleanName($("#selectPickupLocations :selected").text()) + " - ")
+            $("#selectedDestinyContainer").text(cleanName($("#selectDestinies :selected").text()))
+            $("#totalPriceContainer").text(travel.getTotalPrice() + ".00$ USD")
+
+            buildWaMeTravelMessage()
+
+        } else {
+            const excursion = new Excursion(excursions.value, carKey)
+
+            $("#selectedExcursionContainer").text(cleanName($("#selectExcursions :selected").text()))
+            $("#totalPriceContainer").text(excursion.getTotalPrice() + ".00$ USD")
+
+            buildWaMeExcursionMessage()
+        }
+
+        $('#ventanaModal').modal('show').modal('handleUpdate')
     })
 
     //On click of select a car btn
     $("#btnCarSelected1").on('click', () => {
         changeCarSelected('Chevrolet suburban 2012', 'carContainer1');
+        carKey = "ChevroletSuburban"
     });
 
     $("#btnCarSelected2").on('click', () => {
         changeCarSelected('Limosina Town Car 2007', 'carContainer2');
+        carKey = "StretchLimo"
     });
 
     $("#btnCarSelected3").on('click', () => {
         changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');
+        carKey = "MercedesBenz"
     });
 
     // On button wame clicking event handler
