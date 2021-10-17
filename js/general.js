@@ -3,6 +3,20 @@
 let timerId
 let carSelected // This var will change while the user click the select car
 let wameMessage = ''
+// Options series
+const optionsSerie1 = "<option value=\"\"></option>" +
+        "<option value=\"PUJ\">Aeropuerto Internacional de Punta Cana</option>";
+const optionsSerie2 = "<option value=\"\"></option>" + 
+        "<option value=\"HZBPC\">" + "Hoteles en la Zona Bavaro Punta Cana" + "</option>" +
+        "<option value=\"HUA\">" + "Hoteles en Uvero Alto" + "</option>" + 
+        "<option value=\"HLR\">" + "Hoteles en La Romana" + "</option>" + 
+        "<option value=\"SPM\">" + "San Pedro de Macoris" + "</option>" +
+        "<option value=\"Sbo\">" + "Siebo" + "</option>" +
+        "<option value=\"BC\">" + "Boca Chica" + "</option>" + 
+        "<option value=\"SD\">" + "Santo Domingo" + "</option>" +
+        "<option value=\"Sgo\">" + "Santiago" + "</option>" + 
+        "<option value=\"Sna\">" + "Samaná" + "</option>" + 
+        "<option value=\"PP\">" + "Puerto Plata" + "</option>";
 
 // Draw an alert in DOM with a animation
 const drawAlert = (content) => {
@@ -99,4 +113,21 @@ const checkErrors = () => {
     }
 
     return false;
-}    
+}
+
+$(document).ready(() => {
+    // pickupLocations select should change the destinies options according its value 
+    $("#selectPickupLocations").on('change', () => {
+        const pickupLocationsValue = document.fBook.pickupLocations.value
+
+        if (pickupLocationsValue != 'PUJ') {
+            if ($("#selectDestinies").html() != optionsSerie1) {
+                $("#selectDestinies").html(optionsSerie1)
+            }
+        } else {
+            if ($("#selectDestinies").html() != optionsSerie2) {
+                $("#selectDestinies").html(optionsSerie2)
+            }
+        }
+    });
+});
