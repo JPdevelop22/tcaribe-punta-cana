@@ -1,6 +1,8 @@
 // Globals vars
 // Timer controller for animations
 let timerId
+let carSelected // This var will change while the user click the select car
+let wameMessage = ''
 
 // Draw an alert in DOM with a animation
 const drawAlert = (content) => {
@@ -56,52 +58,45 @@ const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__')
     }
 );
 
-// Empty containers in the recived array by Id
-const hideContainer = (containerId) => {
-        let id = `#${containerId}`
-        animateCSS(id, 'fadeOut', 'faster').then(() => $(id).hide('fast'))
-}
-
-const hideContainers = (containerIds) => {
-    containerIds.forEach(containerId => {
-        let id = `#${containerId}`
-        animateCSS(id, 'fadeOut', 'faster').then(() => $(id).hide('fast'))
-    })
-}
-
-// A function for set actual date to a date input element by id
-const setActualDate = (elementId, langFormat = "es-ES") => {
-    let datePicker = document.getElementById(elementId)
-    let actualDate = new Date(Date.now())
-    let day = actualDate.getDate();
-    let year = actualDate.getFullYear();
-    let month = actualDate.toLocaleDateString(langFormat, {month:'2-digit'})
-    
-    let actualDateFormated = year + "-" + month + "-" + day
-
-    datePicker.min = actualDateFormated
-}
-
-// A function for format a date by its language return a 
-// correct date writed according the langFormat argument
-const formatDate = (date, langFormat = "es-ES") => {
+// A function for format a date into a writed date 
+const formatDate = (date) => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
     let year = dateToFormat.getFullYear();
-    let month = dateToFormat.toLocaleDateString(langFormat, {month: 'long'})
+    let month = dateToFormat.toLocaleDateString("es-ES", {month: 'long'})
 
-    // Now return a writed date in Spanish if langFormat is in spanish, anyways not
-    return (langFormat == "es-ES")?  
-        day + " de " + month + " del " + year: // Dia de Mes del Año
-        month + " " + day + ", " + year; // Month Day, Year
+    // Now return a writed date in Spanish
+    return  day + " de " + month + " del " + year; // Dia de Mes del Año
 }
 
-export {
-    timerId, 
-    drawAlert, 
-    animateCSS, 
-    hideContainer,
-    hideContainers,
-    setActualDate,
-    formatDate
-}
+/**
+ * Check errors in the reservation form, handle those errors 
+ * and return true if get an error or false wherenot.
+ * @return {[bool]} [true if there is an error or false where not]
+ */
+const checkErrors = () => {
+    const {
+        bookType,
+        pickupLocations,
+        excursions,
+        destinies,
+        passengers,
+        pickupDate
+    } = document.fBook
+
+    if (!carSelected) {
+        drawAlert("Debe seleccionar un vehiculo")
+        window.location = '#carContainer1'
+        return true;
+    }
+
+    if (bookType.value == 'Travel') {
+        if (pickupLocations.value == destinies.value) {
+            drawAlert("No puede tener un destino igual que el punto de recogida")
+            window.location = '#formBook'
+            return true;
+        }
+    }
+
+    return false;
+}    
