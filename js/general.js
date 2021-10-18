@@ -7,18 +7,21 @@ let wameMessage = ''
 const optionsSerie1 = "<option value=\"\"></option>" +
         "<option value=\"PUJ\">Aeropuerto Internacional de Punta Cana</option>";
 const optionsSerie2 = "<option value=\"\"></option>" + 
-        "<option value=\"HZBPC\">" + "Hoteles en la Zona Bavaro Punta Cana" + "</option>" +
+        "<option value=\"HZBPC\">" + "Hoteles de la zona Bávaro, Punta Cana" + "</option>" +
         "<option value=\"HUA\">" + "Hoteles en Uvero Alto" + "</option>" + 
         "<option value=\"HLR\">" + "Hoteles en La Romana" + "</option>" + 
-        "<option value=\"SPM\">" + "San Pedro de Macoris" + "</option>" +
-        "<option value=\"Sbo\">" + "Siebo" + "</option>" +
+        "<option value=\"SPM\">" + "San Pedro de Macorís" + "</option>" +
+        "<option value=\"Sbo\">" + "El Seibo" + "</option>" +
         "<option value=\"BC\">" + "Boca Chica" + "</option>" + 
         "<option value=\"SD\">" + "Santo Domingo" + "</option>" +
         "<option value=\"Sgo\">" + "Santiago" + "</option>" + 
         "<option value=\"Sna\">" + "Samaná" + "</option>" + 
         "<option value=\"PP\">" + "Puerto Plata" + "</option>";
 
-// Draw an alert in DOM with a animation
+/**
+ * Draw an alert in DOM with an animation
+ * @param  {[String]} content The content to be writed in the alert
+ */
 const drawAlert = (content) => {
     const alertContainerId = '#alertContainer'
 
@@ -51,7 +54,13 @@ const drawAlert = (content) => {
     }, 4000);
 }
 
-// Function for animate elements
+/**
+ * Function for animate elements
+ * @param  {String} element   The element query to be selected
+ * @param  {String} animation The animation to be use
+ * @param  {String} duration  The duration of the animation
+ * @param  {String} prefix    The prefix class to use
+ */
 const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__') =>
     // We create a Promise and return it
     new Promise((resolve, reject) => {
@@ -72,7 +81,11 @@ const animateCSS = (element, animation, duration = 'fast', prefix = 'animate__')
     }
 );
 
-// A function for format a date into a writed date 
+/**
+ * A function for format a date into a writed date
+ * @param  {Date} date The date formated to be writed
+ * @return {String}      The date in a writed format
+ */
 const formatDate = (date) => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
@@ -86,7 +99,7 @@ const formatDate = (date) => {
 /**
  * Check errors in the reservation form, handle those errors 
  * and return true if get an error or false wherenot.
- * @return {[bool]} [true if there is an error or false where not]
+ * @return {bool} true if there is an error or false where not
  */
 const checkErrors = () => {
     const {
