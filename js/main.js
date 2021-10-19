@@ -21,6 +21,7 @@ $(document).ready(() => {
 
                 $('#excursionContainer').hide('faster')
                 $('#selectExcursions').attr('disabled', 'disabled')
+                cleanModal()
                 break;
         
             case "Excursion":
@@ -32,6 +33,7 @@ $(document).ready(() => {
 
                 $('#destiniesContainer').hide('faster')
                 $('#selectDestinies').attr('disabled', 'disabled')
+                cleanModal()
                 break;
             
             default:
@@ -136,3 +138,6 @@ const setActualDate = (elementId, langFormat = "es-ES") => {
     datePicker.min = actualDateFormated
 }
 
+const cleanModal = () => {
+    $("#selectedPickupLocationContainer, #selectedDestinyContainer, #selectedPickupLocationContainer").text("")
+}
