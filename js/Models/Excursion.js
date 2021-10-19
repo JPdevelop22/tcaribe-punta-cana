@@ -1,3 +1,6 @@
+/**
+ * Excursion class model to keep excursions data 
+ */
 export default class Excursion {
     constructor(excursionName, selectedCar) {
         this.excursionKey = excursionName;
@@ -68,6 +71,7 @@ export default class Excursion {
         }
     }
 
+    // GETTERS
     getStartKey() {
         return this.startKey;
     }
