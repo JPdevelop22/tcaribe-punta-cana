@@ -111,6 +111,12 @@ const checkErrors = () => {
         pickupDate
     } = document.fBook
 
+    if (!bookType.value || !passengers.value || !pickupDate.value) {
+        drawAlert("No ha llenado todos los campos necesarios")
+        window.location = '#formBook'
+        return true;
+    }
+
     if (!carSelected) {
         drawAlert("Debe seleccionar un vehiculo")
         window.location = '#carContainer1'
@@ -118,8 +124,20 @@ const checkErrors = () => {
     }
 
     if (bookType.value == 'Travel') {
-        if (pickupLocations.value == destinies.value) {
+        if (!pickupLocations.value || !destinies.value) {
+            drawAlert("No ha llenado todos los campos necesarios")
+            window.location = '#formBook'
+            return true;
+        }
+
+        else if (pickupLocations.value == destinies.value) {
             drawAlert("No puede tener un destino igual que el punto de recogida")
+            window.location = '#formBook'
+            return true;
+        }
+    } else {
+        if (!excursions.value) {
+            drawAlert("No ha llenado todos los campos necesarios")
             window.location = '#formBook'
             return true;
         }
