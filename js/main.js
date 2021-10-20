@@ -139,5 +139,7 @@ const setActualDate = (elementId, langFormat = "es-ES") => {
 }
 
 const cleanModal = () => {
-    $("#selectedPickupLocationContainer, #selectedDestinyContainer, #selectedPickupLocationContainer").text("")
+    $("#selectedPickupLocationContainer").text("")
+    $("#selectedDestinyContainer").text("")
+    $("#selectedExcursionContainer").text("")
 }
