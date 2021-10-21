@@ -94,7 +94,7 @@ nav{
 
 .title_content h1{
     width: 60%;
-    margin: 10% auto 0;
+    margin: 5% auto 0;
     text-align: center;
     font-size: 1.25rem;
     font-family: var(--paragraph-font);
@@ -131,6 +131,34 @@ nav{
     flex-direction: row;
     justify-content: center;
     margin: 0 0 3%;
+    align-items: center;
+}
+
+.select_car_content{
+    text-align: center;
+    margin: 5% 0;
+}
+
+.select_car_btn{
+    background: var(--red-brand);
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--title-font);
+}
+
+.select_car_btn:hover{
+    text-decoration: none;
+    background: none;
+    border: 2px var(--red-brand) solid;
+    color: var(--red-brand);
+    transition: all .2s ease;
+}
+
+.select_car_btn i{
+    font-size: 40px;
 }
 /* END */
 
@@ -309,14 +337,14 @@ nav{
 }
     .btn_select_content button:hover{
         background: #e52d2a00;
-        border: var(--red-brand) solid .125rem;
-        color: var(--red-brand);
+        border: var(--blue-brand) solid .125rem;
+        color: var(--blue-brand);
         transition: all .2s ease-in-out;
     }
 
 .btn_select_content button{
     border: none;
-    background: var(--red-brand);
+    background: var(--blue-brand);
     padding: .625rem 1.25rem;
     border-radius: 1.25rem;
     font-size: .8125rem;
@@ -330,10 +358,10 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10% 0;
+    margin: 6% 0;
 }
     .tobook_content .btn_tobook:hover{
-        background: #fff0;
+        /* background: #fff0; */
         border: var(--red-brand) solid .1875rem;
         color: var(--red-brand);
         transform: scale(1.02,1.02);
@@ -342,7 +370,7 @@ nav{
 
 .btn_tobook{
     border: none;
-    background: var(--blue-brand);
+    background: var(--red-brand);
     padding: .625rem 1.25rem;
     border-radius: 1.5625rem;
     text-align: center;
@@ -642,7 +670,7 @@ footer{
 }
 
 .storyself_content .icon_storyself i{
-    font-size: 25px;
+    font-size: 30px;
     color: var(--red-brand);
     text-align: center;
     border-radius: 100%;
