@@ -1,19 +1,22 @@
-//This algorithm add animations by position of the scroll
+/**
+ * This algorithm add animations by position of the scroll
+ * @param  {string} idOfElement The plain id of the element that will be animate
+ * @param  {[type]} animation   The animation to use
+ * @param  {String} duration    The duration of the animation
+ * @param  {String} prefix      The animation prfix class
+ */
 const animationByScroll = (idOfElement, animation, duration = "fast", prefix = 'animate__') => {
     let element = document.getElementById(idOfElement);
     let elementPosition = element.getBoundingClientRect().top;
     
-    // console.debug(elementPosition);
-    // console.debug(window.innerHeight);
-
     if(elementPosition < window.innerHeight) {
-        // console.debug("Works well")
         let animationClass = `${prefix}${animation}`
         let animationDurationClass = `${prefix}${duration}`
         element.classList.add(`${prefix}animated`, animationClass, animationDurationClass)
     }
 }
 
+// Animation actioner
 $(document).ready(() => {
     animationByScroll("langContainer", "fadeIn", "slower")
     $(window).on('scroll', () => {

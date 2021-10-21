@@ -5,11 +5,11 @@ let carSelected // This var will change while the user click the select car
 let wameMessage = ''
 // Options series
 const optionsSerie1 = "<option value=\"\"></option>" +
-        "<option value=\"PUJ\">Aeropuerto Internacional de Punta Cana</option>";
+        "<option value=\"PUJ\">Punta Cana Internacional airport</option>";
 const optionsSerie2 = "<option value=\"\"></option>" + 
-        "<option value=\"HZBPC\">" + "Hoteles de la zona Bávaro, Punta Cana" + "</option>" +
-        "<option value=\"HUA\">" + "Hoteles en Uvero Alto" + "</option>" + 
-        "<option value=\"HLR\">" + "Hoteles en La Romana" + "</option>" + 
+        "<option value=\"HZBPC\">" + "Hotels in Bávaro, Punta Cana area" + "</option>" +
+        "<option value=\"HUA\">" + "Hotels in Uvero Alto" + "</option>" + 
+        "<option value=\"HLR\">" + "Hotels in La Romana" + "</option>" + 
         "<option value=\"SPM\">" + "San Pedro de Macorís" + "</option>" +
         "<option value=\"Sbo\">" + "El Seibo" + "</option>" +
         "<option value=\"BC\">" + "Boca Chica" + "</option>" + 
@@ -90,10 +90,10 @@ const formatDate = (date) => {
     let dateToFormat = new Date(date);
     let day = dateToFormat.getDate();
     let year = dateToFormat.getFullYear();
-    let month = dateToFormat.toLocaleDateString("es-ES", {month: 'long'})
+    let month = dateToFormat.toLocaleDateString("us-EN", {month: 'long'})
 
     // Now return a writed date in Spanish
-    return  day + " de " + month + " del " + year; // Dia de Mes del Año
+    return month + " " + day + ", " + year; // Month Day, Year
 }
 
 /**
@@ -112,32 +112,32 @@ const checkErrors = () => {
     } = document.fBook
 
     if (!bookType.value || !passengers.value || !pickupDate.value) {
-        drawAlert("No ha llenado todos los campos necesarios")
+        drawAlert("You should fill all required inputs")
         window.location = '#formBook'
         return true;
     }
 
     if (!carSelected) {
-        drawAlert("Debe seleccionar un vehiculo")
+        drawAlert("You should select a car")
         window.location = '#carContainer1'
         return true;
     }
 
     if (bookType.value == 'Travel') {
         if (!pickupLocations.value || !destinies.value) {
-            drawAlert("No ha llenado todos los campos necesarios")
+            drawAlert("You should fill all required inputs")
             window.location = '#formBook'
             return true;
         }
 
         else if (pickupLocations.value == destinies.value) {
-            drawAlert("No puede tener un destino igual que el punto de recogida")
+            drawAlert("You should fill all required inputs")
             window.location = '#formBook'
             return true;
         }
     } else {
         if (!excursions.value) {
-            drawAlert("No ha llenado todos los campos necesarios")
+            drawAlert("You should fill all required inputs")
             window.location = '#formBook'
             return true;
         }
@@ -164,11 +164,10 @@ const buildWaMeTravelMessage = () => {
     const destinyName = cleanName($("#selectDestinies :selected").text())
 
     wameMessage = 
-        `Hola, quiero hacer una reservación del servicio de Viaje, ` +
-        `tomaré la ruta que va desde el punto de recogida: ${pickupName} hasta ` +
-        `${destinyName}, para la fecha del ${writedDate}, con una ` +
-        `cantidad de pasajeros que va desde ${passengers.value} pasajeros. ` +
-        `He elegido el auto: ${carSelected}, ` + '¿Me podrían ofrecer más información, por favor?'
+        `Hi!, I want to make a reservation about Travel sercvice, ` +
+        `I'd like to take the route that goes from: ${pickupName} to ` +
+        `${destinyName}, for the date of ${writedDate}, with a passenger range between ` +
+        `${passengers.value}. ` + `I chose the ${carSelected} car, ` + 'Could you offer me more information, please?'
 }
 
 /** A function for build the Whatsapp excursion service message that will be send */
@@ -181,10 +180,10 @@ const buildWaMeExcursionMessage = () => {
     const excursionName = cleanName($("#selectExcursions :selected").text())
 
     wameMessage = 
-        `Hola, quiero hacer una reservación del servicio de Excursión, ` +
-        `escogí la excursión: ${excursionName}, para la fecha del ${writedDate} ` +
-        `con una cantidad de pasajeros que va desde ${passengers.value} pasajeros, ` +
-        `He elegido el auto: ${carSelected}, ` + '¿Me podrían ofrecer más información, por favor?'
+        `Hi!, I want to make a reservation about Excursion sercvice, ` +
+        `I chose the excursion called: ${excursionName}, for the date of ${writedDate} ` +
+        `with a passenger range between ${passengers.value}, ` +
+        `I chose the ${carSelected} car, ` + 'Could you offer me more information, please?'
 }
 
 
