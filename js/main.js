@@ -136,6 +136,7 @@ const setActualDate = (elementId, langFormat = "es-ES") => {
     let actualDateFormated = year + "-" + month + "-" + day
 
     datePicker.min = actualDateFormated
+    datePicker.value = actualDateFormated
 }
 
 const cleanModal = () => {
