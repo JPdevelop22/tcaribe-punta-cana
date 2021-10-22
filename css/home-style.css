@@ -298,11 +298,23 @@ nav{
 
 .mercedes_car{
     width: 25%;
-    background-image: url(../img/cars/mercedes.png);
+    background-image: url(../img/cars/mercedes.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     left: 5%;
+    margin: 2% 0 -5% 0;
+
+}
+
+.minibus_car{
+    width: 25%;
+    background-image: url(../img/cars/minibus.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 5%;
+    margin: 2% 0 -5% 0;
 }
 
 .name_car{
@@ -342,6 +354,8 @@ nav{
         transition: all .2s ease-in-out;
     }
 
+
+
 .btn_select_content button{
     border: none;
     background: var(--blue-brand);
@@ -353,6 +367,19 @@ nav{
     color: #fff;
     box-shadow: .1875rem .1875rem .25rem -0.0625rem var(--black-brand);
 }
+
+.btn_select_minibus_content button{
+    border: none;
+    background: var(--blue-brand);
+    padding: .625rem 1.25rem;
+    border-radius: 1.25rem;
+    font-size: .8125rem;
+    font-family: var(--title-font);
+    font-weight: 800;
+    color: #fff;
+    box-shadow: .1875rem .1875rem .25rem -0.0625rem var(--black-brand);
+}
+
 
 .tobook_content{
     width: 100%;
@@ -387,8 +414,12 @@ nav{
     top:20%;
     width: 30%;
     position: fixed;
-    z-index: 80;
+    z-index: 9999;
     
+}
+
+.alert_warning{
+    background: yellow;
 }
 
 .alert-booking .content-one{
@@ -677,6 +708,11 @@ footer{
     border: 2px #e52d2a3d dotted;
     padding: 20%;
     
+}
+
+.optional_cars_container{
+    width: 100%;
+    background: #000;
 }
 
 /* MEDIA QUERIES */
@@ -977,10 +1013,11 @@ footer{
         margin-left: 7%;
     }
 
-    .chevrolet_car, .limosina_car, .mercedes_car{
+    .chevrolet_car, .limosina_car, .mercedes_car, .minibus_car{
         background-position: center;
         margin-right: 2%;
     }
+
 
     .title_about_us h2{
         font-size: 16px;

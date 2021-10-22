@@ -105,7 +105,7 @@ $(document).ready(() => {
     });
 
     $("#btnCarSelected3").on('click', () => {
-        changeCarSelected('Mercedes Benz Clase C 2012', 'carContainer3');
+        changeCarSelected('Mercedes Benz Clase S 350', 'carContainer3');
         carKey = "MercedesBenz"
     });
 

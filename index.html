@@ -68,6 +68,7 @@
 
     <link rel="stylesheet" href="./css/home-style.css">
     <link rel="stylesheet" href="./css/modal-view.css">
+    
     <!-- #endregion -->
 
     <title>Reserva tu mejor experiencia turística - T.CARIBE</title>
@@ -312,7 +313,7 @@
                 <div class="btn_select_content">
                     <button
                         onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
-                        type="button"
+                        type="submit"
                         id="btnCarSelected1" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
                         aria-label="Seleccionar Chevrolet suburban 2012">
                         SELECCIONAR
@@ -327,11 +328,7 @@
 
 
                 <div class="position_brandname_alert">
-<<<<<<< HEAD
                     <h3 class="name_car">Limosina Town Car</h3>
-=======
-                    <h3 class="name_car">Limosina Town Car 2011</h3>
->>>>>>> 2921f5c2b362ba7ee631bc174775ed4893cefc63
 
                     <div class="alert">
                         <p>
@@ -346,7 +343,7 @@
                 <div class="btn_select_content">
                     <button
                         onclick="drawAlert('Según el auto que eliga puede que cambie el numero de pasajeros que puede seleccionar'); $('#selectPassengers :selected').attr('value', '1 - 13').text('De 1 a 13 personas')"
-                        type="button"
+                        type="submit"
                         id="btnCarSelected2" aria-details="Boton para seleccionar el Limosina Town Car 2007"
                         aria-label="Seleccionar Limosina Town Car 2007">
                         SELECCIONAR
@@ -361,11 +358,7 @@
 
 
                 <div class="position_brandname_alert">
-<<<<<<< HEAD
                     <h3 class="name_car">Mercedes Benz Clase S 350</h3>
-=======
-                    <h3 class="name_car">Mercedes Benz Clase S 350 2012</h3>
->>>>>>> 2921f5c2b362ba7ee631bc174775ed4893cefc63
 
                     <div class="alert">
                         <p>
@@ -380,19 +373,54 @@
                 <div class="btn_select_content">
                     <button
                         onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
-                        type="button"
+                        type="submit"
                         id="btnCarSelected3" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
-                        aria-label="Seleccionar Mercedes Benz Clase C 2012">
+                        aria-label="Seleccionar Mercedes Benz Clase S 350">
                         SELECCIONAR
                     </button>
                 </div>
 
             </div>
+
+            <div id="carContainer4" class="car_content">
+
+                <div class="car_img minibus_car" role="img"></div>
+
+
+                <div class="position_brandname_alert">
+                    <h3 class="name_car">Minibus</h3>
+
+                    <div class="alert">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            Las fotografías están destinadas a ilustrar el tipo de vehículo únicamente,
+                            el color de su vehículo seleccionado puede ser diferente.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="btn_select_content">
+                    <button
+                        onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
+                        type="submit"
+                        id="btnCarSelected3" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
+                        aria-label="Seleccionar Mercedes Benz Clase S 350">
+                        SELECCIONAR
+                    </button>
+                </div>
+
             </div>
 
+            </div>
+
+            <!-- 
             <div class="tobook_content">
                 <button id="btn-pay" class="btn_tobook" type="submit">Consultar</button>
-            </div>
+            </div> 
+            -->
+
+                            
 
         </form>
 
