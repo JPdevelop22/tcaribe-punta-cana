@@ -654,9 +654,6 @@ footer{
     
 }
 
-.storyself_container{
-
-}
 
 .storyself_container .row-1, .row-2{
     width: 100%;
@@ -866,6 +863,22 @@ footer{
             margin: 0 5%;
         }
 
+        .storyself_container .row-1, .row-2{
+            flex-direction: column;
+                        
+        }
+
+        .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+            width: 90%;
+            margin: 0 auto 5%;
+            font-size: 17px;
+
+        }
+
+        .storyself_content .icon_storyself{
+            margin: 0 7%;
+        }
+
 }
 
 @media screen and (max-width:764px){
@@ -904,6 +917,17 @@ footer{
 
     .booking_content{
         width: 90%;
+    }
+
+    .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        width: 90%;
+        margin: 0 auto 5%;
+        font-size: 16px;
+
+    }
+
+    .row-2 .storyself_content:nth-child(1), .row-2 .storyself_content:nth-child(2){
+        height: 250px;
     }
 }
 
@@ -986,6 +1010,16 @@ footer{
     .contact div{
         padding: 0;
     }
+
+    .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        margin: 0 auto 5%;
+        font-size: 15px;
+
+    }
+
+    .row-2 .storyself_content:nth-child(1), .row-2 .storyself_content:nth-child(2){
+        height: 300px;
+    }
 }
 
 @media screen and (max-width:450px){
@@ -1026,7 +1060,9 @@ footer{
     .cristian_introduction_content .cristian p{
         font-size: 12px;
     }
-
+    .cristian_introduction_content{
+        width: 90%;
+    }
     
 }
 
@@ -1041,6 +1077,34 @@ footer{
 
     .select_from, .select_to, .select_arrivaldate, .select_amount_person, .select_booking_type, .select_excursion{
         margin: 0 4%;
+    }
+
+    .storyself_container .storyself_content p{
+        margin: 0 5% 5%;
+    }
+
+    .storyself_content .icon_storyself{
+        display: flex;
+        justify-content: center;
+        margin: 0 0 5%;
+    }
+
+    .storyself_content .icon_storyself i{
+        padding: 7%;
+    }
+
+    .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        margin: 0 auto 5%;
+        font-size: 15px;
+        flex-direction: column;
+        padding: 5%;
+    }
+    .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        height: 350px;
+    }
+
+    .row-2 .storyself_content:nth-child(1), .row-2 .storyself_content:nth-child(2){
+        height: 450px;
     }
 }
 
@@ -1075,9 +1139,37 @@ footer{
         font-size: 12px;
         text-align: center;
     }
+
+    .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        margin: 0 auto 5%;
+        font-size: 15px;
+        flex-direction: column;
+        padding: 5%;
+    }
+    .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        height: 350px;
+    }
+
+    .row-2 .storyself_content:nth-child(1), .row-2 .storyself_content:nth-child(2){
+        height: 500px;
+    }
 }
 @media screen and (max-width:286px){
     :root{
         font-size: 8px;
+    }
+
+    .storyself_container .storyself_content, .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        margin: 0 auto 5%;
+        font-size: 14px;
+        flex-direction: column;
+        padding: 5%;
+    }
+    .row-1 .storyself_content:nth-child(1), .row-1 .storyself_content:nth-child(2){
+        height: 370px;
+    }
+
+    .row-2 .storyself_content:nth-child(1), .row-2 .storyself_content:nth-child(2){
+        height: 550px;
     }
 }
