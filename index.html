@@ -292,7 +292,10 @@
             <div class="tittle_select_car">
                 <h1 id="selecting_cars">ELIGE EL <span>VEHÍCULO</span> DE TU PREFERENCIA</h1>
             </div>
-            <div id="carContainer1" class="car_content">
+
+                <!-- SI QUIERES ACTIVAR ÉSTE DISEÑO COMIENZA DESDE LA CLASE QUE ESTA AQUI ABAJO "carContainer1" HASTA LA CLASE "carContainer4" -->
+
+            <!-- <div id="carContainer1" class="car_content">
 
                 <div class="car_img chevrolet_car" role="img"></div>
 
@@ -379,9 +382,13 @@
                     </button>
                 </div>
 
-            </div>
+            </div> -->
 
+
+
+            <!--             
             <div id="carContainer4" class="car_content">
+
 
                 <div class="car_img minibus_car" role="img"></div>
 
@@ -409,8 +416,116 @@
                     </button>
                 </div>
 
+            </div> -->
+
+
+            <!-- SI QUIERES DESACTIVAR ÉSTE DISEÑO; COMIENZA DESDE LA CASE "cars_show_content" Y SE DESACTIVARÁ-->
+
+            <div class="cars_show_content">
+                
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/minibus.jpeg">
+                             <div class="capa">
+                                 <h3>Mini Bus</h3>
+                                 <button>Seleccionar</button>
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
+
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/chevrolet.png">
+                             <div class="capa">
+                                 <h3>Chevrolet suburban</h3>
+                                 
+                                 <button
+                                 onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
+                                 type="submit"
+                                 id="btnCarSelected1" aria-details="Boton para seleccionar el Chevrolet suburban 2012"
+                                 aria-label="Seleccionar Chevrolet suburban 2012">
+                                 SELECCIONAR
+                             </button>
+
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
+
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/limusina.png">
+                             <div class="capa">
+                                 <h3>Limosina Town Car</h3>
+                                 
+                                 <button
+                                 onclick="drawAlert('Según el auto que eliga puede que cambie el numero de pasajeros que puede seleccionar'); $('#selectPassengers :selected').attr('value', '1 - 13').text('De 1 a 13 personas')"
+                                 type="submit"
+                                 id="btnCarSelected2" aria-details="Boton para seleccionar el Limosina Town Car 2007"
+                                 aria-label="Seleccionar Limosina Town Car 2007">
+                                 SELECCIONAR
+                             </button>
+
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
+
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/mercedes2.png">
+                             <div class="capa">
+                                 <h3>Mercedes Benz Clase S 350</h3>
+
+                                 <button
+                                 onclick="$('#selectPassengers :selected').attr('value', '1 - 6').text('De 1 a 6 personas')"
+                                 type="submit"
+                                 id="btnCarSelected3" aria-details="Boton para seleccionar el Mercedes Benz Clase C 2012"
+                                 aria-label="Seleccionar Mercedes Benz Clase S 350">
+                                 SELECCIONAR
+                             </button>
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
+                 
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/minibus.jpeg">
+                             <div class="capa">
+                                 <h3>Mini Bus</h3>
+                                 <button>Seleccionar</button>
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
+
+                <div class="minibus_contenedor">
+                    <a href="#">
+                         <figure class="minibus_selected">
+                             <img src="./img/cars/minibus.jpeg">
+                             <div class="capa">
+                                 <h3>Mini Bus</h3>
+                                 <button>Seleccionar</button>
+                             </div>
+                         </figure>
+                     </a>
+                 </div>
+
             </div>
 
+        
             </div>
 
             <!-- 
